@@ -3,10 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.CadastroVoluntario"
              Title="CadastroVoluntario">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="10"
+                         Spacing="10">
+        <Button Text="Voltar"
+                HorizontalOptions="Start"
+                Clicked="VoltarButton_Clicked"
+                />
+        
+        <Label Text="Cadastro de Novo Voluntário"
+               FontSize="20"
+               HorizontalOptions="Center" 
+               />
+
+        <Label Text="Nome Completo *"/>
+        <Entry x:Name="txt_nome_completo"/>
+
+        <Label Text="E-mail *"/>
+        <Entry x:Name="txt_email"/>
+
+        <Label Text="Telefone *"/>
+        <Entry x:Name="txt_telefone"/>
+
+        <Label Text="Unidade NUPDEC *"/>
+        <Entry x:Name="txt_unidade"/>
+
+        <Label Text="Senha *"/>
+        <Entry x:Name="txt_senha"/>
+
+        <Button Text="Cadastrar"
+                HorizontalOptions="Center"
+                Clicked="CadastrarOKButton_Clicked"
+                Padding="50, 0"
+                />
+
     </VerticalStackLayout>
 </ContentPage>

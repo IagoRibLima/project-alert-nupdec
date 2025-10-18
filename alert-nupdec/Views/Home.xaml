@@ -18,12 +18,17 @@
                        HorizontalTextAlignment="Center"
                        />
                 <Button Text="Desconectar"
-                        Clicked="Button_Clicked"
+                        Clicked="DisconectButton_Clicked"
                         HorizontalOptions="Center"
                         />
 
             </VerticalStackLayout>
         </Frame>
-        
+
+        <Button Text="Cadastrar Voluntario"
+                Clicked="CadastrarButton_Clicked"
+                HorizontalOptions="Center"
+                />
+
     </VerticalStackLayout>
 </ContentPage>

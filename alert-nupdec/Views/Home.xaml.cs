@@ -15,7 +15,7 @@ public partial class Home : ContentPage
         });
 	}
 
-	private async void Button_Clicked(object sender, EventArgs e)
+	private async void DisconectButton_Clicked(object sender, EventArgs e)
 	{
 		bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
 		
@@ -25,4 +25,9 @@ public partial class Home : ContentPage
 			App.Current.MainPage = new Login();
         }
 	}
+
+	private async void CadastrarButton_Clicked(object sender, EventArgs e)
+	{
+		App.Current.MainPage = new CadastroVoluntario();
+    }
 }
