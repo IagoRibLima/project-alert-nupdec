@@ -46,10 +46,25 @@
             </Picker>
 
             <Label Text="Senha *"/>
-            <Entry x:Name="txt_senha"
-                   Placeholder="Mínimo 8 caracteres"
-                   IsPassword="True"
-                   />
+
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+                <Entry x:Name="txt_senha"
+                       Placeholder="Mínimo 8 caracteres"
+                       IsPassword="True"
+                       Grid.Column="0"
+                       />
+                <Button x:Name="btn_senha"
+                        ImageSource="olho_aberto.png"
+                        Clicked="SenhaButton_Clicked"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        WidthRequest="50"
+                        HeightRequest="40"
+                        Background="Gray"
+                        BorderWidth="0"
+                        />
+            </Grid>
+            
             <Label Text="A senha deve ter min. 8caracteres, 1 maiúscula e 1 caracter especial"
                    FontSize="10"
                    TextColor="Gray"

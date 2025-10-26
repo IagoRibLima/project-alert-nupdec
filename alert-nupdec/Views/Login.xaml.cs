@@ -1,6 +1,5 @@
-using alert_nupdec.Models;
+Ôªøusing alert_nupdec.Models;
 using alert_nupdec.Repository;
-using System.Collections;
 
 namespace alert_nupdec;
 
@@ -43,18 +42,34 @@ public partial class Login : ContentPage
                 }
                 else
                 {
-                    throw new Exception("Usu·rio ou senha inv·lidos.");
+                    throw new Exception("Usu√°rio ou senha inv√°lidos.");
                 }
             }
             else
             {
-                throw new Exception("Usu·rio ou senha inv·lidos.");
+                throw new Exception("Usu√°rio ou senha inv√°lidos.");
             }
 
         }
         catch (Exception ex)
 		{
 			await DisplayAlert("Erro", ex.Message, "Fechar");
+        }
+    }
+
+    private void SenhaButton_Clicked(object sender, EventArgs e)
+    {
+        txt_senha.IsPassword = !txt_senha.IsPassword;
+
+        var button = (Button)sender;
+
+        if (txt_senha.IsPassword)
+        {
+            button.ImageSource = "olho_aberto.png";
+        }
+        else
+        {
+            button.ImageSource = "olho_fechado.png";
         }
     }
 }

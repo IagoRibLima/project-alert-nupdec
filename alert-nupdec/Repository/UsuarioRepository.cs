@@ -16,7 +16,7 @@ namespace alert_nupdec.Repository
                 Email = "iago@email.com",
                 Telefone = "11999999999",
                 Unidade = "Unidade A",
-                Senha = "A@bc1234"
+                Senha = "Abc1234@"
             },
             new Usuario()
             {
@@ -25,7 +25,7 @@ namespace alert_nupdec.Repository
                 Email = "pri@email.com",
                 Telefone = "11988888888",
                 Unidade = "Unidade A",
-                Senha = "A@bc1234"
+                Senha = "Abc1234@"
             }
         };
 

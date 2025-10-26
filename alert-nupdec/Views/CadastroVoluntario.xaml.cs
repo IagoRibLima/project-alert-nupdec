@@ -1,4 +1,4 @@
-using alert_nupdec.Models;
+Ôªøusing alert_nupdec.Models;
 using alert_nupdec.Repository;
 using System.Net.Mail;
 
@@ -36,37 +36,37 @@ public partial class CadastroVoluntario : ContentPage
             string senha = txt_senha.Text?.Trim();
 
             if (string.IsNullOrWhiteSpace(nome))
-                erros.Add("O campo Nome Completo È obrigatÛrio.");
+                erros.Add("O campo Nome Completo √© obrigat√≥rio.");
             if (string.IsNullOrWhiteSpace(email))
-                erros.Add("O campo Email È obrigatÛrio.");
+                erros.Add("O campo Email √© obrigat√≥rio.");
             if (string.IsNullOrWhiteSpace(telefone))
-                erros.Add("O campo Telefone È obrigatÛrio.");
+                erros.Add("O campo Telefone √© obrigat√≥rio.");
             if (string.IsNullOrWhiteSpace(unidade))
-                erros.Add("O campo Unidade È obrigatÛrio.");
+                erros.Add("O campo Unidade √© obrigat√≥rio.");
             if (string.IsNullOrWhiteSpace(senha))
-                erros.Add("O campo Senha È obrigatÛrio.");
+                erros.Add("O campo Senha √© obrigat√≥rio.");
 
             if (!string.IsNullOrWhiteSpace(email))
             {
                 if (!MailAddress.TryCreate(email, out _))
-                    erros.Add("O campo Email deve conter um endereÁo de email v·lido.");
+                    erros.Add("O campo Email deve conter um endere√ßo de email v√°lido.");
             }
 
             if (!string.IsNullOrWhiteSpace(telefone))
             {
                 string numeroTelefone = new string(telefone.Where(char.IsDigit).ToArray());
                 if(numeroTelefone.Length != 11)
-                    erros.Add("O campo Telefone deve conter 11 dÌgitos (DDD + n˙mero).");
+                    erros.Add("O campo Telefone deve conter 11 d√≠gitos (DDD + n√∫mero).");
             }
 
             if (!string.IsNullOrWhiteSpace(senha))
             {
                 if (senha.Length < 8)
-                    erros.Add("O campo Senha deve ter no mÌnimo 8 caracteres.");
+                    erros.Add("O campo Senha deve ter no m√≠nimo 8 caracteres.");
                 if (!senha.Any(char.IsUpper))
-                    erros.Add("O campo Senha deve ter pelo menos uma letra mai˙scula.");
+                    erros.Add("O campo Senha deve ter pelo menos uma letra mai√∫scula.");
                 if (!senha.Any(char.IsDigit))
-                    erros.Add("O campo Senha deve ter pelo menos um n˙mero.");
+                    erros.Add("O campo Senha deve ter pelo menos um n√∫mero.");
                 if (senha.All(char.IsLetterOrDigit))
                     erros.Add("O campo Senha deve ter pelo menos um caractere especial (ex: @, #, $, !).");
             }
@@ -74,7 +74,7 @@ public partial class CadastroVoluntario : ContentPage
             if (erros.Count > 0)
             {
                 string mensagemErro = string.Join("\n", erros);
-                await DisplayAlert("Campos inv·lidos", mensagemErro, "Corrigir");
+                await DisplayAlert("Campos inv√°lidos", mensagemErro, "Corrigir");
                 return;
             }
 
@@ -89,7 +89,7 @@ public partial class CadastroVoluntario : ContentPage
 
             UsuarioRepository.cadastrarUsuario(voluntario);
 
-            await DisplayAlert("Sucesso", "Volunt·rio cadastrado com sucesso!", "Fechar");
+            await DisplayAlert("Sucesso", "Volunt√°rio cadastrado com sucesso!", "Fechar");
 
             txt_nome_completo.Text = string.Empty;
             txt_email.Text = string.Empty;
@@ -100,6 +100,22 @@ public partial class CadastroVoluntario : ContentPage
         catch (Exception ex)
         {
             await DisplayAlert("Erro", ex.Message, "Fechar");
+        }
+    }
+
+    private void SenhaButton_Clicked(object sender, EventArgs e)
+    {
+        txt_senha.IsPassword = !txt_senha.IsPassword;
+
+        var button = (Button)sender;
+
+        if (txt_senha.IsPassword)
+        {
+            button.ImageSource = "olho_aberto.png";
+        }
+        else
+        {
+            button.ImageSource = "olho_fechado.png";
         }
     }
 }

@@ -3,28 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Login"
              Title="Login">
-    
-    <VerticalStackLayout 
-        VerticalOptions="Center"
-        Spacing="10"
-        Padding="10"
-        >
 
-        <Label 
-            Text="Login de Usuário"
-            HorizontalOptions="Center" 
-            />
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center"
+                             Spacing="10"
+                             Padding="10"
+                             >
 
-        <Label Text="Usuário:"/>
-        <Entry x:Name="txt_usuario"/>
+            <Label Text="Login de Usuário"
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   Margin="0,0,0,20"
+                   />
 
-        <Label Text="Senha:"/>
-        <Entry x:Name="txt_senha" IsPassword="True"/>
+            <Label Text="Email:"/>
+            <Entry x:Name="txt_usuario"/>
 
-        <Button Text="Entrar"
-                HorizontalOptions="Center"
-                Clicked="Button_Clicked"
-                />
+            <Label Text="Senha:"/>
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+                <Entry x:Name="txt_senha" 
+                       IsPassword="True"
+                       Grid.Column="0"
+                       />
 
-    </VerticalStackLayout>
+                <Button x:Name="btn_senha"
+                        ImageSource="olho_aberto.png"
+                        Clicked="SenhaButton_Clicked"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        WidthRequest="50"
+                        HeightRequest="40"
+                        Background="Gray"
+                        BorderWidth="0"
+                        />
+            </Grid>
+
+            <Button Text="Entrar"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked"
+                    Margin="0,20,0,0"
+                    />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
