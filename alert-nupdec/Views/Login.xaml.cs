@@ -15,30 +15,37 @@ public partial class Login : ContentPage
 	{
 		try
 		{
-            Usuario dados_digitados = new Usuario()
-            {
-                NomeCompleto = txt_usuario.Text,
-                Senha = txt_senha.Text
-            };
+            string emailDigitado = txt_usuario.Text?.Trim();
+            string senhaDigitada = txt_senha.Text;
 
-            if(UsuarioRepository.lista_adm.
-                Cast<Usuario>().
-                Any(i => (dados_digitados.NomeCompleto == i.NomeCompleto && 
-                          dados_digitados.Senha == i.Senha)))
-            {
-                await SecureStorage.Default.SetAsync("usuario_logado", dados_digitados.NomeCompleto);
+            if (string.IsNullOrWhiteSpace(emailDigitado))
+                throw new Exception("Por favor, preecha o e-mail e a senha.");
 
+            Usuario admEncontrado = UsuarioRepository.lista_adm
+                .Cast<Usuario>()
+                .FirstOrDefault(i => emailDigitado == i.Email && senhaDigitada == i.Senha);
+
+            if (admEncontrado != null)
+            {
+                await SecureStorage.Default.SetAsync("usuario_logado", admEncontrado.NomeCompleto);
                 App.Current.MainPage = new Home();
             }
-            else if (UsuarioRepository.ListaVoluntarios != null &&
-                     UsuarioRepository.ListaVoluntarios.
-                     Cast<Usuario>().
-                     Any(i => (dados_digitados.NomeCompleto == i.NomeCompleto &&
-                               dados_digitados.Senha == i.Senha)))
+            else if (UsuarioRepository.lista_voluntarios != null)
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", dados_digitados.NomeCompleto);
-                App.Current.MainPage = new HomeVoluntario();
-            }   
+                Usuario voluntarioEncontrado = UsuarioRepository.ListaVoluntarios
+                    .Cast<Usuario>()
+                    .FirstOrDefault(i => emailDigitado == i.Email && senhaDigitada == i.Senha);
+
+                if (voluntarioEncontrado != null)
+                {
+                    await SecureStorage.Default.SetAsync("usuario_logado", voluntarioEncontrado.NomeCompleto);
+                    App.Current.MainPage = new HomeVoluntario();
+                }
+                else
+                {
+                    throw new Exception("Usuário ou senha inválidos.");
+                }
+            }
             else
             {
                 throw new Exception("Usuário ou senha inválidos.");

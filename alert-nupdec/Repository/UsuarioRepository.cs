@@ -3,11 +3,11 @@ using System.Collections;
 
 namespace alert_nupdec.Repository
 {
-    internal class UsuarioRepository
+    public class UsuarioRepository
     {
-        internal static ArrayList lista_voluntarios = new ArrayList();
+        public static ArrayList lista_voluntarios = new ArrayList();
 
-        internal static ArrayList lista_adm = new ArrayList()
+        public static ArrayList lista_adm = new ArrayList()
         {
             new Usuario()
             {
@@ -15,8 +15,8 @@ namespace alert_nupdec.Repository
                 NomeCompleto = "Iago Lima",
                 Email = "iago@email.com",
                 Telefone = "11999999999",
-                Unidade = "central",
-                Senha = "123"
+                Unidade = "Unidade A",
+                Senha = "A@bc1234"
             },
             new Usuario()
             {
@@ -24,8 +24,8 @@ namespace alert_nupdec.Repository
                 NomeCompleto = "Pri Couto",
                 Email = "pri@email.com",
                 Telefone = "11988888888",
-                Unidade = "central",
-                Senha = "123"
+                Unidade = "Unidade A",
+                Senha = "A@bc1234"
             }
         };
 
