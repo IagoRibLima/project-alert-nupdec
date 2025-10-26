@@ -948,3 +948,4 @@ C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupde
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\alert-nupdec.sourcelink.json
