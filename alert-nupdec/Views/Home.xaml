@@ -10,7 +10,7 @@
                          >
         <Frame>
             <VerticalStackLayout>
-                <Label Text="Home"
+                <Label Text="Home Administrador"
                        FontSize="Large"
                        HorizontalTextAlignment="Center"
                        />

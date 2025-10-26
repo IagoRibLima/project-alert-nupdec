@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="alert_nupdec.HomeVoluntario"
+             Title="HomeVoluntario">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                     Padding="10"
+                     Spacing="10"
+                     >
+        <Frame>
+            <VerticalStackLayout>
+                <Label Text="Home Voluntário"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Label x:Name="lbl_boasvindas"
+                   HorizontalTextAlignment="Center"
+                   />
+                <Button Text="Desconectar"
+                    Clicked="DisconectButton_Clicked"
+                    HorizontalOptions="Center"
+                    />
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>
