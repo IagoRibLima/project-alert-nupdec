@@ -30,5 +30,10 @@
                 HorizontalOptions="Center"
                 />
 
+        <Button Text="Emitir Alerta"
+                Clicked="EmitirAlertaButton_Clicked"
+                HorizontalOptions="Center"
+                />
+
     </VerticalStackLayout>
 </ContentPage>

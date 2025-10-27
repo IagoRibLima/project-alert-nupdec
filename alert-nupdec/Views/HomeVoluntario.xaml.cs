@@ -1,3 +1,5 @@
+using alert_nupdec.Views;
+
 namespace alert_nupdec;
 
 public partial class HomeVoluntario : ContentPage
@@ -24,5 +26,10 @@ public partial class HomeVoluntario : ContentPage
             SecureStorage.Default.Remove("usuario_logado");
             App.Current.MainPage = new Login();
         }
+    }
+
+    private async void EmitirAlertaButton_Clicked(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new EmitirAlerta();
     }
 }

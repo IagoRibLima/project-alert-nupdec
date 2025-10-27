@@ -65,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\EmitirAlerta.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\HomeVoluntario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

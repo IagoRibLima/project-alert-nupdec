@@ -1,3 +1,5 @@
+using alert_nupdec.Views;
+
 namespace alert_nupdec;
 
 public partial class Home : ContentPage
@@ -30,4 +32,9 @@ public partial class Home : ContentPage
 	{
 		App.Current.MainPage = new CadastroVoluntario();
     }
+
+	private async void EmitirAlertaButton_Clicked(object sender, EventArgs e)
+	{
+		App.Current.MainPage = new EmitirAlerta();
+    }	
 }

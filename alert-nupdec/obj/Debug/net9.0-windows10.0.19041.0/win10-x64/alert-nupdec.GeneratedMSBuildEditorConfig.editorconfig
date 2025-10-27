@@ -58,6 +58,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Cadastr
 build_metadata.AdditionalFiles.TargetPath = Views\CadastroVoluntario.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CadastroVoluntario.xaml
 
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/EmitirAlerta.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.EmitirAlerta.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EmitirAlerta.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EmitirAlerta.xaml
+
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Home.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Home.xaml

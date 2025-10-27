@@ -14,11 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f5ce590995c422094cc6b54d590e789bde1e79f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+665d35ab92b17008a29e94723ef6a4b9875283a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst18.5")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst26.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst15.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
