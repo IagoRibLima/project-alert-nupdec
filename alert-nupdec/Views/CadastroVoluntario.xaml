@@ -33,6 +33,13 @@
                    Keyboard="Email"
                    />
 
+            <Label Text="CPF *"/>
+            <Entry x:Name="txt_cpf"
+                   Placeholder="00000000000"
+                   Keyboard="Numeric"
+                   MaxLength="11"
+                   />
+
             <Label Text="Telefone (com DDD) *"/>
             <Entry x:Name="txt_telefone"
                    Placeholder="11999999999"
@@ -65,7 +72,7 @@
                         />
             </Grid>
             
-            <Label Text="A senha deve ter min. 8caracteres, 1 maiúscula e 1 caracter especial"
+            <Label Text="A senha deve ter min. 8 caracteres, 1 maiúscula e 1 caracter especial"
                    FontSize="10"
                    TextColor="Gray"
                    />

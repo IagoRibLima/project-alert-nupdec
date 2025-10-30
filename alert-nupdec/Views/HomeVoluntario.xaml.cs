@@ -1,3 +1,4 @@
+using alert_nupdec.Repository;
 using alert_nupdec.Views;
 
 namespace alert_nupdec;
@@ -12,8 +13,8 @@ public partial class HomeVoluntario : ContentPage
 
         Task.Run(async () =>
         {
-            usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
-            lbl_boasvindas.Text = $"Bem-vindo(a) {usuario_logado}";
+            //usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
+            lbl_boasvindas.Text = $"Bem-vindo(a) {UsuarioRepository.usuario_logado.NomeCompleto}";
         });
     }
 

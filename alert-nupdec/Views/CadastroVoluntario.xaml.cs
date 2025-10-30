@@ -31,6 +31,7 @@ public partial class CadastroVoluntario : ContentPage
 
             string nome = txt_nome_completo.Text?.Trim();
             string email = txt_email.Text?.Trim();
+            string cpf = txt_cpf.Text?.Trim();
             string telefone = txt_telefone.Text?.Trim();
             string unidade = picker_unidades.SelectedItem as string;
             string senha = txt_senha.Text?.Trim();
@@ -41,10 +42,19 @@ public partial class CadastroVoluntario : ContentPage
                 erros.Add("O campo Email é obrigatório.");
             if (string.IsNullOrWhiteSpace(telefone))
                 erros.Add("O campo Telefone é obrigatório.");
+            if (string.IsNullOrWhiteSpace(cpf))
+                erros.Add("O campo CPF é obrigatório.");
             if (string.IsNullOrWhiteSpace(unidade))
                 erros.Add("O campo Unidade é obrigatório.");
             if (string.IsNullOrWhiteSpace(senha))
                 erros.Add("O campo Senha é obrigatório.");
+
+            if (!string.IsNullOrWhiteSpace(cpf))
+            {
+                string numeroTelefone = new string(cpf.Where(char.IsDigit).ToArray());
+                if (numeroTelefone.Length != 11)
+                    erros.Add("O campo Telefone deve conter 11 dígitos.");
+            }
 
             if (!string.IsNullOrWhiteSpace(email))
             {
@@ -82,6 +92,7 @@ public partial class CadastroVoluntario : ContentPage
             {
                 NomeCompleto = nome,
                 Email = email,
+                CPF = cpf,
                 Telefone = telefone,
                 Unidade = unidade,
                 Senha = senha
@@ -93,6 +104,7 @@ public partial class CadastroVoluntario : ContentPage
 
             txt_nome_completo.Text = string.Empty;
             txt_email.Text = string.Empty;
+            txt_cpf.Text = string.Empty;
             txt_telefone.Text = string.Empty;
             picker_unidades.SelectedItem = null;
             txt_senha.Text = string.Empty;

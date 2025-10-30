@@ -15,12 +15,12 @@
                    HorizontalTextAlignment="Center"
                    />
                 <Label x:Name="lbl_boasvindas"
-                   HorizontalTextAlignment="Center"
-                   />
+                       HorizontalTextAlignment="Center"
+                       />
                 <Button Text="Desconectar"
-                    Clicked="DisconectButton_Clicked"
-                    HorizontalOptions="Center"
-                    />
+                        Clicked="DisconectButton_Clicked"
+                        HorizontalOptions="Center"
+                        />
 
             </VerticalStackLayout>
         </Frame>

@@ -1,5 +1,6 @@
 ﻿using alert_nupdec.Models;
 using alert_nupdec.Repository;
+using System.Security.Cryptography.X509Certificates;
 
 namespace alert_nupdec;
 
@@ -26,7 +27,7 @@ public partial class Login : ContentPage
 
             if (admEncontrado != null)
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", admEncontrado.NomeCompleto);
+                UsuarioRepository.usuario_logado = admEncontrado;
                 App.Current.MainPage = new Home();
             }
             else if (UsuarioRepository.lista_voluntarios != null)
@@ -37,7 +38,7 @@ public partial class Login : ContentPage
 
                 if (voluntarioEncontrado != null)
                 {
-                    await SecureStorage.Default.SetAsync("usuario_logado", voluntarioEncontrado.NomeCompleto);
+                    UsuarioRepository.usuario_logado = voluntarioEncontrado;
                     App.Current.MainPage = new HomeVoluntario();
                 }
                 else
