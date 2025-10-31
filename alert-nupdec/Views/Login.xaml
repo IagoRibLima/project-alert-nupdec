@@ -18,13 +18,15 @@
                    />
 
             <Label Text="Email:"/>
-            <Entry x:Name="txt_usuario"/>
+            <Entry x:Name="txt_usuario"
+                   ClearButtonVisibility="WhileEditing"/>
 
             <Label Text="Senha:"/>
             <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
                 <Entry x:Name="txt_senha" 
                        IsPassword="True"
                        Grid.Column="0"
+                       ClearButtonVisibility="WhileEditing"
                        />
 
                 <Button x:Name="btn_senha"

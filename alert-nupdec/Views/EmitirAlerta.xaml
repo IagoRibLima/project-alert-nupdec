@@ -25,17 +25,20 @@
         <Label Text="Endereço *"
                FontSize="16"/>
         <Entry x:Name="txt_endereco"
-               Placeholder="Rua, Numero, Bairro"/>
+               Placeholder="Rua, Numero, Bairro"
+               ClearButtonVisibility="WhileEditing"/>
 
         <Label Text="Descrição da ocorrência *"
                FontSize="16"/>
         <Entry x:Name="txt_descricao"
-               Placeholder="Descreva a situação com o máximo de detalhes"/>
+               Placeholder="Descreva a situação com o máximo de detalhes"
+               ClearButtonVisibility="WhileEditing"/>
 
         <Label Text="Anexar foto *"
                FontSize="16"/>
         <Entry x:Name="txt_imagem"
-               Placeholder="Adicionar foto"/>
+               Placeholder="Adicionar foto"
+               ClearButtonVisibility="WhileEditing"/>
 
         <Button Text="Emitir"
                 HorizontalOptions="Center"

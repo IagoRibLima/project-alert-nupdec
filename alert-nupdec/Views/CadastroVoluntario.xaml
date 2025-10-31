@@ -25,12 +25,14 @@
             <Label Text="Nome Completo *"/>
             <Entry x:Name="txt_nome_completo"
                    Placeholder="Digite seu nome completo"
+                   ClearButtonVisibility="WhileEditing"
                    />
 
             <Label Text="E-mail *"/>
             <Entry x:Name="txt_email"
                    Placeholder="exemplo@email.com"
                    Keyboard="Email"
+                   ClearButtonVisibility="WhileEditing"
                    />
 
             <Label Text="CPF *"/>
@@ -38,6 +40,7 @@
                    Placeholder="00000000000"
                    Keyboard="Numeric"
                    MaxLength="11"
+                   ClearButtonVisibility="WhileEditing"
                    />
 
             <Label Text="Telefone (com DDD) *"/>
@@ -45,6 +48,7 @@
                    Placeholder="11999999999"
                    Keyboard="Telephone"
                    MaxLength="11"
+                   ClearButtonVisibility="WhileEditing"
                    />
 
             <Label Text="Unidade NUPDEC *"/>
@@ -59,6 +63,7 @@
                        Placeholder="Mínimo 8 caracteres"
                        IsPassword="True"
                        Grid.Column="0"
+                       ClearButtonVisibility="WhileEditing"
                        />
                 <Button x:Name="btn_senha"
                         ImageSource="olho_aberto.png"

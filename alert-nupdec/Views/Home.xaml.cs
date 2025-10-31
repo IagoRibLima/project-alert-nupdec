@@ -24,8 +24,9 @@ public partial class Home : ContentPage
 		
 		if (confirmacao)
 		{
-			SecureStorage.Default.Remove("usuario_logado");
-			App.Current.MainPage = new Login();
+			//SecureStorage.Default.Remove("usuario_logado");
+			UsuarioRepository.usuario_logado = null;
+            App.Current.MainPage = new Login();
         }
 	}
 

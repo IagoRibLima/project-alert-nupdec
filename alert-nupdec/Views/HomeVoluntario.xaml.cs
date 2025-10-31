@@ -24,7 +24,8 @@ public partial class HomeVoluntario : ContentPage
 
         if (confirmacao)
         {
-            SecureStorage.Default.Remove("usuario_logado");
+            //SecureStorage.Default.Remove("usuario_logado");
+            UsuarioRepository.usuario_logado = null;
             App.Current.MainPage = new Login();
         }
     }

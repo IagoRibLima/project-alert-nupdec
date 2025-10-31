@@ -1,6 +1,5 @@
 ﻿using alert_nupdec.Models;
 using alert_nupdec.Repository;
-using System.Security.Cryptography.X509Certificates;
 
 namespace alert_nupdec;
 
