@@ -46,3 +46,5 @@ C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupde
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-ios\iossimulator-x64\alert-nupdec.AssemblyInfo.cs
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-ios\iossimulator-x64\alert-nupdec.csproj.CoreCompileInputs.cache
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-ios\iossimulator-x64\alert-nupdec.sourcelink.json
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\olho_fechado.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\olho_aberto.png

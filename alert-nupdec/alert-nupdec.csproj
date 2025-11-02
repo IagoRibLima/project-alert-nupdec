@@ -65,6 +65,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="FlyoutPageADM.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FlyoutPageVoluntario.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EmitirAlerta.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

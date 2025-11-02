@@ -27,7 +27,7 @@ public partial class Login : ContentPage
             if (admEncontrado != null)
             {
                 UsuarioRepository.usuario_logado = admEncontrado;
-                App.Current.MainPage = new NavigationPage(new Home());
+                App.Current.MainPage = new NavigationPage(new FlyoutPageADM());
             }
             else if (UsuarioRepository.lista_voluntarios != null)
             {
@@ -38,7 +38,7 @@ public partial class Login : ContentPage
                 if (voluntarioEncontrado != null)
                 {
                     UsuarioRepository.usuario_logado = voluntarioEncontrado;
-                    App.Current.MainPage = new NavigationPage(new HomeVoluntario());
+                    App.Current.MainPage = new NavigationPage(new FlyoutPageVoluntario());
                 }
                 else
                 {

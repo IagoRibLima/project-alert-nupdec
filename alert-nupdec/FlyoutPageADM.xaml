@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="alert_nupdec.FlyoutPageADM"
+            Title="FlyoutPageADM"
+            FlyoutLayoutBehavior="Popover"
+            NavigationPage.HasNavigationBar="False">
+    
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Flyout submenu"
+                     BackgroundColor="Aqua">
+
+            <VerticalStackLayout VerticalOptions="Center"
+                                 Padding="10"
+                                 Spacing="10">
+
+                <Label Text="Submenu"/>
+
+            </VerticalStackLayout>
+
+            
+
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+
+    <FlyoutPage.Detail>
+        <ContentPage BackgroundColor="Blue">
+
+            <VerticalStackLayout VerticalOptions="Center"
+                                 Padding="10"
+                                 Spacing="10">
+
+                <Label Text="Detalhes"/>
+
+                <Button Text="Desconectar"
+                        Clicked="DisconectButton_Clicked"
+                        HorizontalOptions="Center"/>
+
+                <Button Text="Cadastrar Voluntario"
+                        Clicked="CadastrarButton_Clicked"
+                        HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+        </ContentPage>
+    </FlyoutPage.Detail>
+    
+</FlyoutPage>

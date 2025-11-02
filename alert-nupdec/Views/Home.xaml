@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Home"
-             Title="Home">
-    
+             Title="Home"
+             NavigationPage.HasNavigationBar="False">
+
     <VerticalStackLayout VerticalOptions="Center"
                          Padding="10"
                          Spacing="10"
