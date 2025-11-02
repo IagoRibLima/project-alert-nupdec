@@ -32,11 +32,11 @@ public partial class Home : ContentPage
 
 	private async void CadastrarButton_Clicked(object sender, EventArgs e)
 	{
-		App.Current.MainPage = new CadastroVoluntario();
+		await Navigation.PushAsync(new CadastroVoluntario());
     }
 
 	private async void EmitirAlertaButton_Clicked(object sender, EventArgs e)
 	{
-		App.Current.MainPage = new EmitirAlerta();
+		await Navigation.PushAsync(new EmitirAlerta());
     }	
 }

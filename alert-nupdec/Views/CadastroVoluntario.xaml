@@ -11,6 +11,7 @@
                              >
             
             <Button Text="Voltar"
+                    VerticalOptions="Start"
                     HorizontalOptions="Start"
                     Clicked="VoltarButton_Clicked"
                     />

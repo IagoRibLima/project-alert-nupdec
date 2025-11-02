@@ -20,7 +20,7 @@ public partial class CadastroVoluntario : ContentPage
 
     private async void VoltarButton_Clicked(object sender, EventArgs e)
     {
-        App.Current.MainPage = new Home();
+        Navigation.PopAsync();
     }
 
     private async void CadastrarOKButton_Clicked(object sender, EventArgs e)

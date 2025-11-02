@@ -19,7 +19,7 @@ public partial class EmitirAlerta : ContentPage
 
     private async void VoltarButton_Clicked(object sender, EventArgs e)
     {
-        App.Current.MainPage = new HomeVoluntario();
+        Navigation.PopAsync();
     }
 
     private async void EmitirOKButton_Clicked(object sender, EventArgs e)

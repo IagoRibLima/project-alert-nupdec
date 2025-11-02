@@ -32,6 +32,6 @@ public partial class HomeVoluntario : ContentPage
 
     private async void EmitirAlertaButton_Clicked(object sender, EventArgs e)
     {
-        App.Current.MainPage = new EmitirAlerta();
+        await Navigation.PushAsync(new EmitirAlerta());
     }
 }
