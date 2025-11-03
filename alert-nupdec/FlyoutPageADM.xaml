@@ -8,9 +8,11 @@
     
     <FlyoutPage.Flyout>
         <ContentPage Title="Flyout submenu"
-                     BackgroundColor="Aqua">
+                     BackgroundColor="Aqua"
+                     WidthRequest="200"
+                     >
 
-            <VerticalStackLayout VerticalOptions="Center"
+            <VerticalStackLayout VerticalOptions="Start"
                                  Padding="10"
                                  Spacing="10">
 

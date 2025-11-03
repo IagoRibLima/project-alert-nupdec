@@ -72,4 +72,9 @@ public partial class Login : ContentPage
             button.ImageSource = "olho_fechado.png";
         }
     }
+
+    private void OnTapRecuperarSenha(object sender, EventArgs e)
+    {
+        
+    }
 }
