@@ -2,11 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Views.HomeVoluntario"
-             Title="HomeVoluntario">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="HomeVoluntario"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
+
+    <VerticalStackLayout VerticalOptions="Start"
+                         Padding="10"
+                         Spacing="10">
+
+        <Frame BackgroundColor="#1848a0">
+            <VerticalStackLayout>
+                <Label Text="Home Voluntário"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"/>
+                <Label x:Name="lbl_boasvindas"
+                       HorizontalTextAlignment="Center"/>
+                <Button Text="Desconectar"
+                        Clicked="ButtonDisconect"
+                        HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Emitir Alerta"
+                Clicked="ButtonEmitirAlerta"
+                HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

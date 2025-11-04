@@ -16,7 +16,7 @@ public partial class HomeADM : ContentPage
         });
     }
 
-    private async void DisconectButton_Clicked(object sender, EventArgs e)
+    private async void ButtonDisconect(object sender, EventArgs e)
     {
         bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
 
@@ -27,7 +27,7 @@ public partial class HomeADM : ContentPage
         }
     }
 
-    private async void EmitirAlertaButton_Clicked(object sender, EventArgs e)
+    private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());
     }
