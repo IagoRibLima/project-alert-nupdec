@@ -30,18 +30,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/FlyoutPageADM.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.FlyoutPageADM.xaml
-build_metadata.AdditionalFiles.TargetPath = FlyoutPageADM.xaml
-build_metadata.AdditionalFiles.RelativePath = FlyoutPageADM.xaml
-
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/FlyoutPageVoluntario.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.FlyoutPageVoluntario.xaml
-build_metadata.AdditionalFiles.TargetPath = FlyoutPageVoluntario.xaml
-build_metadata.AdditionalFiles.RelativePath = FlyoutPageVoluntario.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.MainPage.xaml
@@ -72,6 +60,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.EmitirA
 build_metadata.AdditionalFiles.TargetPath = Views\EmitirAlerta.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\EmitirAlerta.xaml
 
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/FlyoutPageADM.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.FlyoutPageADM.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FlyoutPageADM.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FlyoutPageADM.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/FlyoutPageVoluntario.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.FlyoutPageVoluntario.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FlyoutPageVoluntario.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FlyoutPageVoluntario.xaml
+
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Home.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Home.xaml
@@ -89,3 +89,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Login.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/RecuperarSenha.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.RecuperarSenha.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RecuperarSenha.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RecuperarSenha.xaml

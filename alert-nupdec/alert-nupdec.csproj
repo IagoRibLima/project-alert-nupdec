@@ -43,7 +43,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="transparent"/>
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="transparent" />
 		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\AppIcon\appicon.svg" Color="transparent" BaseSize="128,128" />
@@ -65,10 +65,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="FlyoutPageADM.xaml">
+	  <MauiXaml Update="Views\FlyoutPageADM.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="FlyoutPageVoluntario.xaml">
+	  <MauiXaml Update="Views\FlyoutPageVoluntario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EmitirAlerta.xaml">
@@ -84,6 +84,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Home.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RecuperarSenha.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -3,14 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Login"
              Title="Login"
-             NavigationPage.HasNavigationBar="False">
-
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Offset="0.8" Color="#a6a6a6" />
-            <GradientStop Offset="1.1" Color="#a6a6a6" />
-        </LinearGradientBrush>
-    </ContentPage.Background>
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="*, Auto">
         <ScrollView Grid.Row="0">
@@ -23,7 +17,7 @@
                        WidthRequest="150"
                        HeightRequest="150"/>
 
-                <Label Text="Alert Nupdec"
+                <Label Text="Alert NUPDEC"
                        TextColor="#212468"
                        HorizontalOptions="Center" 
                        FontAttributes="Bold"
@@ -55,7 +49,7 @@
                            PlaceholderColor="#6170ab"
                            TextColor="DarkSlateGray"/>
                 </Border>
-
+                
 
                 <Label Text="Senha"
                        TextColor="#2a2828"

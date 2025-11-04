@@ -1,5 +1,7 @@
 ﻿using alert_nupdec.Models;
 using alert_nupdec.Repository;
+using alert_nupdec.Views;
+using System.Threading.Tasks;
 
 namespace alert_nupdec;
 
@@ -14,15 +16,16 @@ public partial class Login : ContentPage
 	{
 		try
 		{
-            string emailDigitado = txt_usuario.Text?.Trim();
+            string usuarioDigitado = txt_usuario.Text?.Trim();
             string senhaDigitada = txt_senha.Text;
 
-            if (string.IsNullOrWhiteSpace(emailDigitado))
-                throw new Exception("Por favor, preecha o e-mail e a senha.");
+            if (string.IsNullOrWhiteSpace(usuarioDigitado))
+                throw new Exception("Por favor, preecha o e-mail/CPF e a senha.");
 
             Usuario admEncontrado = UsuarioRepository.lista_adm
                 .Cast<Usuario>()
-                .FirstOrDefault(i => emailDigitado == i.Email && senhaDigitada == i.Senha);
+                .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) && 
+                                      senhaDigitada == i.Senha);
 
             if (admEncontrado != null)
             {
@@ -33,7 +36,8 @@ public partial class Login : ContentPage
             {
                 Usuario voluntarioEncontrado = UsuarioRepository.ListaVoluntarios
                     .Cast<Usuario>()
-                    .FirstOrDefault(i => emailDigitado == i.Email && senhaDigitada == i.Senha);
+                    .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) && 
+                                         senhaDigitada == i.Senha);
 
                 if (voluntarioEncontrado != null)
                 {
@@ -73,8 +77,8 @@ public partial class Login : ContentPage
         }
     }
 
-    private void OnTapRecuperarSenha(object sender, EventArgs e)
+    private async void OnTapRecuperarSenha(object sender, EventArgs e)
     {
-        
+        await Navigation.PushAsync(new RecuperarSenha());
     }
 }

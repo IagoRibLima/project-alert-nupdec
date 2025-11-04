@@ -2,15 +2,15 @@
 <FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="alert_nupdec.FlyoutPageADM"
-            Title="FlyoutPageADM"
+            Title=""
             FlyoutLayoutBehavior="Popover"
-            NavigationPage.HasNavigationBar="False">
-    
+            NavigationPage.HasNavigationBar="False"
+            BackgroundColor="#1848a0">
+
     <FlyoutPage.Flyout>
         <ContentPage Title="Flyout submenu"
-                     BackgroundColor="Aqua"
-                     WidthRequest="200"
-                     >
+                     BackgroundColor="#1848a0"
+                     Opacity="0.75">
 
             <VerticalStackLayout VerticalOptions="Start"
                                  Padding="10"
@@ -19,15 +19,13 @@
                 <Label Text="Submenu"/>
 
             </VerticalStackLayout>
-
             
-
         </ContentPage>
     </FlyoutPage.Flyout>
 
 
     <FlyoutPage.Detail>
-        <ContentPage BackgroundColor="Blue">
+        <ContentPage BackgroundColor="#a6a6a6">
 
             <VerticalStackLayout VerticalOptions="Center"
                                  Padding="10"

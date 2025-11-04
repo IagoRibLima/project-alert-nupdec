@@ -7,7 +7,7 @@ public partial class FlyoutPageADM : FlyoutPage
 	public FlyoutPageADM()
 	{
 		InitializeComponent();
-	}
+    }
 
     private async void DisconectButton_Clicked(object sender, EventArgs e)
     {
@@ -17,7 +17,7 @@ public partial class FlyoutPageADM : FlyoutPage
         {
             //SecureStorage.Default.Remove("usuario_logado");
             UsuarioRepository.usuario_logado = null;
-            App.Current.MainPage = new Login();
+            App.Current.MainPage = new NavigationPage(new Login());
         }
     }
 
