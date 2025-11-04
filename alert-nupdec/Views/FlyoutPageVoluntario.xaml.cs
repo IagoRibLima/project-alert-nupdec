@@ -1,6 +1,6 @@
 using alert_nupdec.Repository;
 
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class FlyoutPageVoluntario : FlyoutPage
 {
@@ -15,9 +15,23 @@ public partial class FlyoutPageVoluntario : FlyoutPage
 
         if (confirmacao)
         {
-            //SecureStorage.Default.Remove("usuario_logado");
             UsuarioRepository.usuario_logado = null;
             App.Current.MainPage = new Login();
         }
+    }
+
+    private async void OnTapDicas(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Dicas());
+    }
+
+    private async void OnTapCursos(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Cursos());
+    }
+
+    private async void OnTapConfiguracoes(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Configuracoes());
     }
 }

@@ -1,28 +1,24 @@
-using alert_nupdec.Repository;
-
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class FlyoutPageADM : FlyoutPage
 {
 	public FlyoutPageADM()
 	{
-		InitializeComponent();
+        InitializeComponent();
     }
 
-    private async void DisconectButton_Clicked(object sender, EventArgs e)
+    private async void OnTapDicas(object sender, EventArgs e)
     {
-        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
-
-        if (confirmacao)
-        {
-            //SecureStorage.Default.Remove("usuario_logado");
-            UsuarioRepository.usuario_logado = null;
-            App.Current.MainPage = new NavigationPage(new Login());
-        }
+        await Navigation.PushAsync(new Dicas());
     }
 
-    private async void CadastrarButton_Clicked(object sender, EventArgs e)
+    private async void OnTapCursos(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new CadastroVoluntario());
+        await Navigation.PushAsync(new Cursos());
+    }
+
+    private async void OnTapConfiguracoes(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Configuracoes());
     }
 }

@@ -1,7 +1,6 @@
 using alert_nupdec.Repository;
-using alert_nupdec.Views;
 
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class Home : ContentPage
 {

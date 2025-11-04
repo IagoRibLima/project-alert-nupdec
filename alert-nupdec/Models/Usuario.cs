@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace alert_nupdec.Models
+﻿namespace alert_nupdec.Models
 {
     public class Usuario
     {

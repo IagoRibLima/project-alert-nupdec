@@ -1,9 +1,7 @@
 ﻿using alert_nupdec.Models;
 using alert_nupdec.Repository;
-using alert_nupdec.Views;
-using System.Threading.Tasks;
 
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class Login : ContentPage
 {

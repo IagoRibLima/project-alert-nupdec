@@ -1,7 +1,6 @@
 using alert_nupdec.Repository;
-using alert_nupdec.Views;
 
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class HomeVoluntario : ContentPage
 {
@@ -24,7 +23,6 @@ public partial class HomeVoluntario : ContentPage
 
         if (confirmacao)
         {
-            //SecureStorage.Default.Remove("usuario_logado");
             UsuarioRepository.usuario_logado = null;
             App.Current.MainPage = new Login();
         }

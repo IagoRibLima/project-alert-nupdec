@@ -2,7 +2,7 @@
 using alert_nupdec.Repository;
 using System.Net.Mail;
 
-namespace alert_nupdec;
+namespace alert_nupdec.Views;
 
 public partial class CadastroVoluntario : ContentPage
 {
