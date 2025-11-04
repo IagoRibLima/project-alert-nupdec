@@ -10,7 +10,7 @@ public partial class Login : ContentPage
 		InitializeComponent();
 	}
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    private async void ButtonLogin(object sender, EventArgs e)
     {
         try
         {
@@ -59,7 +59,7 @@ public partial class Login : ContentPage
         }
     }
 
-    private void SenhaButton_Clicked(object sender, EventArgs e)
+    private void ButtonVerSenha(object sender, EventArgs e)
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
 

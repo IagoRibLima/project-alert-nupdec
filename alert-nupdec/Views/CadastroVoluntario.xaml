@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="alert_nupdec.Views.CadastroVoluntario"
+             Title="CadastroVoluntario"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center"
+                             Padding="15"
+                             Spacing="10"
+                             >
+
+            <Button Text="Voltar"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Clicked="ButtonVoltar"/>
+
+            <Label Text="Cadastro de Novo Voluntário"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" 
+                   Margin="0,15,0,15"/>
+
+            <Label Text="Nome Completo *"/>
+            <Entry x:Name="txt_nome_completo"
+                   Placeholder="Digite seu nome completo"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label Text="E-mail *"/>
+            <Entry x:Name="txt_email"
+                   Placeholder="exemplo@email.com"
+                   Keyboard="Email"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label Text="CPF *"/>
+            <Entry x:Name="txt_cpf"
+                   Placeholder="00000000000"
+                   Keyboard="Numeric"
+                   MaxLength="11"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label Text="Telefone (com DDD) *"/>
+            <Entry x:Name="txt_telefone"
+                   Placeholder="11999999999"
+                   Keyboard="Telephone"
+                   MaxLength="11"
+                   ClearButtonVisibility="WhileEditing"/>
+
+            <Label Text="Unidade NUPDEC *"/>
+            <Picker x:Name="picker_unidades"
+                    Title="Selecione uma Unidade">
+            </Picker>
+
+            <Label Text="Senha *"/>
+
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+                <Entry x:Name="txt_senha"
+                       Placeholder="Mínimo 8 caracteres"
+                       IsPassword="True"
+                       Grid.Column="0"
+                       ClearButtonVisibility="WhileEditing"/>
+                <Button x:Name="btn_senha"
+                        ImageSource="olho_aberto.png"
+                        Clicked="ButtonVerSenha"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        WidthRequest="50"
+                        HeightRequest="40"
+                        Background="Gray"
+                        BorderWidth="0"/>
+            </Grid>
+
+            <Label Text="A senha deve ter min. 8 caracteres, 1 maiúscula e 1 caracter especial"
+                   FontSize="10"
+                   TextColor="Gray"/>
+
+            <Button Text="Cadastrar"
+                    HorizontalOptions="Center"
+                    Clicked="ButtonCadastrar"
+                    Padding="50, 10"
+                    Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

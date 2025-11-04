@@ -7,6 +7,11 @@ public partial class FlyoutPageADM : FlyoutPage
 		InitializeComponent();
 	}
 
+    private async void OnTapCadastrarVoluntario(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CadastroVoluntario());
+    }
+
     private async void OnTapDicas(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Dicas());

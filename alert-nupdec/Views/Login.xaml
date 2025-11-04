@@ -83,7 +83,7 @@
 
                         <ImageButton x:Name="btn_senha"
                                      Source="olho_aberto.png"
-                                     Clicked="SenhaButton_Clicked"
+                                     Clicked="ButtonVerSenha"
                                      Grid.Column="1"
                                      VerticalOptions="Center"
                                      WidthRequest="35"
@@ -113,7 +113,7 @@
                         Margin="0,20,0,0">
 
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Button_Clicked" />
+                        <TapGestureRecognizer Tapped="ButtonLogin" />
                     </Border.GestureRecognizers>
 
                     <Border.StrokeShape>
