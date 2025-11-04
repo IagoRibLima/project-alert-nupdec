@@ -145,9 +145,7 @@
                                Margin="0,10,0,10"/>
 
                     </HorizontalStackLayout>
-
                 </Border>
-
             </VerticalStackLayout>
         </ScrollView>
 

@@ -1,19 +1,19 @@
-Ôªøusing alert_nupdec.Models;
+using alert_nupdec.Models;
 using alert_nupdec.Repository;
 
 namespace alert_nupdec.Views;
 
 public partial class Login : ContentPage
 {
-    public Login()
+	public Login()
 	{
 		InitializeComponent();
 	}
 
-	private async void Button_Clicked(object sender, EventArgs e)
-	{
-		try
-		{
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
             string usuarioDigitado = txt_usuario.Text?.Trim();
             string senhaDigitada = txt_senha.Text;
 
@@ -22,7 +22,7 @@ public partial class Login : ContentPage
 
             Usuario admEncontrado = UsuarioRepository.lista_adm
                 .Cast<Usuario>()
-                .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) && 
+                .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) &&
                                       senhaDigitada == i.Senha);
 
             if (admEncontrado != null)
@@ -34,7 +34,7 @@ public partial class Login : ContentPage
             {
                 Usuario voluntarioEncontrado = UsuarioRepository.ListaVoluntarios
                     .Cast<Usuario>()
-                    .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) && 
+                    .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) &&
                                          senhaDigitada == i.Senha);
 
                 if (voluntarioEncontrado != null)
@@ -44,18 +44,18 @@ public partial class Login : ContentPage
                 }
                 else
                 {
-                    throw new Exception("Usu√°rio ou senha inv√°lidos.");
+                    throw new Exception("Usu·rio ou senha inv·lidos.");
                 }
             }
             else
             {
-                throw new Exception("Usu√°rio ou senha inv√°lidos.");
+                throw new Exception("Usu·rio ou senha inv·lidos.");
             }
 
         }
         catch (Exception ex)
-		{
-			await DisplayAlert("Erro", ex.Message, "Fechar");
+        {
+            await DisplayAlert("Erro", ex.Message, "Fechar");
         }
     }
 

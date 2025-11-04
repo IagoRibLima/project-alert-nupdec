@@ -48,12 +48,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroVoluntario.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroVoluntario.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CadastroVoluntario.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CadastroVoluntario.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Configuracoes.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Configuracoes.xaml
@@ -72,12 +66,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Dicas.x
 build_metadata.AdditionalFiles.TargetPath = Views\Dicas.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Dicas.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/EmitirAlerta.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.EmitirAlerta.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\EmitirAlerta.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\EmitirAlerta.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/FlyoutPageADM.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.FlyoutPageADM.xaml
@@ -90,17 +78,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.FlyoutP
 build_metadata.AdditionalFiles.TargetPath = Views\FlyoutPageVoluntario.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FlyoutPageVoluntario.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Home.xaml]
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/HomeADM.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Home.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Home.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Home.xaml
-
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/HomeVoluntario.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.HomeVoluntario.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\HomeVoluntario.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\HomeVoluntario.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.HomeADM.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomeADM.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomeADM.xaml
 
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Login.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

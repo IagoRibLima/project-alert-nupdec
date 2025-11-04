@@ -1,4 +1,6 @@
-﻿namespace alert_nupdec
+﻿using alert_nupdec.Views;
+
+namespace alert_nupdec
 {
     public partial class App : Application
     {

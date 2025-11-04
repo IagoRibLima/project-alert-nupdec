@@ -4,8 +4,8 @@ public partial class FlyoutPageADM : FlyoutPage
 {
 	public FlyoutPageADM()
 	{
-        InitializeComponent();
-    }
+		InitializeComponent();
+	}
 
     private async void OnTapDicas(object sender, EventArgs e)
     {
