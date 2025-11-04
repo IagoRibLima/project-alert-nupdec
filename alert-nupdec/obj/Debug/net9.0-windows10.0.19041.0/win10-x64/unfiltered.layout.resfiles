@@ -54,6 +54,16 @@ dotnet_bot.scale-400.png
 logo.scale-100.png
 olho_aberto.scale-100.png
 olho_fechado.scale-100.png
+appiconSplashScreen.scale-100.png
+appiconSplashScreen.scale-125.png
+appiconSplashScreen.scale-150.png
+appiconSplashScreen.scale-200.png
+appiconSplashScreen.scale-400.png
+logoSplashScreen.scale-100.png
+logoSplashScreen.scale-125.png
+logoSplashScreen.scale-150.png
+logoSplashScreen.scale-200.png
+logoSplashScreen.scale-400.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png
