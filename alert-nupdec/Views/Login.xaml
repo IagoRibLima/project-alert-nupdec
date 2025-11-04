@@ -12,134 +12,141 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <ScrollView>
-        <VerticalStackLayout VerticalOptions="Start"
-                             Spacing="10"
-                             Padding="60,20,60,0">
+    <Grid RowDefinitions="*, Auto">
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout VerticalOptions="Start"
+                                 Spacing="10"
+                                 Padding="60,20,60,0">
 
-            <Image Source="logo.png"
-                   Margin="0,12,0,15"
-                   WidthRequest="150"
-                   HeightRequest="150"/>
+                <Image Source="logo.png"
+                       Margin="0,12,0,15"
+                       WidthRequest="150"
+                       HeightRequest="150"/>
 
-            <Label Text="Alert Nupdec"
-                   TextColor="#212468"
-                   HorizontalOptions="Center" 
-                   FontAttributes="Bold"
-                   FontSize="25"
-                   Margin="0,0,0,15"/>
+                <Label Text="Alert Nupdec"
+                       TextColor="#212468"
+                       HorizontalOptions="Center" 
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       Margin="0,0,0,15"/>
 
-            <Label Text="Email ou CPF"
-                   TextColor="#2a2828"
-                   Margin="10,15,0,0"/>
-            <Border StrokeThickness="1"
-                    BackgroundColor="#e8ecee"
-                    Padding="8">
+                <Label Text="Email ou CPF"
+                       TextColor="#2a2828"
+                       Margin="10,15,0,0"/>
+                <Border StrokeThickness="1"
+                        BackgroundColor="#e8ecee"
+                        Padding="8">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20"/>
-                </Border.StrokeShape>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
 
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                            Offset="5,5"
-                            Radius="10"
-                            Opacity="0.3"/>
-                </Border.Shadow>
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
 
-                <Entry x:Name="txt_usuario"
-                       ClearButtonVisibility="WhileEditing"
-                       Placeholder="Digite seu e-mail ou CPF"
-                       BackgroundColor="#e8ecee"
-                       PlaceholderColor="#6170ab"
-                       TextColor="DarkSlateGray"/>
-            </Border>
-
-
-            <Label Text="Senha"
-                   TextColor="#2a2828"
-                   Margin="10,15,0,0"/>
-            <Border BackgroundColor="#e8ecee"
-                    Padding="8"
-                    StrokeThickness="1">
-
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20"/>
-                </Border.StrokeShape>
-
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                            Offset="5,5"
-                            Radius="10"
-                            Opacity="0.3"/>
-                </Border.Shadow>
-
-                <Grid ColumnDefinitions="*, Auto" 
-                      ColumnSpacing="5">
-
-                    <Entry x:Name="txt_senha" 
-                           IsPassword="True"
-                           Grid.Column="0"
-                           Placeholder="Digite sua senha"
+                    <Entry x:Name="txt_usuario"
+                           ClearButtonVisibility="WhileEditing"
+                           Placeholder="Digite seu e-mail ou CPF"
+                           BackgroundColor="Transparent"
                            PlaceholderColor="#6170ab"
-                           TextColor="DarkSlateGrey"
-                           BackgroundColor="#e8ecee"/>
+                           TextColor="DarkSlateGray"/>
+                </Border>
 
-                    <Button x:Name="btn_senha"
-                            ImageSource="olho_aberto.png"
-                            Clicked="SenhaButton_Clicked"
-                            Grid.Column="1"
-                            VerticalOptions="Center"
-                            WidthRequest="50"
-                            HeightRequest="40"
-                            Background="Transparent"
-                            BorderWidth="0"/>
-                </Grid>
-            </Border>
 
-            <Label Text="Recuperar senha"
-                   FontSize="12"
-                   TextColor="#6170ab"
-                   FontAttributes="Bold"
-                   Margin="10,0,0,0">
+                <Label Text="Senha"
+                       TextColor="#2a2828"
+                       Margin="10,15,0,0"/>
+                <Border BackgroundColor="#e8ecee"
+                        Padding="8"
+                        StrokeThickness="1">
 
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnTapRecuperarSenha" />
-                </Label.GestureRecognizers>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
 
-            </Label>
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
 
-            <Border BackgroundColor="#ff751f"
-                    Padding="4"
-                    StrokeThickness="1"
-                    Margin="0,20,0,0">
+                    <Grid ColumnDefinitions="*, Auto" 
+                          ColumnSpacing="5">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20"/>
-                </Border.StrokeShape>
+                        <Entry x:Name="txt_senha" 
+                               IsPassword="True"
+                               ClearButtonVisibility="WhileEditing"
+                               Grid.Column="0"
+                               Placeholder="Digite sua senha"
+                               PlaceholderColor="#6170ab"
+                               TextColor="DarkSlateGrey"
+                               BackgroundColor="Transparent"/>
 
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                            Offset="2,0"
-                            Radius="10"
-                            Opacity="0.1"/>
-                </Border.Shadow>
+                        <ImageButton x:Name="btn_senha"
+                                     Source="olho_aberto.png"
+                                     Clicked="SenhaButton_Clicked"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     WidthRequest="35"
+                                     HeightRequest="35"
+                                     Background="Transparent"
+                                     Aspect="AspectFit"
+                                     BorderWidth="0"
+                                     Padding="10"/>
+                    </Grid>
+                </Border>
 
-                <Button Text="Entrar"
-                        FontAttributes="Bold"
-                        Clicked="Button_Clicked"
-                        Margin="0,0,0,0"
-                        BackgroundColor="#ff751f"
-                        TextColor="#e8ecee"
-                        FontSize="16"/>
-            </Border>
+                <Label Text="Recuperar senha"
+                       FontSize="12"
+                       TextColor="#6170ab"
+                       FontAttributes="Bold"
+                       Margin="10,0,0,0">
 
-            <Label Text="© 2024 NUPDEC - Núcleo de Pesquisa em Defesa Civil"
-                   TextColor="#7e7e7e"
-                   FontSize="10"
-                   HorizontalOptions="Center"
-                   Margin="0,120,0,0"/>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapRecuperarSenha" />
+                    </Label.GestureRecognizers>
 
-        </VerticalStackLayout>
-    </ScrollView>
+                </Label>
+
+                <Border BackgroundColor="#ff751f"
+                        Padding="4"
+                        StrokeThickness="1"
+                        Margin="0,20,0,0">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="2,0"
+                                Radius="10"
+                                Opacity="0.1"/>
+                    </Border.Shadow>
+
+                    <Button Text="Entrar"
+                            FontAttributes="Bold"
+                            Clicked="Button_Clicked"
+                            Margin="0,0,0,0"
+                            BackgroundColor="#ff751f"
+                            TextColor="#e8ecee"
+                            FontSize="16"/>
+                </Border>
+                
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label Grid.Row="1"
+               Text="© 2024 NUPDEC - Núcleo de Pesquisa em Defesa Civil"
+               TextColor="#7e7e7e"
+               FontSize="10"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Margin="0,0,0,20"/>
+    </Grid>
 </ContentPage>
