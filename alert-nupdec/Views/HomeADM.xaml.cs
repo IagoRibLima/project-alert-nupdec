@@ -12,23 +12,21 @@ public partial class HomeADM : ContentPage
 
         Task.Run(async () =>
         {
-            lbl_boasvindas.Text = $"Bem-vindo(a) {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade}";
         });
-    }
-
-    private async void ButtonDisconect(object sender, EventArgs e)
-    {
-        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
-
-        if (confirmacao)
-        {
-            UsuarioRepository.usuario_logado = null;
-            App.Current.MainPage = new NavigationPage(new Login());
-        }
     }
 
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());
+    }
+
+    private void ButtonMenu(object sender, EventArgs e)
+    {
+        if (App.Current.MainPage is FlyoutPage flyoutPage)
+        {
+            flyoutPage.IsPresented = true;
+        }
     }
 }

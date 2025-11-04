@@ -522,3 +522,9 @@ C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupde
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\mais.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\sino.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\usuario.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\mais.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\sino.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\usuario.scale-100.png
