@@ -540,3 +540,5 @@ C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupde
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconSplashScreen.scale-150.png
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconSplashScreen.scale-200.png
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconSplashScreen.scale-400.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\login_entrar.scale-100.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\login_entrar.scale-100.png

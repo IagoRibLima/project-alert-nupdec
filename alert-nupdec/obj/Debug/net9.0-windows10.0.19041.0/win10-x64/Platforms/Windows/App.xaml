@@ -1,0 +1,23 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="alert_nupdec.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:alert_nupdec.WinUI">
+
+    <maui:MauiWinUIApplication.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="Transparent"/>
+
+            <SolidColorBrush x:Key="TextControlFocusVisualPrimaryBrush" Color="Transparent"/>
+            <SolidColorBrush x:Key="TextControlFocusVisualSecondaryBrush" Color="Transparent"/>
+
+            <Thickness x:Key="TextControlBorderThemeThicknessFocused">0</Thickness>
+
+            <Thickness x:Key="TextControlBorderThemeThickness">0</Thickness>
+
+        </ResourceDictionary>
+    </maui:MauiWinUIApplication.Resources>
+
+</maui:MauiWinUIApplication>
+
