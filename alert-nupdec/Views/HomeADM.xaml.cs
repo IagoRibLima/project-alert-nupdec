@@ -21,12 +21,4 @@ public partial class HomeADM : ContentPage
     {
         await Navigation.PushAsync(new EmitirAlerta());
     }
-
-    private void ButtonMenu(object sender, EventArgs e)
-    {
-        if (App.Current.MainPage is FlyoutPage flyoutPage)
-        {
-            flyoutPage.IsPresented = true;
-        }
-    }
 }

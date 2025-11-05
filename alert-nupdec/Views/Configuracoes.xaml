@@ -6,6 +6,8 @@
     <VerticalStackLayout>
         <Button Text="Sair"
                 TextColor="Red"
+                FontSize="30"
+                FontAttributes="Bold"
                 BackgroundColor="Transparent"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"

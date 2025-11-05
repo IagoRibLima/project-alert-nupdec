@@ -12,19 +12,9 @@ public partial class HomeVoluntario : ContentPage
 
         Task.Run(async () =>
         {
-            lbl_boasvindas.Text = $"Bem-vindo(a) {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_boasvindas.Text = $"Voluntário: {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade}";
         });
-    }
-
-    private async void ButtonDisconect(object sender, EventArgs e)
-    {
-        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
-
-        if (confirmacao)
-        {
-            UsuarioRepository.usuario_logado = null;
-            App.Current.MainPage = new NavigationPage(new Login());
-        }
     }
 
     private async void ButtonEmitirAlerta(object sender, EventArgs e)

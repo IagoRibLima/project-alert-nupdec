@@ -6,25 +6,78 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
 
-    <VerticalStackLayout VerticalOptions="Start"
-                         Padding="10"
-                         Spacing="10">
+    <Grid RowDefinitions="Auto,*">
+        <!--Primeiro Grid Vertital (Barra Azul com nome do Usuário)-->
+        <Grid Grid.Row="0" 
+              BackgroundColor="#1848a0" 
+              Padding="10, 15">
 
-        <Frame BackgroundColor="#1848a0">
-            <VerticalStackLayout>
-                <Label Text="Home Voluntário"
-                       FontSize="Large"
-                       HorizontalTextAlignment="Center"/>
+            <!--Definição do Grid Horizontal da Barra Superior Azul-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Primeiro Grid Horizontal (Foto do usuário)-->
+            <Border Grid.Column="0"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    StrokeShape="RoundRectangle 20"
+                    Margin="10,0"
+                    VerticalOptions="Center">
+                <Image Source="usuario.png" Aspect="AspectFill" />
+            </Border>
+
+            <!--Segundo Grid Horizontal (Nome do usuário com unidade)-->
+            <VerticalStackLayout Grid.Column="1" 
+                                 VerticalOptions="Center"
+                                 Margin="20,0"
+                                 Spacing="2">
                 <Label x:Name="lbl_boasvindas"
-                       HorizontalTextAlignment="Center"/>
-                <Button Text="Desconectar"
-                        Clicked="ButtonDisconect"
-                        HorizontalOptions="Center"/>
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="16"/>
+                <Label x:Name="lbl_unidade" 
+                       TextColor="#B0C4DE"
+                       FontSize="12"/>
             </VerticalStackLayout>
-        </Frame>
 
-        <Button Text="Emitir Alerta"
-                Clicked="ButtonEmitirAlerta"
-                HorizontalOptions="Center"/>
-    </VerticalStackLayout>
+            <!--Terceiro Grid Horizontal (Sino de notificação)-->
+            <Grid Grid.Column="2" 
+                  VerticalOptions="Center"
+                  Margin="10,0">
+
+                <ImageButton Source="sino.png"
+                             HeightRequest="26"
+                             WidthRequest="26"
+                             Background="Transparent"/>
+            </Grid>
+        </Grid>
+
+        <!--Grid do Feed-->
+        <Grid Grid.Row="1">
+            <ScrollView>
+                <VerticalStackLayout Spacing="12" 
+                                     Padding="10">
+
+                    <!--Feed-->
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+            <!--Botão para criar alerta-->
+            <ImageButton Source="mais.png"
+                         Clicked="ButtonEmitirAlerta"
+                         BackgroundColor="#FF751F"
+                         CornerRadius="28"
+                         HeightRequest="56"
+                         WidthRequest="56"
+                         Padding="12" 
+                         Aspect="AspectFit"
+                         HorizontalOptions="End"
+                         VerticalOptions="End"
+                         Margin="20"/>
+        </Grid>
+    </Grid>
 </ContentPage>
