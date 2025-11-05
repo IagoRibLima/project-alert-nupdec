@@ -3,85 +3,238 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Views.CadastroVoluntario"
              Title="CadastroVoluntario"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
 
-    <ScrollView>
-        <VerticalStackLayout VerticalOptions="Center"
-                             Padding="15"
-                             Spacing="10"
-                             >
+    <Grid RowDefinitions="Auto, *">
+        <!--Botão de voltar-->
+        <Button Grid.Row="0"
+                Text="Voltar"
+                TextColor="#e8ecee"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                Clicked="ButtonVoltar"
+                Margin="8"
+                Padding="12"
+                BackgroundColor="#1848a0"/>
 
-            <Button Text="Voltar"
-                    VerticalOptions="Start"
-                    HorizontalOptions="Start"
-                    Clicked="ButtonVoltar"/>
+        <!--ScrollView do formulário-->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout VerticalOptions="Start"
+                                 Padding="60,0,60,60"
+                                 Spacing="10">
 
-            <Label Text="Cadastro de Novo Voluntário"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center" 
-                   Margin="0,15,0,15"/>
+                <!--Título da página-->
+                <Label Text="Cadastrar Voluntário"
+                       TextColor="#1848a0"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" 
+                       Margin="0,0,0,15"/>
 
-            <Label Text="Nome Completo *"/>
-            <Entry x:Name="txt_nome_completo"
-                   Placeholder="Digite seu nome completo"
-                   ClearButtonVisibility="WhileEditing"/>
+                <!--Primeiro campo do formulário-->
+                <Label Text="Nome Completo *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Border StrokeThickness="1"
+                        BackgroundColor="#e8ecee"
+                        Padding="8">
 
-            <Label Text="E-mail *"/>
-            <Entry x:Name="txt_email"
-                   Placeholder="exemplo@email.com"
-                   Keyboard="Email"
-                   ClearButtonVisibility="WhileEditing"/>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
 
-            <Label Text="CPF *"/>
-            <Entry x:Name="txt_cpf"
-                   Placeholder="00000000000"
-                   Keyboard="Numeric"
-                   MaxLength="11"
-                   ClearButtonVisibility="WhileEditing"/>
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
 
-            <Label Text="Telefone (com DDD) *"/>
-            <Entry x:Name="txt_telefone"
-                   Placeholder="11999999999"
-                   Keyboard="Telephone"
-                   MaxLength="11"
-                   ClearButtonVisibility="WhileEditing"/>
+                    <Entry x:Name="txt_nome_completo"
+                           Placeholder="Digite seu nome completo"
+                           ClearButtonVisibility="WhileEditing"/>
+                </Border>
 
-            <Label Text="Unidade NUPDEC *"/>
-            <Picker x:Name="picker_unidades"
-                    Title="Selecione uma Unidade">
-            </Picker>
+                <!--Segundo campo do formulário-->
+                <Label Text="E-mail *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Border StrokeThickness="1"
+                        BackgroundColor="#e8ecee"
+                        Padding="8">
 
-            <Label Text="Senha *"/>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
 
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
-                <Entry x:Name="txt_senha"
-                       Placeholder="Mínimo 8 caracteres"
-                       IsPassword="True"
-                       Grid.Column="0"
-                       ClearButtonVisibility="WhileEditing"/>
-                <Button x:Name="btn_senha"
-                        ImageSource="olho_aberto.png"
-                        Clicked="ButtonVerSenha"
-                        Grid.Column="1"
-                        VerticalOptions="Center"
-                        WidthRequest="50"
-                        HeightRequest="40"
-                        Background="Gray"
-                        BorderWidth="0"/>
-            </Grid>
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
 
-            <Label Text="A senha deve ter min. 8 caracteres, 1 maiúscula e 1 caracter especial"
-                   FontSize="10"
-                   TextColor="Gray"/>
+                    <Entry x:Name="txt_email"
+                           Placeholder="exemplo@email.com"
+                           Keyboard="Email"
+                           ClearButtonVisibility="WhileEditing"/>
+                </Border>
 
-            <Button Text="Cadastrar"
-                    HorizontalOptions="Center"
-                    Clicked="ButtonCadastrar"
-                    Padding="50, 10"
-                    Margin="0,20,0,0"/>
+                <!--Terceiro campo do formulário-->
+                <Label Text="CPF *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Border StrokeThickness="1"
+                        BackgroundColor="#e8ecee"
+                        Padding="8">
 
-        </VerticalStackLayout>
-    </ScrollView>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
 
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
+
+                    <Entry x:Name="txt_cpf"
+                           Placeholder="00000000000"
+                           Keyboard="Numeric"
+                           MaxLength="11"
+                           ClearButtonVisibility="WhileEditing"/>
+                </Border>
+
+                <!--Quarto campo do formulário-->
+                <Label Text="Telefone (com DDD) *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Border StrokeThickness="1"
+                        BackgroundColor="#e8ecee"
+                        Padding="8">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
+
+                    <Entry x:Name="txt_telefone"
+                           Placeholder="11999999999"
+                           Keyboard="Telephone"
+                           MaxLength="11"
+                           ClearButtonVisibility="WhileEditing"/>
+                </Border>
+
+                <!--Quinto campo do formulário-->
+                <Label Text="Unidade NUPDEC *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Picker x:Name="picker_unidades"
+                        Title="Selecione uma Unidade"
+                        TitleColor="#1848a0"
+                        TextColor="#1848a0"
+                        BackgroundColor="#e8ecee"
+                        FontSize="14">
+                </Picker>
+
+                <!--Sexto campo do formulário-->
+                <Label Text="Senha *"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="16"
+                       Margin="10,2"/>
+                <Border BackgroundColor="#e8ecee"
+                        Padding="8"
+                        StrokeThickness="1">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Radius="10"
+                                Opacity="0.3"/>
+                    </Border.Shadow>
+
+                    <Grid ColumnDefinitions="*, Auto" 
+                          ColumnSpacing="5">
+                        <Entry x:Name="txt_senha"
+                               Placeholder="Mínimo 8 caracteres"
+                               IsPassword="True"
+                               Grid.Column="0"
+                               ClearButtonVisibility="WhileEditing"
+                               TextColor="DarkSlateGrey"
+                               BackgroundColor="Transparent"/>
+
+                        <ImageButton x:Name="btn_senha"
+                                     Source="olho_aberto.png"
+                                     Clicked="ButtonVerSenha"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     WidthRequest="35"
+                                     HeightRequest="35"
+                                     Background="Transparent"
+                                     Aspect="AspectFit"
+                                     BorderWidth="0"
+                                     Padding="10"/>
+                    </Grid>
+                </Border>
+
+                <Label Text="A senha deve ter min. 8 caracteres, 1 maiúscula e 1 caracter especial"
+                       FontSize="10"
+                       TextColor="Gray"
+                       Margin="12,0"/>
+
+                <!--Botão de cadastrar-->
+                <Border BackgroundColor="#ff751f"
+                        Padding="4"
+                        StrokeThickness="1"
+                        Margin="0,20,0,0">
+
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonLogin" />
+                    </Border.GestureRecognizers>
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="2,0"
+                                Radius="10"
+                                Opacity="0.1"/>
+                    </Border.Shadow>
+                    <Button Text="Cadastrar"
+                            TextColor="#e8ecee"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Clicked="ButtonCadastrar"
+                            BackgroundColor="Transparent"/>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

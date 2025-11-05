@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+900520fc1a0e935791fccc7b84a7fdaf38b7e469")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c20471adc1d2e44eca9787220d54ffdd379e4d4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("alert-nupdec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

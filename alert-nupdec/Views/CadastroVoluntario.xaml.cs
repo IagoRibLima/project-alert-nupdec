@@ -120,15 +120,15 @@ public partial class CadastroVoluntario : ContentPage
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
 
-        var button = (Button)sender;
+        var button = (ImageButton)sender;
 
         if (txt_senha.IsPassword)
         {
-            button.ImageSource = "olho_aberto.png";
+            button.Source = "olho_aberto.png";
         }
         else
         {
-            button.ImageSource = "olho_fechado.png";
+            button.Source = "olho_fechado.png";
         }
     }
 }

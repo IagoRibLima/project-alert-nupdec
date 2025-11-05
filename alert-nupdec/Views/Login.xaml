@@ -135,14 +135,14 @@
                         <Image Source="login_entrar.png"
                                HeightRequest="26"
                                VerticalOptions="Center"
-                               Margin="0,10,0,10"/>
+                               Margin="0,10"/>
 
                         <Label Text="Entrar"
                                FontAttributes="Bold"
                                FontSize="18"
                                TextColor="#e8ecee"
                                VerticalOptions="Center"
-                               Margin="0,10,0,10"/>
+                               Margin="0,10"/>
 
                     </HorizontalStackLayout>
                 </Border>
