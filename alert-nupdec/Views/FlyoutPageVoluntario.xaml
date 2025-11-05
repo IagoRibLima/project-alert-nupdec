@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:alert_nupdec.Views"  
+            x:Class="alert_nupdec.Views.FlyoutPageVoluntario"
+            Title="FlyoutPageVoluntario"
+            FlyoutLayoutBehavior="Popover"
+            NavigationPage.HasNavigationBar="False"
+            BackgroundColor="#1848a0">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Submenu"
+                     BackgroundColor="#1848a0"
+                     Opacity="0.75">
+            <VerticalStackLayout>
+                
+                <!--Botão Dicas-->
+                <HorizontalStackLayout Spacing="10"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       Padding="10">
+
+                    <Image Source="login_entrar.png"
+                           HeightRequest="26"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Dicas"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#e8ecee"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapDicas"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+
+                <!--Botão Cursos-->
+                <HorizontalStackLayout Spacing="10"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       Padding="10">
+
+                    <Image Source="login_entrar.png"
+                           HeightRequest="26"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Cursos"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#e8ecee"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapCursos"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+
+                <!--Botão Configurações-->
+                <HorizontalStackLayout Spacing="10"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       Padding="10">
+
+                    <Image Source="login_entrar.png"
+                           HeightRequest="26"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Configurações"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#e8ecee"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapConfiguracoes"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+                <!--Final dos Botões-->
+
+            </VerticalStackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage NavigationPage.HasNavigationBar="False">
+            <x:Arguments>
+                <local:HomeVoluntario/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

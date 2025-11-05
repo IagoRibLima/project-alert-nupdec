@@ -1,4 +1,6 @@
-namespace alert_nupdec;
+using alert_nupdec.Repository;
+
+namespace alert_nupdec.Views;
 
 public partial class HomeVoluntario : ContentPage
 {
@@ -10,19 +12,13 @@ public partial class HomeVoluntario : ContentPage
 
         Task.Run(async () =>
         {
-            usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
-            lbl_boasvindas.Text = $"Bem-vindo(a) {usuario_logado}";
+            lbl_boasvindas.Text = $"Voluntário: {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade}";
         });
     }
 
-    private async void DisconectButton_Clicked(object sender, EventArgs e)
+    private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
-        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
-
-        if (confirmacao)
-        {
-            SecureStorage.Default.Remove("usuario_logado");
-            App.Current.MainPage = new Login();
-        }
+        await Navigation.PushAsync(new EmitirAlerta());
     }
 }
