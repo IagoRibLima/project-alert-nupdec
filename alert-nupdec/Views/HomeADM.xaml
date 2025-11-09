@@ -4,6 +4,7 @@
              x:Class="alert_nupdec.Views.HomeADM"
              Title="HomeADM"
              NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto,*">
