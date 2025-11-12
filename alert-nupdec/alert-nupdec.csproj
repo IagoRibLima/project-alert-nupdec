@@ -107,6 +107,9 @@
 	  <MauiXaml Update="Views\RecuperarSenha.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\RecuperarSenhaAlteracao.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

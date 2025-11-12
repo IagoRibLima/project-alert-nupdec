@@ -22,11 +22,11 @@ public partial class RecuperarSenha : ContentPage
             string emailDigitado = txt_email.Text?.Trim();
             string cpfDigitado = txt_cpf.Text?.Trim();
 
-            string possivelNovaSenha = UsuarioRepository.AlterarSenha(emailDigitado, cpfDigitado);
+            string idNovaSenha = UsuarioRepository.AlterarSenha(emailDigitado, cpfDigitado);
 
-            if (possivelNovaSenha != null)
+            if (idNovaSenha != null)
             {
-                await DisplayAlert("Encontrado", "Usuário Encontrado", "Fechar");
+                await Navigation.PushAsync(new RecuperarSenhaAlteracao());
             }
             else
             {

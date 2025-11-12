@@ -1,6 +1,6 @@
 ﻿namespace alert_nupdec.Models
 {
-    class Alerta
+    public class Alerta
     {
         public string Tipo { get; set; }
         public string Endereco { get; set; }

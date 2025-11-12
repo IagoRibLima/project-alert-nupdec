@@ -19,7 +19,7 @@ public partial class CadastroVoluntario : ContentPage
         };*/
 
         picker_unidades.ItemsSource = AreaDeRiscoRepository.list_areasderisco;
-        picker_unidades.ItemDisplayBinding = new Binding("CEP");      
+        picker_unidades.ItemDisplayBinding = new Binding("Bairro");      
     }
 
     private async void ButtonVoltar(object sender, EventArgs e)
@@ -37,7 +37,7 @@ public partial class CadastroVoluntario : ContentPage
             string email = txt_email.Text?.Trim();
             string cpf = txt_cpf.Text?.Trim();
             string telefone = txt_telefone.Text?.Trim();
-            string unidade = picker_unidades.SelectedItem as string;
+            AreaRisco unidade = picker_unidades.SelectedItem as AreaRisco;
             string senha = txt_senha.Text?.Trim();
 
             if (string.IsNullOrWhiteSpace(nome))
@@ -48,7 +48,7 @@ public partial class CadastroVoluntario : ContentPage
                 erros.Add("O campo Telefone é obrigatório.");
             if (string.IsNullOrWhiteSpace(cpf))
                 erros.Add("O campo CPF é obrigatório.");
-            if (string.IsNullOrWhiteSpace(unidade))
+            if (unidade == null)
                 erros.Add("O campo Unidade é obrigatório.");
             if (string.IsNullOrWhiteSpace(senha))
                 erros.Add("O campo Senha é obrigatório.");

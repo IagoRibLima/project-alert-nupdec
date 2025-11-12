@@ -17,7 +17,12 @@ namespace alert_nupdec.Repository
                 Email = "iago@email.com",
                 CPF = "00000000000",
                 Telefone = "11999999999",
-                Unidade = "Unidade A",
+                Unidade = new AreaRisco()
+                {
+                    Rua = "Rua A",
+                    Bairro = "Centro",
+                    CEP = "00000000"
+                },
                 Senha = "Abc1234@"
             },
             new Usuario()
@@ -27,7 +32,12 @@ namespace alert_nupdec.Repository
                 Email = "pri@email.com",
                 CPF = "11111111111",
                 Telefone = "11988888888",
-                Unidade = "Unidade A",
+                Unidade = new AreaRisco()
+                {
+                    Rua = "Rua A",
+                    Bairro = "Centro",
+                    CEP = "00000000"
+                },
                 Senha = "Abc1234@"
             }
         };

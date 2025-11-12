@@ -7,36 +7,30 @@
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto, Auto">
-        <Grid ColumnDefinitions="Auto, *"
-              Grid.Row="0"
-              Margin="0,12">
-            <!--Botão de voltar-->
-            <Label Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   Text="Configuração da Conta"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   TextColor="#1848a0"
-                   FontSize="22"
-                   FontAttributes="Bold"/>
+        <Button Grid.Row="0"
+                Text="Voltar"
+                TextColor="#e8ecee"
+                FontSize="15"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                Padding="12"
+                BackgroundColor="#1848a0"
+                Clicked="ButtonVoltar"
+                Margin="8"/>
 
-            <Button Grid.Column="0"
-                    Text="Voltar"
-                    TextColor="#e8ecee"
-                    FontSize="15"
-                    FontAttributes="Bold"
-                    VerticalOptions="Start"
-                    HorizontalOptions="Start"
-                    Margin="8"
-                    Padding="12"
-                    BackgroundColor="#1848a0"
-                    Clicked="ButtonVoltar"/>
-        </Grid>
-
-        <!--ScrollView das Configurações-->
+            <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
                     Padding="10,0">
             <VerticalStackLayout>
+                <Label Text="Configuração da Conta"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="#1848a0"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,20"/>
+                
                 <Border Grid.Column="0"
                         HeightRequest="80"
                         WidthRequest="80"

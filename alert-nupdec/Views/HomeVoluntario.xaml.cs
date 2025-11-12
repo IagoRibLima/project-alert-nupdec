@@ -13,7 +13,7 @@ public partial class HomeVoluntario : ContentPage
         Task.Run(async () =>
         {
             lbl_boasvindas.Text = $"Voluntário: {UsuarioRepository.usuario_logado.NomeCompleto}";
-            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.Bairro} - {UsuarioRepository.usuario_logado.Unidade.CEP}";
         });
     }
 
