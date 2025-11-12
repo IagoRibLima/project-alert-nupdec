@@ -7,7 +7,19 @@ public partial class Configuracoes : ContentPage
 	public Configuracoes()
 	{
 		InitializeComponent();
-	}
+
+        Task.Run(async () =>
+        {
+            lbl_usuario.Text = $"{UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_email.Text = $"{UsuarioRepository.usuario_logado.Email}";
+            lbl_senha.Text = $"{UsuarioRepository.usuario_logado.Senha}";
+        });
+    }
+
+    private async void ButtonVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 
     private async void ButtonDisconect(object sender, EventArgs e)
     {

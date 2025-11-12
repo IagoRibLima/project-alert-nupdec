@@ -2,15 +2,173 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="alert_nupdec.Views.Configuracoes"
-             Title="Configuracoes">
-    <VerticalStackLayout>
-        <Button Text="Sair"
-                TextColor="Red"
-                FontSize="30"
-                FontAttributes="Bold"
-                BackgroundColor="Transparent"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Clicked="ButtonDisconect"/>
-    </VerticalStackLayout>
+             Title="Configuracoes"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
+
+    <Grid RowDefinitions="Auto, Auto">
+        <Grid ColumnDefinitions="Auto, *"
+              Grid.Row="0"
+              Margin="0,12">
+            <!--Botão de voltar-->
+            <Label Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Configuração da Conta"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#1848a0"
+                   FontSize="22"
+                   FontAttributes="Bold"/>
+
+            <Button Grid.Column="0"
+                    Text="Voltar"
+                    TextColor="#e8ecee"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="8"
+                    Padding="12"
+                    BackgroundColor="#1848a0"
+                    Clicked="ButtonVoltar"/>
+        </Grid>
+
+        <!--ScrollView das Configurações-->
+        <ScrollView Grid.Row="1"
+                    Padding="10,0">
+            <VerticalStackLayout>
+                <Border Grid.Column="0"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        StrokeShape="RoundRectangle 40"
+                        Margin="10,0"
+                        VerticalOptions="Center">
+                    <Image Source="usuario.png" Aspect="AspectFill" />
+                </Border>
+
+                <Label Text="Dados da Conta"
+                       TextColor="#1848a0"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"
+                       Padding="10,0"
+                       Margin="0,30,0,0"/>
+
+                <!--Botão do Nome do Usuario-->
+                <Grid Margin="0,20">
+                    <!--Definição do Grid Horizontal dos Botões-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Grid Nome do Usuario-->
+                    <VerticalStackLayout Grid.Column="0" 
+                                         VerticalOptions="Center"
+                                         Spacing="2">
+                        <Label Text="Nome Completo"
+                               TextColor="DarkSlateGray"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <Label x:Name="lbl_usuario" 
+                               TextColor="DarkSlateGray"
+                               FontSize="12"/>
+                    </VerticalStackLayout>
+
+                    <!--Grid Imagem do Botão-->
+                    <Grid Grid.Column="1" 
+                          VerticalOptions="Center"
+                          Margin="10,0">
+
+                        <ImageButton Source="login_entrar.png"
+                                     HeightRequest="26"
+                                     WidthRequest="26"
+                                     Background="Transparent"/>
+                    </Grid>
+                </Grid>
+
+                <!--Botão do Nome do Usuario-->
+                <Grid Margin="0,20">
+                    <!--Definição do Grid Horizontal dos Botões-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Grid Nome do Email-->
+                    <VerticalStackLayout Grid.Column="0" 
+                         VerticalOptions="Center"
+                         Spacing="2">
+                        <Label Text="Email"
+                               TextColor="DarkSlateGray"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <Label x:Name="lbl_email" 
+                               TextColor="DarkSlateGray"
+                               FontSize="12"/>
+                    </VerticalStackLayout>
+
+                    <!--Grid Imagem do Botão-->
+                    <Grid Grid.Column="1" 
+                          VerticalOptions="Center"
+                          Margin="10,0">
+
+                        <ImageButton Source="login_entrar.png"
+                                     HeightRequest="26"
+                                     WidthRequest="26"
+                                     Background="Transparent"/>
+                    </Grid>
+                </Grid>
+
+                <!--Botão Senha-->
+                <Grid Margin="0,20">
+                    <!--Definição do Grid Horizontal dos Botões-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Grid Nome do Usuario-->
+                    <VerticalStackLayout Grid.Column="0" 
+                                         VerticalOptions="Center"
+                                         Spacing="2">
+                        <Label Text="Senha"
+                               TextColor="DarkSlateGray"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <Label x:Name="lbl_senha"
+                               TextColor="DarkSlateGray"
+                               FontSize="12"/>
+                    </VerticalStackLayout>
+
+                    <!--Grid Imagem do Botão-->
+                    <Grid Grid.Column="1" 
+                          VerticalOptions="Center"
+                          Margin="10,0">
+
+                        <ImageButton Source="login_entrar.png"
+                                     HeightRequest="26"
+                                     WidthRequest="26"
+                                     Background="Transparent"/>
+                    </Grid>
+                </Grid>
+
+                <!--Botão de Sair-->
+                <Label Text="Sair"
+                       TextColor="Red"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       Margin="0,30">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonDisconect" />
+                    </Label.GestureRecognizers>
+                </Label >
+                
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
+
+
+

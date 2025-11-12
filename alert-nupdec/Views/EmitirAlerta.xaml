@@ -72,6 +72,7 @@
 
                     <Entry x:Name="txt_endereco"
                            Placeholder="Rua, Numero, Bairro"
+                           TextColor="DarkSlateGray"
                            ClearButtonVisibility="WhileEditing"
                            PlaceholderColor="#6170ab"/>
                 </Border>
@@ -100,7 +101,8 @@
                     <Entry x:Name="txt_descricao"
                            Placeholder="Descreva a situação com o máximo de detalhes"
                            ClearButtonVisibility="WhileEditing"
-                           PlaceholderColor="#6170ab"/>
+                           PlaceholderColor="#6170ab"
+                           TextColor="DarkSlateGray"/>
                 </Border>
 
                 <!--Quarto campo do formulário-->
@@ -127,7 +129,8 @@
                     <Entry x:Name="txt_imagem"
                            Placeholder="Adicionar foto"
                            ClearButtonVisibility="WhileEditing"
-                           PlaceholderColor="#6170ab"/>
+                           PlaceholderColor="#6170ab"
+                           TextColor="DarkSlateGray"/>
                 </Border>
 
                 <!--Botão para emitir o alerta-->

@@ -32,9 +32,9 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <!--<HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapDicas"/>
-                    </HorizontalStackLayout.GestureRecognizers>-->
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapDashboard"/>
+                    </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
                 <!--Botão Ocorrências-->
@@ -55,9 +55,9 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <!--<HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapDicas"/>
-                    </HorizontalStackLayout.GestureRecognizers>-->
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapOcorrencia"/>
+                    </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
                 <!--Botão Cadastrar Voluntários-->
@@ -101,9 +101,9 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <!--<HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapDicas"/>
-                    </HorizontalStackLayout.GestureRecognizers>-->
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapAreaDeRisco"/>
+                    </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
                 <!--Botão Dicas-->

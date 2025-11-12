@@ -10,13 +10,16 @@ public partial class CadastroVoluntario : ContentPage
 	{
 		InitializeComponent();
 
-        picker_unidades.ItemsSource = new List<string>
+        /*picker_unidades.ItemsSource = new List<string>
         {
             "Unidade A",
             "Unidade B",
             "Unidade C",
             "Unidade D"
-        };
+        };*/
+
+        picker_unidades.ItemsSource = AreaDeRiscoRepository.list_areasderisco;
+        picker_unidades.ItemDisplayBinding = new Binding("CEP");      
     }
 
     private async void ButtonVoltar(object sender, EventArgs e)

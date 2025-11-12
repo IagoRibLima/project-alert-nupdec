@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="alert_nupdec.Views.Dicas"
-             Title="Dicas"
+             x:Class="alert_nupdec.Views.Dashboard"
+             Title="Dashboard"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto, Auto">
         <Grid ColumnDefinitions="Auto, *"
-              Grid.Row="0"
-              Margin="0,12">
+          Grid.Row="0"
+          Margin="0,12">
             <!--Botão de voltar-->
             <Label Grid.Column="0"
                    Grid.ColumnSpan="2"
-                   Text="Dicas"
+                   Text="Dashboard"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    TextColor="#1848a0"
                    FontSize="26"
                    FontAttributes="Bold"/>
-            
+
             <Button Grid.Column="0"
                     Text="Voltar"
                     TextColor="#e8ecee"
@@ -32,15 +32,13 @@
                     BackgroundColor="#1848a0"
                     Clicked="ButtonVoltar"/>
 
-            
         </Grid>
 
-        <!--ScrollView do Feed-->
+        <!--ScrollView do Dashboard-->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout>
-                <!--Feed de Dicas-->
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-    
 </ContentPage>

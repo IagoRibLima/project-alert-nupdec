@@ -1,8 +1,8 @@
 namespace alert_nupdec.Views;
 
-public partial class Dicas : ContentPage
+public partial class Dashboard : ContentPage
 {
-	public Dicas()
+	public Dashboard()
 	{
 		InitializeComponent();
 	}

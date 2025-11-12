@@ -26,4 +26,19 @@ public partial class FlyoutPageADM : FlyoutPage
     {
         await Navigation.PushAsync(new Configuracoes());
     }
+
+    private async void OnTapAreaDeRisco(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AreaDeRisco());
+    }
+
+    private async void OnTapDashboard(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Dashboard());
+    }
+
+    private async void OnTapOcorrencia(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Ocorrencias());
+    }
 }
