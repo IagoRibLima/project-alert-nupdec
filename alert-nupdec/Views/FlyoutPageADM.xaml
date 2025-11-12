@@ -10,10 +10,11 @@
 
     <FlyoutPage.Flyout>
         <ContentPage Title="Submenu"
-                     BackgroundColor="#1848a0"
+                     Background="#1848a0"
                      Opacity="0.75">
+
             <VerticalStackLayout>
-                
+
                 <!--Botão Dashboard-->
                 <HorizontalStackLayout Spacing="10"
                                        HorizontalOptions="Start"
@@ -85,9 +86,9 @@
 
                 <!--Botão Áreas de Risco-->
                 <HorizontalStackLayout Spacing="10"
-                       HorizontalOptions="Start"
-                       VerticalOptions="Start"
-                       Padding="10">
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       Padding="10">
 
                     <Image Source="login_entrar.png"
                            HeightRequest="26"
@@ -175,8 +176,9 @@
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
                 <!--Final dos Botões-->
-                
+
             </VerticalStackLayout>
+
         </ContentPage>
     </FlyoutPage.Flyout>
 

@@ -61,7 +61,7 @@
                            ClearButtonVisibility="WhileEditing"/>
                 </Border>
 
-                <!--Campo de Bairro-->
+                <!--Campo de CPF-->
                 <Label Text="CPF *"
                        TextColor="#1848a0"
                        FontAttributes="Bold"
@@ -83,7 +83,8 @@
                     </Border.Shadow>
 
                     <Entry x:Name="txt_cpf"
-                           Placeholder="Bairro"
+                           Placeholder="CPF"
+                           MaxLength="11"
                            TextColor="DarkSlateGray"
                            BackgroundColor="Transparent"
                            ClearButtonVisibility="WhileEditing"/>
@@ -114,6 +115,7 @@
                             FontSize="18"
                             FontAttributes="Bold"
                             HorizontalOptions="Center"
+                            Clicked="ButtonProcurar"
                             BackgroundColor="Transparent"/>
                 </Border>
             </VerticalStackLayout>

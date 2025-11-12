@@ -12,7 +12,7 @@ namespace alert_nupdec.Repository
         {
             new Usuario()
             {
-                Id = 0,
+                Id = "0",
                 NomeCompleto = "Iago Lima",
                 Email = "iago@email.com",
                 CPF = "00000000000",
@@ -22,7 +22,7 @@ namespace alert_nupdec.Repository
             },
             new Usuario()
             {
-                Id = 1,
+                Id = "1",
                 NomeCompleto = "Pri Couto",
                 Email = "pri@email.com",
                 CPF = "11111111111",
@@ -40,7 +40,7 @@ namespace alert_nupdec.Repository
 
         public static void cadastrarUsuario(Usuario user)
         {
-            user.Id = lista_voluntarios.Count;
+            user.Id = lista_voluntarios.Count.ToString();
             lista_voluntarios.Add(user);
             System.Diagnostics.Debug.WriteLine($"Voluntário cadastrado: {user.NomeCompleto} " +
                                                $"\nID: {user.Id} " +
@@ -49,6 +49,34 @@ namespace alert_nupdec.Repository
                                                $"\nTelefone: {user.Telefone}" +
                                                $"\nUnidade: {user.Unidade}" +
                                                $"\nSenha: {user.Senha}");
+        }
+
+        public static string AlterarSenha(string email, string cpf)
+        {
+            Usuario usuarioEncontrado = lista_adm
+                .Cast<Usuario>()
+                .FirstOrDefault(i => (email == i.Email) && (cpf == i.CPF));
+
+            if (usuarioEncontrado != null)
+            {
+                return usuarioEncontrado.Id;
+            }
+            else if (lista_voluntarios != null)
+            {
+                Usuario usuarioEncotrado = lista_voluntarios
+                    .Cast<Usuario>()
+                    .FirstOrDefault(i => (email == i.Email) && (cpf == i.CPF));
+
+                if (usuarioEncotrado != null)
+                {
+                    return usuarioEncontrado.Id;
+                }
+                else
+                {
+                    throw new Exception("Usuário não encontrado!");
+                }               
+            }
+            throw new Exception("Usuário não encontrado!");
         }
     }
 }
