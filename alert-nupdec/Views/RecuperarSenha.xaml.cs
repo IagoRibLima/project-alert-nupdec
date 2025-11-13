@@ -5,9 +5,9 @@ namespace alert_nupdec.Views;
 
 public partial class RecuperarSenha : ContentPage
 {
-	public RecuperarSenha()
-	{
-		InitializeComponent();
+    public RecuperarSenha()
+	{       
+        InitializeComponent();
 	}
 
     private async void ButtonVoltar(object sender, EventArgs e)
@@ -22,9 +22,9 @@ public partial class RecuperarSenha : ContentPage
             string emailDigitado = txt_email.Text?.Trim();
             string cpfDigitado = txt_cpf.Text?.Trim();
 
-            string idNovaSenha = UsuarioRepository.AlterarSenha(emailDigitado, cpfDigitado);
+            UsuarioRepository.AlterarSenha(emailDigitado, cpfDigitado);
 
-            if (idNovaSenha != null)
+            if (UsuarioRepository.idUsuarioEncontrado.Id != null)
             {
                 await Navigation.PushAsync(new RecuperarSenhaAlteracao());
             }

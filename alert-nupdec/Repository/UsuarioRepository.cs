@@ -5,6 +5,7 @@ namespace alert_nupdec.Repository
 {
     public class UsuarioRepository
     {
+        public static Usuario idUsuarioEncontrado;
         public static Usuario usuario_logado { get; set; }
         public static ArrayList lista_voluntarios = new ArrayList();
 
@@ -61,7 +62,7 @@ namespace alert_nupdec.Repository
                                                $"\nSenha: {user.Senha}");
         }
 
-        public static string AlterarSenha(string email, string cpf)
+        public static void AlterarSenha(string email, string cpf)
         {
             Usuario usuarioEncontrado = lista_adm
                 .Cast<Usuario>()
@@ -69,7 +70,8 @@ namespace alert_nupdec.Repository
 
             if (usuarioEncontrado != null)
             {
-                return usuarioEncontrado.Id;
+                idUsuarioEncontrado = usuarioEncontrado;  
+
             }
             else if (lista_voluntarios != null)
             {
@@ -79,7 +81,7 @@ namespace alert_nupdec.Repository
 
                 if (usuarioEncotrado != null)
                 {
-                    return usuarioEncontrado.Id;
+                    idUsuarioEncontrado = usuarioEncontrado;
                 }
                 else
                 {
@@ -87,6 +89,11 @@ namespace alert_nupdec.Repository
                 }               
             }
             throw new Exception("Usuário não encontrado!");
+        }
+
+        public static void AtualizarSenha(string senha, string confirmarSenha)
+        {          
+            //lista_adm[int.Parse(idUsuarioEncontrado.Id)] = new Usuario();
         }
     }
 }
