@@ -12,9 +12,9 @@ public partial class FlyoutPageVoluntario : FlyoutPage
         await Navigation.PushAsync(new Dicas());
     }
 
-    private async void OnTapCursos(object sender, EventArgs e)
+    private async void OnTapTreinamentos(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Cursos());
+        await Navigation.PushAsync(new Treinamentos());
     }
 
     private async void OnTapConfiguracoes(object sender, EventArgs e)

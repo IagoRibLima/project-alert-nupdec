@@ -12,14 +12,14 @@ public partial class FlyoutPageADM : FlyoutPage
         await Navigation.PushAsync(new CadastroVoluntario());
     }
 
-    private async void OnTapDicas(object sender, EventArgs e)
+    private async void OnTapCadastroDica(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Dicas());
+        await Navigation.PushAsync(new CadastroDica());
     }
 
-    private async void OnTapCursos(object sender, EventArgs e)
+    private async void OnTapCadastroTreinamento(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Cursos());
+        await Navigation.PushAsync(new CadastroTreinamento());
     }
 
     private async void OnTapConfiguracoes(object sender, EventArgs e)

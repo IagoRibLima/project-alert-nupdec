@@ -106,7 +106,7 @@
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
-                <!--Botão Dicas-->
+                <!--Botão Cadastrar Dicas-->
                 <HorizontalStackLayout Spacing="10"
                                        HorizontalOptions="Start"
                                        VerticalOptions="Start"
@@ -117,7 +117,7 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <Label Text="Dicas"
+                    <Label Text="Cadastrar Dicas"
                            FontAttributes="Bold"
                            FontSize="18"
                            TextColor="#e8ecee"
@@ -125,11 +125,11 @@
                            Margin="0,10,0,10"/>
 
                     <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapDicas"/>
+                        <TapGestureRecognizer Tapped="OnTapCadastroDica"/>
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
-                <!--Botão Cursos-->
+                <!--Botão Cadastrar Treinamento-->
                 <HorizontalStackLayout Spacing="10"
                                        HorizontalOptions="Start"
                                        VerticalOptions="Start"
@@ -140,7 +140,7 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <Label Text="Cursos"
+                    <Label Text="Cadastrar Treinamento"
                            FontAttributes="Bold"
                            FontSize="18"
                            TextColor="#e8ecee"
@@ -148,7 +148,7 @@
                            Margin="0,10,0,10"/>
 
                     <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapCursos"/>
+                        <TapGestureRecognizer Tapped="OnTapCadastroTreinamento"/>
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 

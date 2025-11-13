@@ -1,72 +1,73 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="alert_nupdec.Views.Dicas"
-             Title="Dicas"
+             x:Class="alert_nupdec.Views.Treinamentos"
+             Title="Treinamentos"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
+    
+    <Grid RowDefinitions="Auto,*">
 
-    <Grid RowDefinitions="Auto, Auto">
+        <!-- Botão Voltar -->
         <Button Grid.Row="0"
                 Text="Voltar"
                 TextColor="#e8ecee"
-                FontSize="15"
                 FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Start"
+                Clicked="ButtonVoltar"
                 Margin="8"
                 Padding="12"
-                BackgroundColor="#1848a0"
-                Clicked="ButtonVoltar"/>
+                BackgroundColor="#1848a0"/>
 
-        <!--ScrollView do Feed-->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Grid.Row="1"
+        <!-- Conteúdo -->
+        <VerticalStackLayout Grid.Row="1"
                              Padding="20,10"
                              Spacing="10">
 
-                <Label Text="Dicas Cadastradas"
+            <Label Text="Treinamentos Cadastrados"
                    FontSize="26"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    TextColor="#1848a0"
                    Margin="0,10"/>
 
-                <CollectionView x:Name="lista_dicas"
+            <CollectionView x:Name="lista_treinamentos"
                             SelectionMode="None"
                             Margin="0,10">
-                    <CollectionView.EmptyView>
-                        <Label Text="Nenhuma dica cadastrada ainda."
+                <CollectionView.EmptyView>
+                    <Label Text="Nenhum treinamento cadastrado ainda."
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            TextColor="Gray"
                            FontAttributes="Italic"/>
-                    </CollectionView.EmptyView>
+                </CollectionView.EmptyView>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Border StrokeThickness="1"
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeThickness="1"
                                 BackgroundColor="#e8ecee"
                                 Stroke="#1848a0"
                                 Margin="0,5"
                                 Padding="10"
                                 StrokeShape="RoundRectangle 20">
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding NomeDica}"
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Nome}"
                                        FontAttributes="Bold"
                                        FontSize="18"
-                                       TextColor="#FF751F"/>
-                                    <Label Text="{Binding Descricao}"
+                                       TextColor="#ff751f"/>
+                                <Label Text="{Binding Vaga}"
+                                       FontSize="14"
+                                       TextColor="#1848a0"/>
+                                <Label Text="{Binding Descricao}"
                                        FontSize="14"
                                        TextColor="Gray"
                                        LineBreakMode="WordWrap"/>
-                                </VerticalStackLayout>
-                            </Border>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </VerticalStackLayout>
-        </ScrollView>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
     </Grid>
-    
 </ContentPage>
