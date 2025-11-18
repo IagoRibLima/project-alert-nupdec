@@ -1,5 +1,6 @@
 ﻿using alert_nupdec.Models;
 using System.Collections;
+using System.Net.Mail;
 
 namespace alert_nupdec.Repository
 {
@@ -7,11 +8,9 @@ namespace alert_nupdec.Repository
     {
         public static Usuario idUsuarioEncontrado { get; set; }
 
-        public static Usuario usuario_logado { get; set; }
+        public static Usuario usuario_logado { get; set; }        
 
-        public static ArrayList lista_voluntarios = new ArrayList();
-
-        public static ArrayList lista_adm = new ArrayList()
+        public static ArrayList lista_usuario = new ArrayList()
         {
             new Usuario()
             {
@@ -26,7 +25,8 @@ namespace alert_nupdec.Repository
                     Bairro = "Centro",
                     CEP = "00000000"
                 },
-                Senha = "Abc1234@"
+                Senha = "Abc1234@",
+                Adm = true 
             },
             new Usuario()
             {
@@ -41,50 +41,121 @@ namespace alert_nupdec.Repository
                     Bairro = "Centro",
                     CEP = "00000000"
                 },
-                Senha = "Abc1234@"
+                Senha = "Abc1234@",
+                Adm = true
             }
         };
 
         /*------------------------------------------------------------------------------------------------------*/
 
-        //Metodo para cadastrar um novo voluntário
-        public static void cadastrarUsuario(Usuario user)
+        //Metodo para login
+        public static void login(string usuario, string senha)
         {
-            user.Id = lista_voluntarios.Count.ToString();
-            lista_voluntarios.Add(user);
-            System.Diagnostics.Debug.WriteLine($"Voluntário cadastrado: {user.NomeCompleto} " +
-                                               $"\nID: {user.Id} " +
-                                               $"\nEmail: {user.Email}" +
-                                               $"\nCPF: {user.CPF}" +
-                                               $"\nTelefone: {user.Telefone}" +
-                                               $"\nUnidade: {user.Unidade}" +
-                                               $"\nSenha: {user.Senha}");
+            Usuario usuarioEncontrado = lista_usuario
+                .Cast<Usuario>()
+                .FirstOrDefault(i => (usuario == i.Email || usuario == i.CPF) &&
+                                      senha == i.Senha);
+            if (usuarioEncontrado != null)
+            {
+                usuario_logado = usuarioEncontrado;
+                return;
+            }            
+
+            throw new Exception("Infomações de login inválidas");            
+        }
+
+        //Metodo para cadastrar voluntario
+        public static void cadastrarUsuario(string nome, string email, string cpf, string telefone, AreaRisco unidade, string senha)
+        {
+            var erros = new List<string>();
+
+            if (string.IsNullOrWhiteSpace(nome))
+                erros.Add("O campo Nome Completo é obrigatório.");
+            if (string.IsNullOrWhiteSpace(email))
+                erros.Add("O campo Email é obrigatório.");
+            if (string.IsNullOrWhiteSpace(telefone))
+                erros.Add("O campo Telefone é obrigatório.");
+            if (string.IsNullOrWhiteSpace(cpf))
+                erros.Add("O campo CPF é obrigatório.");
+            if (unidade == null)
+                erros.Add("O campo Unidade é obrigatório.");
+            if (string.IsNullOrWhiteSpace(senha))
+                erros.Add("O campo Senha é obrigatório.");
+
+            if (!string.IsNullOrWhiteSpace(cpf))
+            {
+                string numeroTelefone = new string(cpf.Where(char.IsDigit).ToArray());
+                if (numeroTelefone.Length != 11)
+                    erros.Add("O campo Telefone deve conter 11 dígitos.");
+            }
+
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                if (!MailAddress.TryCreate(email, out _))
+                    erros.Add("O campo Email deve conter um endereço de email válido.");
+            }
+
+            if (!string.IsNullOrWhiteSpace(telefone))
+            {
+                string numeroTelefone = new string(telefone.Where(char.IsDigit).ToArray());
+                if (numeroTelefone.Length != 11)
+                    erros.Add("O campo Telefone deve conter 11 dígitos (DDD + número).");
+            }
+
+            if (!string.IsNullOrWhiteSpace(senha))
+            {
+                if (senha.Length < 8)
+                    erros.Add("O campo Senha deve ter no mínimo 8 caracteres.");
+                if (!senha.Any(char.IsUpper))
+                    erros.Add("O campo Senha deve ter pelo menos uma letra maiúscula.");
+                if (!senha.Any(char.IsDigit))
+                    erros.Add("O campo Senha deve ter pelo menos um número.");
+                if (senha.All(char.IsLetterOrDigit))
+                    erros.Add("O campo Senha deve ter pelo menos um caractere especial (ex: @, #, $, !).");
+            }
+
+            if (erros.Count > 0)
+            {
+                string mensagemErro = string.Join("\n", erros);             
+                throw new Exception(mensagemErro);
+            }
+
+            Usuario voluntario = new Usuario()
+            {      
+                Id = lista_usuario.Count.ToString(),
+                NomeCompleto = nome,
+                Email = email,
+                Telefone = telefone,
+                Unidade = unidade,
+                Senha = senha,
+                Adm = false
+            };            
+
+            lista_usuario.Add(voluntario);
+
+            System.Diagnostics.Debug.WriteLine($"Voluntário cadastrado: {voluntario.NomeCompleto} " +
+                                               $"\nID: {voluntario.Id} " +
+                                               $"\nEmail: {voluntario.Email}" +
+                                               $"\nCPF: {voluntario.CPF}" +
+                                               $"\nTelefone: {voluntario.Telefone}" +
+                                               $"\nUnidade: {voluntario.Unidade}" +
+                                               $"\nSenha: {voluntario.Senha}" +
+                                               $"\nAdm: {voluntario.Adm}");
         }
 
         //Metodo para procurar o usuário
         public static void procurarUsuario(string email, string cpf)
         {
-            Usuario admEncontrado = lista_adm
+            Usuario usuarioEncontrado = lista_usuario
                 .Cast<Usuario>()
                 .FirstOrDefault(i => (email == i.Email) && (cpf == i.CPF));
 
-            if (admEncontrado != null)
+            if (usuarioEncontrado != null)
             {
-                idUsuarioEncontrado = admEncontrado;
+                idUsuarioEncontrado = usuarioEncontrado;
                 return;
 
-            }
-
-            Usuario voluntarioEncontrado = lista_voluntarios
-                    .Cast<Usuario>()
-                    .FirstOrDefault(i => (email == i.Email) && (cpf == i.CPF));
-
-            if (voluntarioEncontrado != null)
-            {
-                idUsuarioEncontrado = voluntarioEncontrado;
-                return;
-
-            }
+            }            
         }
 
         //Metodo para atualizar a senha do usuário
@@ -112,21 +183,13 @@ namespace alert_nupdec.Repository
             }
             else
             {
-                if (lista_adm[int.Parse(idUsuarioEncontrado.Id)] == idUsuarioEncontrado)
+                if (lista_usuario[int.Parse(idUsuarioEncontrado.Id)] == idUsuarioEncontrado)
                 {
                     idUsuarioEncontrado.Senha = novaSenha;
-                    lista_adm[int.Parse(idUsuarioEncontrado.Id)] = idUsuarioEncontrado;
+                    lista_usuario[int.Parse(idUsuarioEncontrado.Id)] = idUsuarioEncontrado;
                     idUsuarioEncontrado = null;
                     return;
-                }
-
-                if (lista_voluntarios[int.Parse(idUsuarioEncontrado.Id)] == idUsuarioEncontrado)
-                {
-                    idUsuarioEncontrado.Senha = novaSenha;
-                    lista_voluntarios[int.Parse(idUsuarioEncontrado.Id)] = idUsuarioEncontrado;
-                    idUsuarioEncontrado = null;
-                    return;
-                }
+                }                
             }            
         }
 

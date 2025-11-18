@@ -9,5 +9,6 @@
         public string Telefone { get; set; }
         public AreaRisco Unidade { get; set; }
         public string Senha { get; set; }
+        public bool Adm {  get; set; }
     }    
 }
