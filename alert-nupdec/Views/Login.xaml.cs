@@ -8,6 +8,7 @@ public partial class Login : ContentPage
 	public Login()
 	{
 		InitializeComponent();
+        //Teste github
 	}
 
     //Botão com metodo para fazer o login
