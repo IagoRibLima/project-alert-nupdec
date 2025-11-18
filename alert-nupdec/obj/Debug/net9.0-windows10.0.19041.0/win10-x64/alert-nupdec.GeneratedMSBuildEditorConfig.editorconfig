@@ -52,6 +52,24 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AreaDeRisco.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AreaDeRisco.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AreaDeRisco.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AreaDeRisco.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroDica.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroDica.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CadastroDica.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CadastroDica.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroTreinamento.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroTreinamento.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CadastroTreinamento.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CadastroTreinamento.xaml
+
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroVoluntario.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroVoluntario.xaml
@@ -64,11 +82,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Configu
 build_metadata.AdditionalFiles.TargetPath = Views\Configuracoes.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Configuracoes.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Cursos.xaml]
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Dashboard.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Cursos.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Cursos.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Cursos.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Dashboard.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Dashboard.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Dashboard.xaml
 
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Dicas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -112,8 +130,26 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Login.x
 build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
 
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Ocorrencias.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Ocorrencias.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Ocorrencias.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Ocorrencias.xaml
+
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/RecuperarSenha.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.RecuperarSenha.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RecuperarSenha.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RecuperarSenha.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/RecuperarSenhaAlteracao.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.RecuperarSenhaAlteracao.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RecuperarSenhaAlteracao.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RecuperarSenhaAlteracao.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Treinamentos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Treinamentos.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Treinamentos.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Treinamentos.xaml

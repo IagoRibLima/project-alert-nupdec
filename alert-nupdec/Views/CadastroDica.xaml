@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="alert_nupdec.Views.EmitirAlerta"
-             Title="EmitirAlerta"
+             x:Class="alert_nupdec.Views.CadastroDica"
+             Title="CadastroDica"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
 
-    <Grid RowDefinitions="Auto, Auto">
+    <Grid RowDefinitions="Auto, *">
         <!--Botão de voltar-->
         <Button Grid.Row="0"
                 Text="Voltar"
                 TextColor="#e8ecee"
-                FontSize="15"
                 FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Start"
@@ -20,37 +19,22 @@
                 Padding="12"
                 BackgroundColor="#1848a0"/>
 
-        <!--ScrollView do formulário-->
+        <!--Conteúdo rolável-->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout VerticalOptions="Start"
-                                 Spacing="10"
-                                 Padding="60,0,60,0"
-                                 Margin="0,40">
-                
-                <!--Título da página-->
-                <Label Text="Reportar Ocorrência"
+                                 Padding="60,0,60,60"
+                                 Spacing="10">
+
+                <!--Título-->
+                <Label Text="Cadastrar Dica"
                        TextColor="#1848a0"
                        FontSize="26"
-                       HorizontalOptions="Center"
                        FontAttributes="Bold"
+                       HorizontalOptions="Center"
                        Margin="0,0,0,15"/>
 
-                <!--Primeiro campo do formulário-->
-                <Label Text="Tipo de Ocorrência *"
-                       TextColor="#1848a0"
-                       FontAttributes="Bold"
-                       FontSize="16"/>
-                <Picker x:Name="picker_ocorrencia"
-                        Title="Selecione o tipo"
-                        TitleColor="#1848a0"
-                        TextColor="#1848a0"
-                        BackgroundColor="#e8ecee"
-                        FontSize="14">
-
-                </Picker>
-
-                <!--Segundo campo do formulário-->
-                <Label Text="Endereço *"
+                <!--Campo Nome da Dica-->
+                <Label Text="Nome da Dica *"
                        TextColor="#1848a0"
                        FontAttributes="Bold"
                        FontSize="16"
@@ -62,7 +46,6 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="20"/>
                     </Border.StrokeShape>
-
                     <Border.Shadow>
                         <Shadow Brush="Black"
                                 Offset="5,5"
@@ -70,15 +53,15 @@
                                 Opacity="0.3"/>
                     </Border.Shadow>
 
-                    <Entry x:Name="txt_endereco"
-                           Placeholder="Rua, Numero, Bairro"
+                    <Entry x:Name="txt_nome_dica"
+                           Placeholder="Digite o título da dica"
                            TextColor="DarkSlateGray"
-                           ClearButtonVisibility="WhileEditing"
-                           PlaceholderColor="#6170ab"/>
+                           BackgroundColor="Transparent"
+                           ClearButtonVisibility="WhileEditing"/>
                 </Border>
 
-                <!--Terceiro campo do formulário-->
-                <Label Text="Descrição da ocorrência *"
+                <!--Campo Descrição-->
+                <Label Text="Descrição *"
                        TextColor="#1848a0"
                        FontAttributes="Bold"
                        FontSize="16"
@@ -86,11 +69,9 @@
                 <Border StrokeThickness="1"
                         BackgroundColor="#e8ecee"
                         Padding="8">
-
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="20"/>
                     </Border.StrokeShape>
-
                     <Border.Shadow>
                         <Shadow Brush="Black"
                                 Offset="5,5"
@@ -98,55 +79,26 @@
                                 Opacity="0.3"/>
                     </Border.Shadow>
 
-                    <Entry x:Name="txt_descricao"
-                           Placeholder="Descreva a situação com o máximo de detalhes"
-                           ClearButtonVisibility="WhileEditing"
-                           PlaceholderColor="#6170ab"
-                           TextColor="DarkSlateGray"/>
+                    <Editor x:Name="txt_descricao"
+                            Placeholder="Digite aqui a descrição da dica"
+                            TextColor="DarkSlateGray"
+                            BackgroundColor="Transparent"
+                            AutoSize="TextChanges"
+                            HeightRequest="150"/>
                 </Border>
 
-                <!--Quarto campo do formulário-->
-                <Label Text="Anexar foto *"
-                       TextColor="#1848a0"
-                       FontAttributes="Bold"
-                       FontSize="16"
-                       Margin="10,2"/>
-                <Border StrokeThickness="1"
-                        BackgroundColor="#e8ecee"
-                        Padding="8">
-
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20"/>
-                    </Border.StrokeShape>
-
-                    <Border.Shadow>
-                        <Shadow Brush="Black"
-                                Offset="5,5"
-                                Radius="10"
-                                Opacity="0.3"/>
-                    </Border.Shadow>
-
-                    <Entry x:Name="txt_imagem"
-                           Placeholder="Adicionar foto"
-                           ClearButtonVisibility="WhileEditing"
-                           PlaceholderColor="#6170ab"
-                           TextColor="DarkSlateGray"/>
-                </Border>
-
-                <!--Botão para emitir o alerta-->
+                <!--Botão de cadastrar-->
                 <Border BackgroundColor="#ff751f"
                         Padding="4"
                         StrokeThickness="1"
                         Margin="0,20,0,0">
-
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ButtonEmitirAlerta" />
+                        <TapGestureRecognizer Tapped="ButtonCadastrarDica" />
                     </Border.GestureRecognizers>
 
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="20"/>
                     </Border.StrokeShape>
-
                     <Border.Shadow>
                         <Shadow Brush="Black"
                                 Offset="2,0"
@@ -154,16 +106,14 @@
                                 Opacity="0.1"/>
                     </Border.Shadow>
 
-                    <Button Text="Emitir"
+                    <Button Text="Cadastrar"
                             TextColor="#e8ecee"
                             FontSize="18"
                             FontAttributes="Bold"
-                            BackgroundColor="Transparent"
-                            Clicked="ButtonEmitirAlerta"
-                            Margin="0"/>
+                            HorizontalOptions="Center"
+                            Clicked="ButtonCadastrarDica"
+                            BackgroundColor="Transparent"/>
                 </Border>
-                
-
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

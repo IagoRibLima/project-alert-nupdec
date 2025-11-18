@@ -37,7 +37,7 @@
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
-                <!--Botão Cursos-->
+                <!--Botão Treinamentos-->
                 <HorizontalStackLayout Spacing="10"
                                        HorizontalOptions="Start"
                                        VerticalOptions="Start"
@@ -48,7 +48,7 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                    <Label Text="Cursos"
+                    <Label Text="Treinamentos"
                            FontAttributes="Bold"
                            FontSize="18"
                            TextColor="#e8ecee"
@@ -56,7 +56,7 @@
                            Margin="0,10,0,10"/>
 
                     <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapCursos"/>
+                        <TapGestureRecognizer Tapped="OnTapTreinamentos"/>
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 

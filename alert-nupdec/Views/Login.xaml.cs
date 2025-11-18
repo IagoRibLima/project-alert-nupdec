@@ -10,6 +10,7 @@ public partial class Login : ContentPage
 		InitializeComponent();
 	}
 
+    //Botão com metodo para fazer o login
     private async void ButtonLogin(object sender, EventArgs e)
     {
         try
@@ -17,39 +18,18 @@ public partial class Login : ContentPage
             string usuarioDigitado = txt_usuario.Text?.Trim();
             string senhaDigitada = txt_senha.Text;
 
-            if (string.IsNullOrWhiteSpace(usuarioDigitado))
+            if (string.IsNullOrWhiteSpace(usuarioDigitado) || string.IsNullOrWhiteSpace(senhaDigitada))
                 throw new Exception("Por favor, preecha o e-mail/CPF e a senha.");
 
-            Usuario admEncontrado = UsuarioRepository.lista_adm
-                .Cast<Usuario>()
-                .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) &&
-                                      senhaDigitada == i.Senha);
+            UsuarioRepository.login(usuarioDigitado, senhaDigitada);
 
-            if (admEncontrado != null)
+            if (UsuarioRepository.usuario_logado.Adm == true)
             {
-                UsuarioRepository.usuario_logado = admEncontrado;
                 App.Current.MainPage = new NavigationPage(new FlyoutPageADM());
             }
-            else if (UsuarioRepository.lista_voluntarios != null)
+            if (UsuarioRepository.usuario_logado.Adm == false)
             {
-                Usuario voluntarioEncontrado = UsuarioRepository.ListaVoluntarios
-                    .Cast<Usuario>()
-                    .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) &&
-                                         senhaDigitada == i.Senha);
-
-                if (voluntarioEncontrado != null)
-                {
-                    UsuarioRepository.usuario_logado = voluntarioEncontrado;
-                    App.Current.MainPage = new NavigationPage(new FlyoutPageVoluntario());
-                }
-                else
-                {
-                    throw new Exception("Usuário ou senha inválidos.");
-                }
-            }
-            else
-            {
-                throw new Exception("Usuário ou senha inválidos.");
+                App.Current.MainPage = new NavigationPage(new FlyoutPageVoluntario());
             }
 
         }
@@ -59,6 +39,7 @@ public partial class Login : ContentPage
         }
     }
 
+    //Botão que esconde e mostra a senha
     private void ButtonVerSenha(object sender, EventArgs e)
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
@@ -75,6 +56,7 @@ public partial class Login : ContentPage
         }
     }
 
+    //Botão que muda para a pagina de recuperar senha 
     private async void OnTapRecuperarSenha(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new RecuperarSenha());

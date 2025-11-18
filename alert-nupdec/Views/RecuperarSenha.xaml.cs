@@ -1,9 +1,47 @@
+using alert_nupdec.Models;
+using alert_nupdec.Repository;
+
 namespace alert_nupdec.Views;
 
 public partial class RecuperarSenha : ContentPage
 {
-	public RecuperarSenha()
-	{
-		InitializeComponent();
+    public RecuperarSenha()
+	{       
+        InitializeComponent();
 	}
+
+    //Botão de voltar
+    private async void ButtonVoltar(object sender, EventArgs e)
+    {
+
+        await Navigation.PopAsync();
+    }
+
+    //Botão com metodo de procurar o usuario para recuperar a senha
+    private async void ButtonProcurar(object sender, EventArgs e)
+    {
+        try
+        {
+            string emailDigitado = txt_email.Text?.Trim();
+            string cpfDigitado = txt_cpf.Text?.Trim();
+
+            UsuarioRepository.procurarUsuario(emailDigitado, cpfDigitado);
+
+            if (UsuarioRepository.idUsuarioEncontrado != null)
+            {
+                txt_email.Text = string.Empty;
+                txt_cpf.Text = string.Empty;
+                await Navigation.PushAsync(new RecuperarSenhaAlteracao());
+            }
+            else
+            {
+                await DisplayAlert("Erro", "Email ou CPF incorretos. Tente novamente.", "Fechar");
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Erro", ex.Message, "Fechar");
+        }
+    }
+
 }

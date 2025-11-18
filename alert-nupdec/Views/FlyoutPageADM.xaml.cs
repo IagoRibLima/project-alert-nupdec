@@ -7,23 +7,45 @@ public partial class FlyoutPageADM : FlyoutPage
 		InitializeComponent();
 	}
 
+    //Botão de cadastro de voluntário
     private async void OnTapCadastrarVoluntario(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroVoluntario());
     }
 
-    private async void OnTapDicas(object sender, EventArgs e)
+    //Botão de cadastro de dica
+    private async void OnTapCadastroDica(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Dicas());
+        await Navigation.PushAsync(new CadastroDica());
     }
 
-    private async void OnTapCursos(object sender, EventArgs e)
+    //Botão de cadastro de treinamento
+    private async void OnTapCadastroTreinamento(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Cursos());
+        await Navigation.PushAsync(new CadastroTreinamento());
     }
 
+    //Botão de configurações
     private async void OnTapConfiguracoes(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Configuracoes());
+    }
+
+    //Botão de cadastro da area de risco
+    private async void OnTapAreaDeRisco(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AreaDeRisco());
+    }
+
+    //Botão de dashboard
+    private async void OnTapDashboard(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Dashboard());
+    }
+
+    //Botão de ver ocorrências
+    private async void OnTapOcorrencia(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Ocorrencias());
     }
 }

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="alert_nupdec.Views.AreaDeRisco"
+             Title="AreaDeRisco"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
+
+    <Grid RowDefinitions="Auto, Auto">
+        <Grid ColumnDefinitions="Auto, *"
+              Grid.Row="0"
+              Margin="0,12">
+            <!--Botão de voltar-->
+            <Label Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Área de Risco"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="#1848a0"
+                   FontSize="26"
+                   FontAttributes="Bold"/>
+
+            <Button Grid.Column="0"
+                    Text="Voltar"
+                    TextColor="#e8ecee"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="8"
+                    Padding="12"
+                    BackgroundColor="#1848a0"
+                    Clicked="ButtonVoltar"/>
+
+        </Grid>
+
+        <!--ScrollView da Area de Risco-->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout VerticalOptions="Start"
+                     Padding="60,0,60,60"
+                     Spacing="10">
+
+                    <!--Título da página-->
+                    <Label Text="Cadastrar Área de Risco"
+                           TextColor="#1848a0"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" 
+                           Margin="0,0,0,15"/>
+
+                    <!--Campo da Rua-->
+                    <Label Text="Rua *"
+                           TextColor="#1848a0"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           Margin="10,2"/>
+                    <Border StrokeThickness="1"
+                            BackgroundColor="#e8ecee"
+                            Padding="8">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Offset="5,5"
+                                    Radius="10"
+                                    Opacity="0.3"/>
+                        </Border.Shadow>
+
+                        <Entry x:Name="txt_rua"
+                               Placeholder="Rua"
+                               TextColor="DarkSlateGray"
+                               BackgroundColor="Transparent"
+                               ClearButtonVisibility="WhileEditing"/>
+                    </Border>
+
+                    <!--Campo de Bairro-->
+                    <Label Text="Bairro *"
+                           TextColor="#1848a0"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           Margin="10,2"/>
+                    <Border StrokeThickness="1"
+                            BackgroundColor="#e8ecee"
+                            Padding="8">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Offset="5,5"
+                                    Radius="10"
+                                    Opacity="0.3"/>
+                        </Border.Shadow>
+
+                        <Entry x:Name="txt_bairro"
+                               Placeholder="Bairro"
+                               TextColor="DarkSlateGray"
+                               BackgroundColor="Transparent"
+                               ClearButtonVisibility="WhileEditing"/>
+                    </Border>
+
+                    <!--Campo de CEP-->
+                    <Label Text="CEP *"
+                           TextColor="#1848a0"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           Margin="10,2"/>
+                    <Border StrokeThickness="1"
+                            BackgroundColor="#e8ecee"
+                            Padding="8">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Offset="5,5"
+                                    Radius="10"
+                                    Opacity="0.3"/>
+                        </Border.Shadow>
+
+                        <Entry x:Name="txt_cep"
+                               Placeholder="00000-000"
+                               Keyboard="Numeric"
+                               MaxLength="8"
+                               TextColor="DarkSlateGray"
+                               BackgroundColor="Transparent"
+                               ClearButtonVisibility="WhileEditing"/>
+                    </Border>
+
+                    <!--Botão de cadastrar-->
+                    <Border BackgroundColor="#ff751f"
+                            Padding="4"
+                            StrokeThickness="1"
+                            Margin="0,20,0,0">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ButtonCadastrar" />
+                        </Border.GestureRecognizers>
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Offset="2,0"
+                                    Radius="10"
+                                    Opacity="0.1"/>
+                        </Border.Shadow>
+                        <Button Text="Cadastrar"
+                                TextColor="#e8ecee"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Clicked="ButtonCadastrar"
+                                BackgroundColor="Transparent"/>
+                    </Border>
+                </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
