@@ -10,28 +10,26 @@ public partial class CadastroDica : ContentPage
 		InitializeComponent();
 	}
 
+    //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
     }
 
+    //Botão com metodo para cadastrar a dica
     private async void ButtonCadastrarDica(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(txt_nome_dica.Text) ||
-            string.IsNullOrWhiteSpace(txt_descricao.Text))
+        string dica = txt_nome_dica.Text;
+        string descricao = txt_descricao.Text;
+
+        if (string.IsNullOrWhiteSpace(dica) ||
+            string.IsNullOrWhiteSpace(descricao))
         {
-            await DisplayAlert("Atenção", "Preencha todos os campos obrigatórios.", "OK");
+            await DisplayAlert("Erro", "Preencha os campos título e descrição.", "OK");
             return;
         }
 
-        var dica = new alert_nupdec.Models.Dicas
-        {
-            NomeDica = txt_nome_dica.Text.Trim(),
-            Descricao = txt_descricao.Text.Trim()
-        };
-
-
-        DicasRepository.cadastrarDicas(dica);
+        DicasRepository.cadastrarDicas(dica, descricao);
 
         await DisplayAlert("Sucesso", "Dica cadastrada com sucesso!", "OK");
 

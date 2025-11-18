@@ -8,6 +8,7 @@ public partial class RecuperarSenhaAlteracao : ContentPage
 	{
 		InitializeComponent();
 
+        //Tarefa que mostra as informações na tela
         Task.Run(async () =>
         {
             lbl_nome.Text = $"{UsuarioRepository.idUsuarioEncontrado.NomeCompleto}";
@@ -16,12 +17,14 @@ public partial class RecuperarSenhaAlteracao : ContentPage
         });
     }
 
+    //Botão de voltar 
 	private async void ButtonVoltar(object sender, EventArgs e)
 	{
 		UsuarioRepository.idUsuarioEncontrado = null;
         await Navigation.PopAsync();
     }
 
+    //Botão com metodo de alterar a senha do usuario encontrado
 	private async void ButtonAlterar(object sender, EventArgs e)
 	{
 		try
@@ -42,6 +45,7 @@ public partial class RecuperarSenhaAlteracao : ContentPage
 		}
 	}
 
+    //Botão que mostra e esconde a senha
     private void ButtonVerSenha(object sender, EventArgs e)
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
@@ -58,6 +62,7 @@ public partial class RecuperarSenhaAlteracao : ContentPage
         }
     }
 
+    //Botão que mostra e esconde o confirmar senha
     private void ButtonVerConfirmarSenha(object sender, EventArgs e)
     {
         txt_confirmarsenha.IsPassword = !txt_confirmarsenha.IsPassword;
@@ -73,4 +78,5 @@ public partial class RecuperarSenhaAlteracao : ContentPage
             button.Source = "olho_fechado.png";
         }
     }
+
 }

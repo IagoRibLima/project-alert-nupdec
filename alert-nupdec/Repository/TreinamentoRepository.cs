@@ -3,24 +3,26 @@
 namespace alert_nupdec.Repository
 {
     public class TreinamentoRepository
-    {
-        // Lista estática de treinamentos
+    {        
         private static List<Treinamento> list_treinamento = new List<Treinamento>();
-
-        // Propriedade pública (caso queira acessar diretamente)
-        public List<Treinamento> ListTreinamento
-        {
-            get { return list_treinamento; }
-        }
+        
+        /*------------------------------------------------------------------------------*/
 
         // Método para cadastrar um novo treinamento
-        public static void cadastrarTreinamento(Treinamento treinamento)
+        public static void cadastrarTreinamento(string nome, string vaga, string descricao)
         {
+            Treinamento treinamento = new Treinamento
+            {
+                Nome = nome,
+                Vaga = vaga,
+                Descricao = descricao
+            };
+
             list_treinamento.Add(treinamento);
-            System.Diagnostics.Debug.WriteLine(
-                $"Nome: {treinamento.Nome}" +
-                $"\nVaga: {treinamento.Vaga}" +
-                $"\nDescricao: {treinamento.Descricao}");
+            
+            System.Diagnostics.Debug.WriteLine($"Nome: {treinamento.Nome}" +
+                                               $"\nVaga: {treinamento.Vaga}" +
+                                               $"\nDescricao: {treinamento.Descricao}");
         }
 
         // Método adicionado para listagem — compatível com sua View

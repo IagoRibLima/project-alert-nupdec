@@ -8,6 +8,7 @@ public partial class Configuracoes : ContentPage
 	{
 		InitializeComponent();
 
+        // Carregar os dados do usuário logado
         Task.Run(async () =>
         {
             lbl_usuario.Text = $"{UsuarioRepository.usuario_logado.NomeCompleto}";
@@ -16,11 +17,13 @@ public partial class Configuracoes : ContentPage
         });
     }
 
+    //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
     }
 
+    //Botão de desconectar
     private async void ButtonDisconect(object sender, EventArgs e)
     {
         bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");

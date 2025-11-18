@@ -8,8 +8,7 @@ public partial class HomeVoluntario : ContentPage
 	{
 		InitializeComponent();
 
-        string? usuario_logado = null;
-
+        // Exibir o nome do usuário logado e a unidade
         Task.Run(async () =>
         {
             lbl_boasvindas.Text = $"Voluntário: {UsuarioRepository.usuario_logado.NomeCompleto}";
@@ -17,6 +16,7 @@ public partial class HomeVoluntario : ContentPage
         });
     }
 
+    //Botão de emitir alerta
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());

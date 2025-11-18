@@ -9,15 +9,18 @@ public partial class CadastroVoluntario : ContentPage
 	{
 		InitializeComponent();
 
+        //Opções do picker das unidades
         picker_unidades.ItemsSource = AreaDeRiscoRepository.list_areasderisco;
         picker_unidades.ItemDisplayBinding = new Binding("Bairro");      
     }
 
+    //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
     }
 
+    //Botão com metodo de cadastrar os novos usuarios
     private async void ButtonCadastrar(object sender, EventArgs e)
     {
         try
@@ -46,6 +49,7 @@ public partial class CadastroVoluntario : ContentPage
         }
     }
 
+    //Botão que mostra e esconde a senha
     private void ButtonVerSenha(object sender, EventArgs e)
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
@@ -61,4 +65,5 @@ public partial class CadastroVoluntario : ContentPage
             button.Source = "olho_fechado.png";
         }
     }
+
 }

@@ -10,6 +10,7 @@ public partial class Login : ContentPage
 		InitializeComponent();
 	}
 
+    //Botão com metodo para fazer o login
     private async void ButtonLogin(object sender, EventArgs e)
     {
         try
@@ -38,6 +39,7 @@ public partial class Login : ContentPage
         }
     }
 
+    //Botão que esconde e mostra a senha
     private void ButtonVerSenha(object sender, EventArgs e)
     {
         txt_senha.IsPassword = !txt_senha.IsPassword;
@@ -54,6 +56,7 @@ public partial class Login : ContentPage
         }
     }
 
+    //Botão que muda para a pagina de recuperar senha 
     private async void OnTapRecuperarSenha(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new RecuperarSenha());

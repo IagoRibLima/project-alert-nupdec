@@ -7,6 +7,7 @@ public partial class Dashboard : ContentPage
 		InitializeComponent();
 	}
 
+    //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
     {
         await Navigation.PopAsync();

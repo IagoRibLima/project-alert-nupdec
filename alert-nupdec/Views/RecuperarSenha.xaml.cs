@@ -10,12 +10,14 @@ public partial class RecuperarSenha : ContentPage
         InitializeComponent();
 	}
 
+    //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
     {
 
         await Navigation.PopAsync();
     }
 
+    //Botão com metodo de procurar o usuario para recuperar a senha
     private async void ButtonProcurar(object sender, EventArgs e)
     {
         try
@@ -41,4 +43,5 @@ public partial class RecuperarSenha : ContentPage
             await DisplayAlert("Erro", ex.Message, "Fechar");
         }
     }
+
 }

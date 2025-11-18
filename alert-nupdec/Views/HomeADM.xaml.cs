@@ -7,9 +7,8 @@ public partial class HomeADM : ContentPage
 	public HomeADM()
 	{
 		InitializeComponent();
-
-		string? usuario_logado = null;
-
+	
+        // Exibir o nome do usuário logado e a unidade
         Task.Run(async () =>
         {
             lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
@@ -17,6 +16,7 @@ public partial class HomeADM : ContentPage
         });
     }
 
+    //Botão de emitir alerta
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());

@@ -6,16 +6,21 @@ namespace alert_nupdec.Repository
     {
         public static List<Dicas> list_dicas = new List<Dicas>();
 
-        public List<Dicas> ListDicas
-        {
-            get { return list_dicas; }
-        }
+        /*-----------------------------------------------------------------------------*/
 
-        public static void cadastrarDicas(Dicas Dicas)
+        // Método para cadastrar dicas
+        public static void cadastrarDicas(string dica, string descricao)
         {
-            list_dicas.Add(Dicas);
-            System.Diagnostics.Debug.WriteLine($"NomeDica: {Dicas.NomeDica}" +
-                                               $"\nDescricao: {Dicas.Descricao}");
+            Dicas dicas = new Dicas
+            {
+                NomeDica = dica,
+                Descricao = descricao
+            };
+
+            list_dicas.Add(dicas);
+
+            System.Diagnostics.Debug.WriteLine($"NomeDica: {dicas.NomeDica}" +
+                                               $"\nDescricao: {dicas.Descricao}");
         }
     }
 }
