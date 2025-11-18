@@ -35,6 +35,12 @@
                 <CollectionView x:Name="lista_dicas"
                             SelectionMode="None"
                             Margin="0,10">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    
                     <CollectionView.EmptyView>
                         <Label Text="Nenhuma dica cadastrada ainda."
                            HorizontalOptions="Center"

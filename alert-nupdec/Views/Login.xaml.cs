@@ -32,7 +32,7 @@ public partial class Login : ContentPage
             }
             else if (UsuarioRepository.lista_voluntarios != null)
             {
-                Usuario voluntarioEncontrado = UsuarioRepository.ListaVoluntarios
+                Usuario voluntarioEncontrado = UsuarioRepository.lista_voluntarios
                     .Cast<Usuario>()
                     .FirstOrDefault(i => (usuarioDigitado == i.Email || usuarioDigitado == i.CPF) &&
                                          senhaDigitada == i.Senha);

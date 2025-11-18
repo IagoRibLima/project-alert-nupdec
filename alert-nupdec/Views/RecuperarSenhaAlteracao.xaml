@@ -33,6 +33,39 @@
                        HorizontalOptions="Center" 
                        Margin="0,0,0,15"/>
 
+                <!--Nome do Usuario-->                
+                <Label Text="Nome:"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Margin="10,0"/>
+                <Label x:Name="lbl_nome"
+                       TextColor="DarkSlateGray"
+                       FontSize="15"
+                       Margin="10,0,10,15"/>
+
+                <!--Email do Usuario-->
+                <Label Text="Email:"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Margin="10,0"/>
+                <Label x:Name="lbl_email"
+                       TextColor="DarkSlateGray"
+                       FontSize="15"
+                       Margin="10,0,10,15"/>
+
+                <!--CPF do Usuario-->
+                <Label Text="CPF:"
+                       TextColor="#1848a0"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Margin="10,0"/>
+                <Label x:Name="lbl_cpf"
+                       TextColor="DarkSlateGray"
+                       FontSize="15"
+                       Margin="10,0,10,15"/>
+
                 <!--Campo de Senha-->
                 <Label Text="Senha"
                        TextColor="#1848a0"
@@ -54,11 +87,31 @@
                                 Opacity="0.3"/>
                     </Border.Shadow>
 
-                    <Entry x:Name="txt_senha"
-                           Placeholder="Senha"
-                           TextColor="DarkSlateGray"
-                           BackgroundColor="Transparent"
-                           ClearButtonVisibility="WhileEditing"/>
+                    <Grid ColumnDefinitions="*, Auto" 
+                          ColumnSpacing="5">
+
+                        <Entry Grid.Column="0"
+                               IsPassword="True"
+                               x:Name="txt_senha"
+                               Placeholder="Senha"
+                               PlaceholderColor="#6170ab"
+                               TextColor="DarkSlateGray"
+                               BackgroundColor="Transparent"
+                               ClearButtonVisibility="WhileEditing"/>
+
+                        <ImageButton x:Name="btn_senha"
+                                     Source="olho_aberto.png"
+                                     Clicked="ButtonVerSenha"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     WidthRequest="35"
+                                     HeightRequest="35"
+                                     Background="Transparent"
+                                     Aspect="AspectFit"
+                                     BorderWidth="0"
+                                     Padding="10"/>
+                    </Grid>
+                    
                 </Border>
 
                 <!--Campo de Confirmar Senha-->
@@ -82,11 +135,31 @@
                                 Opacity="0.3"/>
                     </Border.Shadow>
 
-                    <Entry x:Name="txt_confirmarsenha"
-                           Placeholder="Confirmar Senha"
-                           TextColor="DarkSlateGray"
-                           BackgroundColor="Transparent"
-                           ClearButtonVisibility="WhileEditing"/>
+                    <Grid ColumnDefinitions="*, Auto"
+                          ColumnSpacing="5">
+
+                        <Entry Grid.Column="0"
+                               IsPassword="True"
+                               x:Name="txt_confirmarsenha"
+                               Placeholder="Confirmar Senha"
+                               PlaceholderColor="#6170ab"
+                               TextColor="DarkSlateGray"
+                               BackgroundColor="Transparent"
+                               ClearButtonVisibility="WhileEditing"/>
+                        
+                        <ImageButton x:Name="btn_confirmarsenha"
+                                     Source="olho_aberto.png"
+                                     Clicked="ButtonVerConfirmarSenha"
+                                     Grid.Column="1"
+                                     VerticalOptions="Center"
+                                     WidthRequest="35"
+                                     HeightRequest="35"
+                                     Background="Transparent"
+                                     Aspect="AspectFit"
+                                     BorderWidth="0"
+                                     Padding="10"/>
+                    </Grid>
+                   
                 </Border>
 
                 <!--Botão de cadastrar-->

@@ -12,6 +12,7 @@ public partial class RecuperarSenha : ContentPage
 
     private async void ButtonVoltar(object sender, EventArgs e)
     {
+
         await Navigation.PopAsync();
     }
 
@@ -22,10 +23,12 @@ public partial class RecuperarSenha : ContentPage
             string emailDigitado = txt_email.Text?.Trim();
             string cpfDigitado = txt_cpf.Text?.Trim();
 
-            UsuarioRepository.AlterarSenha(emailDigitado, cpfDigitado);
+            UsuarioRepository.procurarUsuario(emailDigitado, cpfDigitado);
 
-            if (UsuarioRepository.idUsuarioEncontrado.Id != null)
+            if (UsuarioRepository.idUsuarioEncontrado != null)
             {
+                txt_email.Text = string.Empty;
+                txt_cpf.Text = string.Empty;
                 await Navigation.PushAsync(new RecuperarSenhaAlteracao());
             }
             else
