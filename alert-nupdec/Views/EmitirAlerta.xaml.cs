@@ -33,16 +33,15 @@ public partial class EmitirAlerta : ContentPage
             string tipo = picker_ocorrencia.SelectedItem as string;
             string endereco = txt_endereco.Text?.Trim();
             string descricao = txt_descricao.Text?.Trim();
-            string imagem = txt_imagem.Text?.Trim();                        
+            //string imagem = txt_imagem.Text?.Trim();                        
 
-            AlertaRepository.cadastrarAlerta(tipo, endereco, descricao, imagem);
+            AlertaRepository.cadastrarAlerta(tipo, endereco, descricao);
 
             await DisplayAlert("Sucesso", "Alerta emitido com sucesso", "Fechar");
 
             picker_ocorrencia.SelectedItem = null;
             txt_descricao.Text = string.Empty;
-            txt_endereco.Text = string.Empty;
-            txt_imagem.Text = string.Empty;
+            txt_endereco.Text = string.Empty;            
 
             OnAppearing();
         }
@@ -52,4 +51,27 @@ public partial class EmitirAlerta : ContentPage
         }
     }
 
+    private async void ButtonSelecionarImagem(object sender, EventArgs e)
+    {
+        try
+        {
+            FileResult photo = await MediaPicker.PickPhotoAsync();
+
+            if (photo == null)
+                return;
+
+            using Stream stream = await photo.OpenReadAsync();
+            using MemoryStream memoryStream = new();
+            await stream.CopyToAsync(memoryStream);
+            byte[] imageBytes = memoryStream.ToArray();
+
+            AlertaRepository.ImagemBase64Temp = Convert.ToBase64String(imageBytes);
+
+            await DisplayAlert("Imagem Selecionada", "Imagem selecionada com sucesso!", "OK");
+        }
+        catch(Exception ex)
+        {
+            await DisplayAlert("Erro", $"Falha ao selecionar imagem: {ex.Message}", "OK");
+        }
+    }
 }

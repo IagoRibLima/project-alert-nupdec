@@ -6,10 +6,12 @@ namespace alert_nupdec.Repository
     {
         public static List<Alerta> list_alerta = new List<Alerta>();
 
+        public static string ImagemBase64Temp { get; set; }
+
         /*---------------------------------------------------------------------------------------------*/
 
         //Metodo para cadastrar alerta
-        public static void cadastrarAlerta(string tipo, string endereco, string descricao, string imagem)
+        public static void cadastrarAlerta(string tipo, string endereco, string descricao)
         {
             var erros = new List<string>();
 
@@ -19,7 +21,7 @@ namespace alert_nupdec.Repository
                 erros.Add("É necessário informa o endereço da ocorrência");
             if (string.IsNullOrWhiteSpace(descricao))
                 erros.Add("Descreva a ocorrência");
-            if (string.IsNullOrEmpty(imagem))
+            if (string.IsNullOrEmpty(ImagemBase64Temp))
                 erros.Add("Envie uma imagem da ocorrência");
 
             if (erros.Count > 0)
@@ -33,7 +35,7 @@ namespace alert_nupdec.Repository
                 Tipo = tipo,
                 Endereco = endereco,
                 Descricao = descricao,
-                Imagem = imagem,
+                Imagem = ImagemBase64Temp,
                 Usuario = UsuarioRepository.usuario_logado
             };
 
@@ -44,6 +46,8 @@ namespace alert_nupdec.Repository
                                                $"\nDescricao: {alerta.Descricao}" +
                                                $"\nImagem: {alerta.Imagem}" +
                                                $"\nUsuario: {alerta.Usuario.NomeCompleto}");
+
+            ImagemBase64Temp = null;
         }        
     }
 }

@@ -26,6 +26,7 @@
             <VerticalStackLayout>
                 <Label Text="Configuração da Conta"
                        HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
                        VerticalOptions="Center"
                        TextColor="#1848a0"
                        FontSize="22"

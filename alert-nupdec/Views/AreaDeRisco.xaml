@@ -32,6 +32,7 @@
                            FontSize="24"
                            FontAttributes="Bold"
                            HorizontalOptions="Center" 
+                           HorizontalTextAlignment="Center"
                            Margin="0,0,0,15"/>
 
                     <!--Campo da Rua-->

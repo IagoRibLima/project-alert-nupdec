@@ -20,6 +20,7 @@
                 <Label Text="Alert NUPDEC"
                        TextColor="#212468"
                        HorizontalOptions="Center" 
+                       HorizontalTextAlignment="Center"
                        FontAttributes="Bold"
                        FontSize="25"
                        Margin="0,0,0,15"/>
