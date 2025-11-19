@@ -5,20 +5,20 @@
              Title="Treinamentos"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
-    
-    <Grid RowDefinitions="Auto,*">
 
-        <!-- Botão Voltar -->
-        <Button Grid.Row="0"
-                Text="Voltar"
-                TextColor="#e8ecee"
-                FontAttributes="Bold"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                Clicked="ButtonVoltar"
-                Margin="8"
-                Padding="12"
-                BackgroundColor="#1848a0"/>
+    <Grid RowDefinitions="Auto,*">
+        <!--Botão de voltar-->
+        <ImageButton Grid.Row="0"
+                     Source="voltar.png"                                        
+                     Margin="8"
+                     Padding="12"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#1848a0"
+                     Clicked="ButtonVoltar"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     CornerRadius="15"/>
 
         <!-- Conteúdo -->
         <VerticalStackLayout Grid.Row="1"

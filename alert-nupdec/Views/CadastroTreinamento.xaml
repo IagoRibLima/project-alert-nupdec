@@ -8,16 +8,17 @@
 
     <Grid RowDefinitions="Auto, *">
         <!--Botão de voltar-->
-        <Button Grid.Row="0"
-                Text="Voltar"
-                TextColor="#e8ecee"
-                FontAttributes="Bold"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                Clicked="ButtonVoltar"
-                Margin="8"
-                Padding="12"
-                BackgroundColor="#1848a0"/>
+        <ImageButton Grid.Row="0"
+                     Source="voltar.png"                                        
+                     Margin="8"
+                     Padding="12"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#1848a0"
+                     Clicked="ButtonVoltar"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     CornerRadius="15"/>
 
         <!--Conteúdo rolável-->
         <ScrollView Grid.Row="1">

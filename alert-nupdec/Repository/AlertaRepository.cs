@@ -44,6 +44,6 @@ namespace alert_nupdec.Repository
                                                $"\nDescricao: {alerta.Descricao}" +
                                                $"\nImagem: {alerta.Imagem}" +
                                                $"\nUsuario: {alerta.Usuario.NomeCompleto}");
-        }
+        }        
     }
 }

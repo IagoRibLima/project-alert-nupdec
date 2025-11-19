@@ -7,19 +7,20 @@
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto, Auto">
-        <Button Grid.Row="0"
-                Text="Voltar"
-                TextColor="#e8ecee"
-                FontSize="15"
-                FontAttributes="Bold"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                Padding="12"
-                BackgroundColor="#1848a0"
-                Clicked="ButtonVoltar"
-                Margin="8"/>
+        <!--Botão de voltar-->
+        <ImageButton Grid.Row="0"
+                     Source="voltar.png"                                        
+                     Margin="8"
+                     Padding="12"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#1848a0"
+                     Clicked="ButtonVoltar"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     CornerRadius="15"/>
 
-            <!--ScrollView das Configurações-->
+        <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
                     Padding="10,0">
             <VerticalStackLayout>
@@ -74,7 +75,7 @@
                           VerticalOptions="Center"
                           Margin="10,0">
 
-                        <ImageButton Source="login_entrar.png"
+                        <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
                                      Background="Transparent"/>
@@ -107,7 +108,7 @@
                           VerticalOptions="Center"
                           Margin="10,0">
 
-                        <ImageButton Source="login_entrar.png"
+                        <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
                                      Background="Transparent"/>
@@ -140,7 +141,7 @@
                           VerticalOptions="Center"
                           Margin="10,0">
 
-                        <ImageButton Source="login_entrar.png"
+                        <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
                                      Background="Transparent"/>

@@ -61,7 +61,59 @@
                 <VerticalStackLayout Spacing="12" 
                                      Padding="10">
 
-                    <!--Feed-->
+                    <CollectionView x:Name="lista_alertas"
+                SelectionMode="None"
+                Margin="0,10">
+
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.EmptyView>
+                            <Label/>
+                        </CollectionView.EmptyView>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border StrokeThickness="5"
+                    BackgroundColor="#e8ecee"
+                    Stroke="#1848a0"
+                    Margin="0,5"
+                    Padding="12"
+                    StrokeShape="RoundRectangle 20">
+                                    <VerticalStackLayout Margin="5,2">
+                                        <Label Text="{Binding Usuario.NomeCompleto}"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#FF751F"
+                           Margin="0,2,0,10"/>
+                                        <Label Text="{Binding Tipo}"
+                           FontSize="16"
+                           TextColor="DarkSlateGray"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
+                                        <Label Text="{Binding Endereco}"
+                           FontSize="16"
+                           TextColor="DarkSlateGray"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
+                                        <Label Text="{Binding Descricao}"
+                           FontSize="16"
+                           TextColor="DarkSlateGray"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
+                                        <Label Text="{Binding Imagem}"
+                           FontSize="16"
+                           TextColor="DarkSlateGray"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
+                                    </VerticalStackLayout>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
 
                 </VerticalStackLayout>
             </ScrollView>

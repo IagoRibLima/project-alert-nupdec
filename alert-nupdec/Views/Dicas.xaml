@@ -21,16 +21,15 @@
 
         <!--ScrollView do Feed-->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Grid.Row="1"
-                             Padding="20,10"
-                             Spacing="10">
+            <VerticalStackLayout Padding="20,10"
+                                 Spacing="10">
 
                 <Label Text="Dicas Cadastradas"
-                   FontSize="26"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#1848a0"
-                   Margin="0,10"/>
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#1848a0"
+                       Margin="0,10"/>
 
                 <CollectionView x:Name="lista_dicas"
                             SelectionMode="None"

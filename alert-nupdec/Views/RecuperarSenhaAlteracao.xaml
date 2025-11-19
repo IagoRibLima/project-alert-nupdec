@@ -7,17 +7,18 @@
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto, Auto">
-        <Button Grid.Column="0"
-                Text="Voltar"
-                TextColor="#e8ecee"
-                FontSize="15"
-                FontAttributes="Bold"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                Margin="12"
-                Padding="12"
-                BackgroundColor="#1848a0"
-                Clicked="ButtonVoltar"/>
+        <!--Botão de voltar-->
+        <ImageButton Grid.Row="0"
+                     Source="voltar.png"                                        
+                     Margin="8"
+                     Padding="12"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     BackgroundColor="#1848a0"
+                     Clicked="ButtonVoltar"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     CornerRadius="15"/>
 
         <!--ScrollView de Recuperar Senha-->
         <ScrollView Grid.Row="1">

@@ -21,7 +21,7 @@ public partial class EmitirAlerta : ContentPage
 
     //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
-    {
+    {        
         await Navigation.PopAsync();
     }
 
@@ -43,6 +43,8 @@ public partial class EmitirAlerta : ContentPage
             txt_descricao.Text = string.Empty;
             txt_endereco.Text = string.Empty;
             txt_imagem.Text = string.Empty;
+
+            OnAppearing();
         }
         catch (Exception ex)
         {
