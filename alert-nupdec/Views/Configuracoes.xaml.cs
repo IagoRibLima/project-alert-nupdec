@@ -11,9 +11,14 @@ public partial class Configuracoes : ContentPage
         // Carregar os dados do usuário logado
         Task.Run(async () =>
         {
+            
             lbl_usuario.Text = $"{UsuarioRepository.usuario_logado.NomeCompleto}";
             lbl_email.Text = $"{UsuarioRepository.usuario_logado.Email}";
+            lbl_cpf.Text = $"{UsuarioRepository.usuario_logado.CPF}";
+            lbl_telefone.Text = $"{UsuarioRepository.usuario_logado.Telefone}";
+            lbl_unidade.Text = $"{UsuarioRepository.usuario_logado.Unidade.Bairro}";
             lbl_senha.Text = $"{UsuarioRepository.usuario_logado.Senha}";
+            
         });
     }
 
@@ -24,22 +29,10 @@ public partial class Configuracoes : ContentPage
     }
 
     //Botão de alterar nome
-    private async void ButtonAlterarNome(object sender, EventArgs e)
+    private async void ButtonEditar(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AlterarNome());
-    }
-    
-    //Botão de alterar email
-    private async void ButtonAlterarEmail(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new AlterarEmail());
-    }
-
-    //Botão de alterar senha
-    private async void ButtonAlterarSenha(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new AlterarSenha());
-    }
+        await Navigation.PushAsync(new EditarDados());
+    }        
 
     //Botão de desconectar
     private async void ButtonDisconect(object sender, EventArgs e)

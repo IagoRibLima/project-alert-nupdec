@@ -48,24 +48,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AlterarEmail.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AlterarEmail.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\AlterarEmail.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\AlterarEmail.xaml
-
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AlterarNome.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AlterarNome.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\AlterarNome.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\AlterarNome.xaml
-
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AlterarSenha.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AlterarSenha.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\AlterarSenha.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\AlterarSenha.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AreaDeRisco.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AreaDeRisco.xaml
@@ -101,6 +83,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Dicas.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Dicas.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Dicas.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/EditarDados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.EditarDados.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditarDados.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditarDados.xaml
 
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/EmitirAlerta.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

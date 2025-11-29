@@ -125,6 +125,7 @@ namespace alert_nupdec.Repository
                 Id = lista_usuario.Count.ToString(),
                 NomeCompleto = nome,
                 Email = email,
+                CPF = cpf,
                 Telefone = telefone,
                 Unidade = unidade,
                 Senha = senha,

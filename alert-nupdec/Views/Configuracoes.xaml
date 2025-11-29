@@ -20,19 +20,21 @@
                      WidthRequest="50"
                      CornerRadius="15"/>
 
+        <Label Text="Configuração da Conta"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               TextColor="#1848a0"
+               FontSize="22"
+               FontAttributes="Bold"
+               Margin="0,20"
+               Padding="60,0"/>
+
         <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
-                    Padding="10,0">
+                    Padding="10,0"
+                    Margin="10,20">
             <VerticalStackLayout>
-                <Label Text="Configuração da Conta"
-                       HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="Center"
-                       TextColor="#1848a0"
-                       FontSize="22"
-                       FontAttributes="Bold"
-                       Margin="0,0,0,20"/>
-                
                 <Border Grid.Column="0"
                         HeightRequest="80"
                         WidthRequest="80"
@@ -50,119 +52,112 @@
                        Padding="10,0"
                        Margin="0,30,0,0"/>
 
-                <!--Botão do Nome do Usuario-->
-                <Grid Margin="0,20">
-                    <!--Definição do Grid Horizontal dos Botões-->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                <!--Label para editar dados-->
+                <Label Text="Editar"
+                       HorizontalOptions="End"
+                       TextColor="DarkSlateGray"
+                       Margin="10,0">
+                    
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonEditar" />
+                    </Label.GestureRecognizers>
+                </Label>
 
-                    <!--Grid Nome do Usuario-->
-                    <VerticalStackLayout Grid.Column="0" 
-                                         VerticalOptions="Center"
-                                         Spacing="2">
-                        <Label Text="Nome Completo"
-                               TextColor="DarkSlateGray"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
-                        <Label x:Name="lbl_usuario" 
-                               TextColor="DarkSlateGray"
-                               FontSize="12"/>
-                    </VerticalStackLayout>
+                <!--Label nome usuario-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="Nome: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
 
-                    <!--Grid Imagem do Botão-->
-                    <Grid Grid.Column="1" 
-                          VerticalOptions="Center"
-                          Margin="10,0">
+                    <Label x:Name="lbl_usuario" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
-                        <ImageButton Source="entrar.png"
-                                     HeightRequest="26"
-                                     WidthRequest="26"
-                                     Background="Transparent"
-                                     Clicked="ButtonAlterarNome"/>
-                    </Grid>
+                <!--Label email-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="Email: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
 
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ButtonAlterarNome"/>
-                    </Grid.GestureRecognizers>
-                </Grid>
+                    <Label x:Name="lbl_email" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
-                <!--Botão do Nome do Usuario-->
-                <Grid Margin="0,20">
-                    <!--Definição do Grid Horizontal dos Botões-->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                <!--Label cpf-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="CPF: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
 
-                    <!--Grid Nome do Email-->
-                    <VerticalStackLayout Grid.Column="0" 
-                         VerticalOptions="Center"
-                         Spacing="2">
-                        <Label Text="Email"
-                               TextColor="DarkSlateGray"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
-                        <Label x:Name="lbl_email" 
-                               TextColor="DarkSlateGray"
-                               FontSize="12"/>
-                    </VerticalStackLayout>
+                    <Label x:Name="lbl_cpf" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
-                    <!--Grid Imagem do Botão-->
-                    <Grid Grid.Column="1" 
-                          VerticalOptions="Center"
-                          Margin="10,0">
+                <!--Label telefone-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="Telefone: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
 
-                        <ImageButton Source="entrar.png"
-                                     HeightRequest="26"
-                                     WidthRequest="26"
-                                     Background="Transparent"
-                                     Clicked="ButtonAlterarEmail"/>
-                    </Grid>
+                    <Label x:Name="lbl_telefone" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ButtonAlterarEmail"/>
-                    </Grid.GestureRecognizers>
-                </Grid>
+                <!--Label unidade-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="Unidade: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
 
-                <!--Botão Senha-->
-                <Grid Margin="0,20">
-                    <!--Definição do Grid Horizontal dos Botões-->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lbl_unidade" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
-                    <!--Grid Nome do Usuario-->
-                    <VerticalStackLayout Grid.Column="0" 
-                                         VerticalOptions="Center"
-                                         Spacing="2">
-                        <Label Text="Senha"
-                               TextColor="DarkSlateGray"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
-                        <Label x:Name="lbl_senha"                              
-                               TextColor="DarkSlateGray"
-                               FontSize="12"/>
-                    </VerticalStackLayout>
-
-                    <!--Grid Imagem do Botão-->
-                    <Grid Grid.Column="1" 
-                          VerticalOptions="Center"
-                          Margin="10,0">
-
-                        <ImageButton Source="entrar.png"
-                                     HeightRequest="26"
-                                     WidthRequest="26"
-                                     Background="Transparent"
-                                     Clicked="ButtonAlterarSenha"/>
-                    </Grid>
-
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ButtonAlterarSenha"/>
-                    </Grid.GestureRecognizers>
-                </Grid>
+                <!--Label senha-->
+                <HorizontalStackLayout Margin="0,10">
+                    <Label Text="Senha: " 
+                           TextColor="#1848a0"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"/>
+        
+                    <Label x:Name="lbl_senha" 
+                           TextColor="DarkSlateGray"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="10,0"/>
+                </HorizontalStackLayout>
 
                 <!--Botão de Sair-->
                 <Label Text="Sair"
