@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
-using System.IO;
 
-namespace alert_nupdec.Converters;
+namespace alert_nupdec.Service;
 
 public class Base64ToImageConverter : IValueConverter
 {
@@ -22,5 +21,5 @@ public class Base64ToImageConverter : IValueConverter
     {
         // Não é necessário converter de volta para este cenário
         throw new NotImplementedException();
-    }
+    }    
 }

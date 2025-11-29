@@ -1,5 +1,6 @@
 using alert_nupdec.Models;
 using alert_nupdec.Repository;
+using alert_nupdec.Service;
 
 namespace alert_nupdec.Views;
 
@@ -53,23 +54,21 @@ public partial class EmitirAlerta : ContentPage
 
     private async void ButtonSelecionarImagem(object sender, EventArgs e)
     {
+        // Agora esta linha vai funcionar porque criamos a classe ImageService no Passo 2
+        var imageService = new ImageService();
+
         try
         {
-            FileResult photo = await MediaPicker.PickPhotoAsync();
+            string base64Result = await imageService.SelecionarFotoAsync();
 
-            if (photo == null)
+            if (string.IsNullOrEmpty(base64Result))
                 return;
 
-            using Stream stream = await photo.OpenReadAsync();
-            using MemoryStream memoryStream = new();
-            await stream.CopyToAsync(memoryStream);
-            byte[] imageBytes = memoryStream.ToArray();
-
-            AlertaRepository.ImagemBase64Temp = Convert.ToBase64String(imageBytes);
+            AlertaRepository.ImagemBase64Temp = base64Result;
 
             await DisplayAlert("Imagem Selecionada", "Imagem selecionada com sucesso!", "OK");
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             await DisplayAlert("Erro", $"Falha ao selecionar imagem: {ex.Message}", "OK");
         }
