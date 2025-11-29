@@ -96,12 +96,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Configu
 build_metadata.AdditionalFiles.TargetPath = Views\Configuracoes.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Configuracoes.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Dashboard.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Dashboard.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Dashboard.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Dashboard.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/Dicas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.Dicas.xaml

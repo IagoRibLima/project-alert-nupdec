@@ -64,63 +64,7 @@
         <!--Grid do Feed-->
         <Grid Grid.Row="1">
             <ScrollView>
-                <VerticalStackLayout Spacing="12" 
-                                     Padding="10">
-
-                    <CollectionView x:Name="lista_alertas"
-                                    SelectionMode="None"
-                                    Margin="0,10">
-
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Vertical"
-                                               ItemSpacing="10"/>
-                        </CollectionView.ItemsLayout>
-
-                        <CollectionView.EmptyView>
-                            <Label/>
-                        </CollectionView.EmptyView>
-
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Border StrokeThickness="5"
-                                        BackgroundColor="#e8ecee"
-                                        Stroke="#1848a0"
-                                        Margin="0,5"
-                                        Padding="12"
-                                        StrokeShape="RoundRectangle 20">
-                                    <VerticalStackLayout Margin="5,2">
-                                        <Label Text="{Binding Usuario.NomeCompleto}"
-                                               FontAttributes="Bold"
-                                               FontSize="18"
-                                               TextColor="#FF751F"
-                                               Margin="0,2,0,10"/>
-                                        <Label Text="{Binding Tipo}"
-                                               FontSize="16"
-                                               TextColor="DarkSlateGray"
-                                               LineBreakMode="WordWrap"
-                                               Margin="5"/>
-                                        <Label Text="{Binding Endereco}"
-                                               FontSize="16"
-                                               TextColor="DarkSlateGray"
-                                               LineBreakMode="WordWrap"
-                                               Margin="5"/>
-                                        <Label Text="{Binding Descricao}"
-                                               FontSize="16"
-                                               TextColor="DarkSlateGray"
-                                               LineBreakMode="WordWrap"
-                                               Margin="5"/>
-                                        <Image Source="{Binding Imagem, Converter={StaticResource Base64ToImage}}"
-                                               HeightRequest="200"
-                                               Aspect="AspectFill"
-                                               Margin="0,0,0,10"/>
-                                    </VerticalStackLayout>
-                                </Border>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                        
-                    </CollectionView>
-
-                </VerticalStackLayout>
+                
             </ScrollView>
 
             <!--Botão para criar alerta-->

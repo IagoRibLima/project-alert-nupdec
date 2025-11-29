@@ -7,20 +7,44 @@ public partial class FlyoutPageADM : FlyoutPage
 		InitializeComponent();
 	}
 
-    //Botão de cadastro de voluntário
+    //Botão submenu de voluntários
+    private async void OnTapSubMenuVoluntario(object sender, EventArgs e)
+    {
+        subMenuVoluntario.IsVisible = !subMenuVoluntario.IsVisible;
+    }
+
+    //Botão submenu de dicas
+    private async void OnTapSubMenuDica(object sender, EventArgs e)
+    {
+        subMenuDica.IsVisible = !subMenuDica.IsVisible;
+    }
+
+    //Botão de cadastro de treinamentos
+    private async void OnTapSubMenuTreinamento(object sender, EventArgs e)
+    {
+        subMenuTreinamento.IsVisible = !subMenuTreinamento.IsVisible;
+    }
+
+    //Botão submenu area de risco
+    private async void OnTapSubMenuAreaDeRisco(object sender, EventArgs e)
+    {
+        subMenuAreaDeRisco.IsVisible = !subMenuAreaDeRisco.IsVisible;
+    }
+
+    //Botão de cadastro de voluntários
     private async void OnTapCadastrarVoluntario(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroVoluntario());
     }
 
-    //Botão de cadastro de dica
-    private async void OnTapCadastroDica(object sender, EventArgs e)
+    //Botão de cadastro de dicas
+    private async void OnTapGerenciarDica(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroDica());
     }
 
-    //Botão de cadastro de treinamento
-    private async void OnTapCadastroTreinamento(object sender, EventArgs e)
+    //Botão de cadastro de treinamentos
+    private async void OnTapGerenciarTreinamento(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroTreinamento());
     }
@@ -32,20 +56,15 @@ public partial class FlyoutPageADM : FlyoutPage
     }
 
     //Botão de cadastro da area de risco
-    private async void OnTapAreaDeRisco(object sender, EventArgs e)
+    private async void OnTapGerenciarAreaDeRisco(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new AreaDeRisco());
-    }
-
-    //Botão de dashboard
-    private async void OnTapDashboard(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Dashboard());
     }
 
     //Botão de ver ocorrências
     private async void OnTapOcorrencia(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Ocorrencias());
+
     }
 }
