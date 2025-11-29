@@ -36,6 +36,12 @@
             <CollectionView x:Name="lista_treinamentos"
                             SelectionMode="None"
                             Margin="0,10">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                       ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
                 <CollectionView.EmptyView>
                     <Label Text="Nenhum treinamento cadastrado ainda."
                            HorizontalOptions="Center"

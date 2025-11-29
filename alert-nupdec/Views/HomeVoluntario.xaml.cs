@@ -21,7 +21,7 @@ public partial class HomeVoluntario : ContentPage
         {
             if (UsuarioRepository.usuario_logado != null)
             {
-                lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
+                lbl_boasvindas.Text = $"Voluntario: {UsuarioRepository.usuario_logado.NomeCompleto}";
                 lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.Bairro} - {UsuarioRepository.usuario_logado.Unidade.CEP}";
             }
         });

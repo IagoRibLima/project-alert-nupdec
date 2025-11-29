@@ -79,8 +79,13 @@
                         <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
-                                     Background="Transparent"/>
+                                     Background="Transparent"
+                                     Clicked="ButtonAlterarNome"/>
                     </Grid>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonAlterarNome"/>
+                    </Grid.GestureRecognizers>
                 </Grid>
 
                 <!--Botão do Nome do Usuario-->
@@ -112,8 +117,13 @@
                         <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
-                                     Background="Transparent"/>
+                                     Background="Transparent"
+                                     Clicked="ButtonAlterarEmail"/>
                     </Grid>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonAlterarEmail"/>
+                    </Grid.GestureRecognizers>
                 </Grid>
 
                 <!--Botão Senha-->
@@ -132,7 +142,7 @@
                                TextColor="DarkSlateGray"
                                FontAttributes="Bold"
                                FontSize="16"/>
-                        <Label x:Name="lbl_senha"
+                        <Label x:Name="lbl_senha"                              
                                TextColor="DarkSlateGray"
                                FontSize="12"/>
                     </VerticalStackLayout>
@@ -145,8 +155,13 @@
                         <ImageButton Source="entrar.png"
                                      HeightRequest="26"
                                      WidthRequest="26"
-                                     Background="Transparent"/>
+                                     Background="Transparent"
+                                     Clicked="ButtonAlterarSenha"/>
                     </Grid>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ButtonAlterarSenha"/>
+                    </Grid.GestureRecognizers>
                 </Grid>
 
                 <!--Botão de Sair-->

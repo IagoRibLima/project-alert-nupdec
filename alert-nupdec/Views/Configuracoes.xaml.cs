@@ -23,6 +23,24 @@ public partial class Configuracoes : ContentPage
         await Navigation.PopAsync();
     }
 
+    //Botão de alterar nome
+    private async void ButtonAlterarNome(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AlterarNome());
+    }
+    
+    //Botão de alterar email
+    private async void ButtonAlterarEmail(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AlterarEmail());
+    }
+
+    //Botão de alterar senha
+    private async void ButtonAlterarSenha(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AlterarSenha());
+    }
+
     //Botão de desconectar
     private async void ButtonDisconect(object sender, EventArgs e)
     {

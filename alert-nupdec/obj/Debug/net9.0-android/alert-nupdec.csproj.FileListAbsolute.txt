@@ -956,3 +956,13 @@ C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupde
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\area.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\camera.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\configuracao.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\dashboard.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\dica.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\entrar.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\ocorrencia.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\treinamento.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\voltar.png
+C:\Users\iagol\OneDrive\Documentos\project-alert-nupdec\alert-nupdec\alert-nupdec\obj\Debug\net9.0-android\resizetizer\r\drawable\voluntarios.png
