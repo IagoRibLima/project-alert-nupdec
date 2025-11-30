@@ -27,8 +27,7 @@
            TextColor="#1848a0"
            FontSize="22"
            FontAttributes="Bold"
-           Margin="0,20"
-           Padding="60,0"/>
+           Margin="0,20"/>
 
         <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
