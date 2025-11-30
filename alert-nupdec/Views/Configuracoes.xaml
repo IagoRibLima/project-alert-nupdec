@@ -34,13 +34,13 @@
                     Padding="10,0"
                     Margin="10,20">
             <VerticalStackLayout>
-                <Border Grid.Column="0"
-                        HeightRequest="80"
+                <Border HeightRequest="80"
                         WidthRequest="80"
                         StrokeShape="RoundRectangle 40"
                         Margin="10,0"
                         VerticalOptions="Center">
-                    <Image Source="usuario.png" Aspect="AspectFill" />
+                    <Image x:Name="img_perfil"
+                           Aspect="AspectFill" />
                 </Border>
 
                 <Label Text="Dados da Conta"

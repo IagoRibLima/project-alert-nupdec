@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:alert_nupdec.Service"
              x:Class="alert_nupdec.Views.EditarDados"
              Title="EditarDados"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#a6a6a6">
+
+    <ContentPage.Resources>
+        <converters:Base64ToImageConverter x:Key="Base64ToImage"/>
+    </ContentPage.Resources>
 
     <Grid RowDefinitions="Auto, Auto">
         <!--Botão de voltar-->
@@ -34,15 +39,44 @@
                     Padding="10,0"
                     Margin="10,20">
             <VerticalStackLayout>
-                <Border Grid.Column="0"
-                        HeightRequest="80"
-                        WidthRequest="80"
-                        StrokeShape="RoundRectangle 40"
-                        Margin="10,0"
-                        VerticalOptions="Center">
-                    <Image Source="usuario.png" Aspect="AspectFill" />
-                </Border>
 
+                <Grid Grid.Column="0"
+                      HeightRequest="86"
+                      WidthRequest="86"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      Margin="10,0">
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MudarFoto_Tapped"/>
+                    </Grid.GestureRecognizers>
+
+                    <Border HeightRequest="80"
+                            WidthRequest="80"
+                            StrokeShape="RoundRectangle 40"                            
+                            VerticalOptions="Center">
+                        <Image x:Name="img_perfil"
+                               Aspect="AspectFill"/>
+                    </Border>
+
+                    <Border BackgroundColor="#1848a0"
+                            Stroke="White"
+                            StrokeThickness="2"
+                            HeightRequest="28"
+                            WidthRequest="28"
+                            StrokeShape="RoundRectangle 14"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            TranslationX="-2"
+                            TranslationY="-2">
+
+                        <Image Source="lapis.png" 
+                               Aspect="AspectFit" 
+                               Margin="5"/>
+                    </Border>
+
+                </Grid>
+                
                 <Label Text="Alterar Dados da Conta"
                        TextColor="#1848a0"
                        FontSize="20"

@@ -1,12 +1,12 @@
 ﻿using alert_nupdec.Models;
 using System.Collections;
 using System.Net.Mail;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace alert_nupdec.Repository
 {
     public class UsuarioRepository
     {
+        public static string fotoPerfilTemp { get; set; }
         public static Usuario idUsuarioEncontrado { get; set; }
 
         public static Usuario usuario_logado { get; set; }        
@@ -27,7 +27,8 @@ namespace alert_nupdec.Repository
                     CEP = "00000000"
                 },
                 Senha = "Abc1234@",
-                Adm = true 
+                Adm = true, 
+                Foto = null
             },
             new Usuario()
             {
@@ -43,7 +44,8 @@ namespace alert_nupdec.Repository
                     CEP = "00000000"
                 },
                 Senha = "Abc1234@",
-                Adm = true
+                Adm = true,
+                Foto = null
             }
         };
 
@@ -130,7 +132,8 @@ namespace alert_nupdec.Repository
                 Telefone = telefone,
                 Unidade = unidade,
                 Senha = senha,
-                Adm = false
+                Adm = false,
+                Foto = null
             };            
 
             lista_usuario.Add(voluntario);
@@ -142,7 +145,8 @@ namespace alert_nupdec.Repository
                                                $"\nTelefone: {voluntario.Telefone}" +
                                                $"\nUnidade: {voluntario.Unidade}" +
                                                $"\nSenha: {voluntario.Senha}" +
-                                               $"\nAdm: {voluntario.Adm}");
+                                               $"\nAdm: {voluntario.Adm}" +
+                                               $"\nFoto: {voluntario.Foto}");
         }
 
         //Metodo para procurar o usuário
@@ -239,6 +243,12 @@ namespace alert_nupdec.Repository
                 ((Usuario)lista_usuario[id]).Senha = senha;
 
                 alterados.Add("Senha");
+            }
+            if (!string.IsNullOrWhiteSpace(fotoPerfilTemp))
+            {
+                ((Usuario)lista_usuario[id]).Foto = fotoPerfilTemp;
+                fotoPerfilTemp = null;
+                alterados.Add("Foto de Perfil");
             }
 
             if (alterados.Count > 0)

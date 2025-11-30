@@ -27,6 +27,16 @@ public partial class Configuracoes : ContentPage
             lbl_unidade.Text = $"{UsuarioRepository.usuario_logado.Unidade.Bairro}";
             lbl_senha.Text = $"{UsuarioRepository.usuario_logado.Senha}";
         }
+
+        if (UsuarioRepository.usuario_logado != null && !string.IsNullOrEmpty(UsuarioRepository.usuario_logado.Foto))
+        {
+            byte[] imageByte = Convert.FromBase64String(UsuarioRepository.usuario_logado.Foto);
+            img_perfil.Source = ImageSource.FromStream(() => new MemoryStream(imageByte));
+        }
+        else
+        {
+            img_perfil.Source = "usuario.png";
+        }
     }
 
     //Botão de voltar

@@ -10,5 +10,6 @@
         public AreaRisco Unidade { get; set; }
         public string Senha { get; set; }
         public bool Adm {  get; set; }
+        public string Foto { get; set; }
     }    
 }
