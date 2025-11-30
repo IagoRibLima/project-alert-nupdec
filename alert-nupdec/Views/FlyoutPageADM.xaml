@@ -255,6 +255,29 @@
                         <TapGestureRecognizer Tapped="OnTapConfiguracoes"/>
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
+
+                <!--Botão Sair-->
+                <HorizontalStackLayout Spacing="10"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       Padding="10">
+
+                    <Image Source="sair.png"
+                           HeightRequest="26"
+                           VerticalOptions="Center"
+                           Margin="0,10,0,10"/>
+
+                    <Label Text="Sair"
+                           FontAttributes="Bold"
+                           FontSize="17"
+                           TextColor="#e8ecee"
+                           VerticalOptions="Center"/>
+
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapSair"/>
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+
                 <!--Final dos Botões-->
 
             </VerticalStackLayout>
