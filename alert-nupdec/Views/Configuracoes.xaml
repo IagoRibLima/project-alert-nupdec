@@ -48,7 +48,6 @@
                        FontSize="20"
                        FontAttributes="Bold"
                        HorizontalOptions="Start"
-                       Padding="10,0"
                        Margin="0,30,0,0"/>
 
                 <!--Label para editar dados-->

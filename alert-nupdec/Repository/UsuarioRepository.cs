@@ -1,6 +1,7 @@
 ﻿using alert_nupdec.Models;
 using System.Collections;
 using System.Net.Mail;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace alert_nupdec.Repository
 {
@@ -194,6 +195,62 @@ namespace alert_nupdec.Repository
             }            
         }
 
+        //Metodo para atualizar os dados do usuário
+        public static string AtualizarDadosUsuario(string email, string telefone, string senha, string confirmarSenha)
+        {
+            var alterados = new List<string>();
+
+            int id = int.Parse(usuario_logado.Id);
+
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                if (!MailAddress.TryCreate(email, out _))
+                    throw new Exception("O campo Email deve conter um endereço de email válido.");
+
+                ((Usuario)lista_usuario[id]).Email = email;
+
+                alterados.Add("Email");
+            }
+            if (!string.IsNullOrWhiteSpace(telefone))
+            {
+                string numeroTelefone = new string(telefone.Where(char.IsDigit).ToArray());
+                if (numeroTelefone.Length != 11)
+                    throw new Exception("O campo Telefone deve conter 11 dígitos (DDD + número).");
+
+                ((Usuario)lista_usuario[id]).Telefone = telefone;
+
+                alterados.Add("Telefone");
+            }
+            if (!string.IsNullOrWhiteSpace(senha))
+            {                
+                if (senha.Length < 8)
+                    throw new Exception("O campo Senha deve ter no mínimo 8 caracteres.");
+                if (!senha.Any(char.IsUpper))
+                    throw new Exception("O campo Senha deve ter pelo menos uma letra maiúscula.");
+                if (!senha.Any(char.IsDigit))
+                    throw new Exception("O campo Senha deve ter pelo menos um número.");
+                if (senha.All(char.IsLetterOrDigit))
+                    throw new Exception("O campo Senha deve ter pelo menos um caractere especial (ex: @, #, $, !).");
+                if (string.IsNullOrWhiteSpace(confirmarSenha))
+                    throw new Exception("É necessário confirmar a senha.");
+                if (senha != confirmarSenha)
+                    throw new Exception("As senhas não coincidem!");
+
+                ((Usuario)lista_usuario[id]).Senha = senha;
+
+                alterados.Add("Senha");
+            }
+
+            if (alterados.Count > 0)
+            {
+                usuario_logado = (Usuario)lista_usuario[id];
+                return $"Dados alterados com sucesso: {string.Join(", ", alterados)}.";
+            }
+            else
+            {
+                throw new Exception("Nenhum dado foi alterado.");
+            }           
+        }
 
     }
 }
