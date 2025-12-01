@@ -29,19 +29,21 @@ public partial class AreaDeRisco : ContentPage
 
             AreaDeRiscoRepository.cadastrarArea(nomeArea, enderecoCompleto, cep, itemSelecionado, descricao, riscoImediato);
 
-            await DisplayAlert("Sucesso", "�rea de risco cadastrada com sucesso!", "Fechar");
+            await DisplayAlert("Sucesso", "Área de risco cadastrada com sucesso!", "Fechar");
 
             txt_nomeArea.Text = string.Empty;
             txt_enderecoCompleto.Text = string.Empty;
             txt_cep.Text = string.Empty;
-            picker_tipoProblema.SelectedItem = null;
+            picker_tipoProblema.SelectedIndex = 0;
             txt_descricao.Text = string.Empty;
             chkRiscoImediato.IsChecked = false;
+            img_perfil.IsVisible = false;
+            AreaDeRiscoRepository.ImagemBase64Temp = null;
 
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Erro", $"Ocorreu um erro ao cadastrar a �rea de risco: \n{ex.Message}", "OK");
+            await DisplayAlert("Erro", $"Ocorreu um erro ao cadastrar a área de risco: \n{ex.Message}", "OK");
         }
     }
 
@@ -50,8 +52,11 @@ public partial class AreaDeRisco : ContentPage
         var itemSelecionado = picker_tipoProblema.SelectedItem?.ToString();
     }
 
+
+
     private async void ButtonSelecionarImagem(object sender, EventArgs e)
-    {        
+    {
+        // Agora esta linha vai funcionar porque criamos a classe ImageService no Passo 2
         var imageService = new ImageService();
 
         try
@@ -61,8 +66,9 @@ public partial class AreaDeRisco : ContentPage
             if (string.IsNullOrEmpty(base64Result))
                 return;
             AreaDeRiscoRepository.ImagemBase64Temp = base64Result;
-
-            await DisplayAlert("Imagem Selecionada", "Imagem selecionada com sucesso!", "OK");
+            img_perfil.IsVisible = true;
+            byte[] imageByte = Convert.FromBase64String(AreaDeRiscoRepository.ImagemBase64Temp);
+            img_perfil.Source = ImageSource.FromStream(() => new MemoryStream(imageByte));
         }
         catch (Exception ex)
         {

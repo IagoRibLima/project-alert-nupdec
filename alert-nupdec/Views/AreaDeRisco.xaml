@@ -189,6 +189,12 @@
                        FontAttributes="Bold"
                        FontSize="16"
                        Margin="10,2"/>
+                <Image
+                    x:Name="img_perfil"
+                    Aspect="AspectFill"
+                    HeightRequest="100"
+                    WidthRequest="250"
+                    IsVisible="false"/>
                 <Border StrokeThickness="3"
                         BackgroundColor="Transparent"
                         Padding="0"
@@ -205,6 +211,7 @@
                     </Border.Shadow>
 
                     <HorizontalStackLayout HorizontalOptions="Center">
+
                         <ImageButton Source="camera.png"                                        
                                      Margin="8"
                                      Padding="12"
