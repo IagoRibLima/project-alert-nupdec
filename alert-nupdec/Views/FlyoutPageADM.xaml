@@ -121,7 +121,7 @@
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
                             <HorizontalStackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnTapGerenciarAreaDeRisco"/>
+                                <TapGestureRecognizer Tapped="OnTapCadastrarAreaDeRisco"/>
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
@@ -131,6 +131,9 @@
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapEditarVisualizarAreaDeRisco"/>
+                            </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
@@ -292,5 +295,5 @@
             </x:Arguments>
         </NavigationPage>
     </FlyoutPage.Detail>
-  
+
 </FlyoutPage>

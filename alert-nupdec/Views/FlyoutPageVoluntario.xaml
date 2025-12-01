@@ -13,7 +13,7 @@
                      BackgroundColor="#1848a0"
                      Opacity="0.75">
             <VerticalStackLayout>
-                
+
                 <!--Botão Dicas-->
                 <HorizontalStackLayout Spacing="10"
                                        HorizontalOptions="Start"

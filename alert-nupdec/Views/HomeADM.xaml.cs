@@ -4,9 +4,9 @@ namespace alert_nupdec.Views;
 
 public partial class HomeADM : ContentPage
 {
-	public HomeADM()
-	{
-		InitializeComponent();        
+    public HomeADM()
+    {
+        InitializeComponent();
     }
 
     protected override void OnAppearing()
@@ -21,7 +21,7 @@ public partial class HomeADM : ContentPage
         if (UsuarioRepository.usuario_logado != null)
         {
             lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
-            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.Bairro} - {UsuarioRepository.usuario_logado.Unidade.CEP}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.enderecoCompleto} - {UsuarioRepository.usuario_logado.Unidade.cep}";
         }
 
         if (UsuarioRepository.usuario_logado != null && !string.IsNullOrEmpty(UsuarioRepository.usuario_logado.Foto))
@@ -39,5 +39,5 @@ public partial class HomeADM : ContentPage
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());
-    }    
+    }
 }

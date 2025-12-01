@@ -4,16 +4,16 @@ namespace alert_nupdec.Views;
 
 public partial class HomeVoluntario : ContentPage
 {
-	public HomeVoluntario()
-	{
-		InitializeComponent();                
+    public HomeVoluntario()
+    {
+        InitializeComponent();
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        // Recarrega a lista toda vez que a página se torna visível (ex: ao voltar de EmitirAlerta)
-        lista_alertas.ItemsSource = null; // Limpa para forçar o refresh
+        // Recarrega a lista toda vez que a p?gina se torna vis?vel (ex: ao voltar de EmitirAlerta)
+        lista_alertas.ItemsSource = null; // Limpa para for?ar o refresh
         lista_alertas.ItemsSource = AlertaRepository.list_alerta;
         CarregarDadosUsuario();
     }
@@ -23,7 +23,7 @@ public partial class HomeVoluntario : ContentPage
         if (UsuarioRepository.usuario_logado != null)
         {
             lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
-            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.Bairro} - {UsuarioRepository.usuario_logado.Unidade.CEP}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.enderecoCompleto} - {UsuarioRepository.usuario_logado.Unidade.cep}";
         }
 
         if (UsuarioRepository.usuario_logado != null && !string.IsNullOrEmpty(UsuarioRepository.usuario_logado.Foto))
@@ -35,9 +35,9 @@ public partial class HomeVoluntario : ContentPage
         {
             img_perfil.Source = "usuario.png";
         }
-    }    
+    }
 
-    //Botão de emitir alerta
+    //Bot?o de emitir alerta
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());
