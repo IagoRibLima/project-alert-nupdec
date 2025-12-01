@@ -22,12 +22,11 @@ namespace alert_nupdec.Repository
                 Telefone = "11999999999",
                 Unidade = new AreaRisco()
                 {
-                    Rua = "Rua A",
-                    Bairro = "Centro",
-                    CEP = "00000000"
+                    enderecoCompleto = "Rua A",
+                    cep = "00000000"
                 },
                 Senha = "Abc1234@",
-                Adm = true, 
+                Adm = true,
                 Foto = null
             },
             new Usuario()
@@ -39,9 +38,8 @@ namespace alert_nupdec.Repository
                 Telefone = "11988888888",
                 Unidade = new AreaRisco()
                 {
-                    Rua = "Rua A",
-                    Bairro = "Centro",
-                    CEP = "00000000"
+                    enderecoCompleto = "Rua A",
+                    cep = "00000000"
                 },
                 Senha = "Abc1234@",
                 Adm = true,
@@ -62,9 +60,9 @@ namespace alert_nupdec.Repository
             {
                 usuario_logado = usuarioEncontrado;
                 return;
-            }            
+            }
 
-            throw new Exception("Infomações de login inválidas");            
+            throw new Exception("Infomações de login inválidas");
         }
 
         //Metodo para cadastrar voluntario
@@ -119,12 +117,12 @@ namespace alert_nupdec.Repository
 
             if (erros.Count > 0)
             {
-                string mensagemErro = string.Join("\n", erros);             
+                string mensagemErro = string.Join("\n", erros);
                 throw new Exception(mensagemErro);
             }
 
             Usuario voluntario = new Usuario()
-            {      
+            {
                 Id = lista_usuario.Count.ToString(),
                 NomeCompleto = nome,
                 Email = email,
@@ -134,7 +132,7 @@ namespace alert_nupdec.Repository
                 Senha = senha,
                 Adm = false,
                 Foto = null
-            };            
+            };
 
             lista_usuario.Add(voluntario);
 
@@ -161,7 +159,7 @@ namespace alert_nupdec.Repository
                 idUsuarioEncontrado = usuarioEncontrado;
                 return;
 
-            }            
+            }
         }
 
         //Metodo para atualizar a senha do usuário
@@ -195,8 +193,8 @@ namespace alert_nupdec.Repository
                     lista_usuario[int.Parse(idUsuarioEncontrado.Id)] = idUsuarioEncontrado;
                     idUsuarioEncontrado = null;
                     return;
-                }                
-            }            
+                }
+            }
         }
 
         //Metodo para atualizar os dados do usuário
@@ -226,7 +224,7 @@ namespace alert_nupdec.Repository
                 alterados.Add("Telefone");
             }
             if (!string.IsNullOrWhiteSpace(senha))
-            {                
+            {
                 if (senha.Length < 8)
                     throw new Exception("O campo Senha deve ter no mínimo 8 caracteres.");
                 if (!senha.Any(char.IsUpper))
@@ -259,7 +257,7 @@ namespace alert_nupdec.Repository
             else
             {
                 throw new Exception("Nenhum dado foi alterado.");
-            }           
+            }
         }
 
     }
