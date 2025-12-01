@@ -20,10 +20,13 @@ namespace alert_nupdec.Repository
                 Email = "iago@email.com",
                 CPF = "00000000000",
                 Telefone = "11999999999",
-                Unidade = new AreaRisco()
+                Unidade = new Unidade()
                 {
+                    nome = "Centro",
                     enderecoCompleto = "Rua A",
-                    cep = "00000000"
+                    cep = "00000000",
+                    descricaoUnidade = "Unidade Central",
+                    imagem = null
                 },
                 Senha = "Abc1234@",
                 Adm = true,
@@ -36,13 +39,16 @@ namespace alert_nupdec.Repository
                 Email = "pri@email.com",
                 CPF = "11111111111",
                 Telefone = "11988888888",
-                Unidade = new AreaRisco()
+                Unidade = new Unidade()
                 {
+                    nome = "Centro",
                     enderecoCompleto = "Rua A",
-                    cep = "00000000"
+                    cep = "00000000",
+                    descricaoUnidade = "Unidade Central",
+                    imagem = null
                 },
                 Senha = "Abc1234@",
-                Adm = true,
+                Adm = false,
                 Foto = null
             }
         };
@@ -66,7 +72,7 @@ namespace alert_nupdec.Repository
         }
 
         //Metodo para cadastrar voluntario
-        public static void cadastrarUsuario(string nome, string email, string cpf, string telefone, AreaRisco unidade, string senha)
+        public static void cadastrarUsuario(string nome, string email, string cpf, string telefone, Unidade unidade, string senha)
         {
             var erros = new List<string>();
 

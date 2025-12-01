@@ -10,8 +10,8 @@ public partial class CadastroVoluntario : ContentPage
 		InitializeComponent();
 
         //Opções do picker das unidades
-        picker_unidades.ItemsSource = AreaDeRiscoRepository.list_areasderisco;
-        picker_unidades.ItemDisplayBinding = new Binding("Bairro");      
+        picker_unidades.ItemsSource = UnidadeRepository.list_unidade;
+        picker_unidades.ItemDisplayBinding = new Binding("nome");      
     }
 
     //Botão de voltar
@@ -29,7 +29,7 @@ public partial class CadastroVoluntario : ContentPage
             string email = txt_email.Text?.Trim();
             string cpf = txt_cpf.Text?.Trim();
             string telefone = txt_telefone.Text?.Trim();
-            AreaRisco unidade = picker_unidades.SelectedItem as AreaRisco;
+            Unidade unidade = picker_unidades.SelectedItem as Unidade;
             string senha = txt_senha.Text?.Trim();
                    
             UsuarioRepository.cadastrarUsuario(nome, email, cpf, telefone, unidade, senha);

@@ -7,7 +7,7 @@
         public string Email { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
-        public AreaRisco Unidade { get; set; }
+        public Unidade Unidade { get; set; }
         public string Senha { get; set; }
         public bool Adm {  get; set; }
         public string Foto { get; set; }

@@ -52,12 +52,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/AreaDeRisco.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.AreaDeRisco.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\AreaDeRisco.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\AreaDeRisco.xaml
-
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroDica.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroDica.xaml
@@ -69,6 +63,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroTreinamento.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CadastroTreinamento.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CadastroTreinamento.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroUnidade.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.CadastroUnidade.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CadastroUnidade.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CadastroUnidade.xaml
 
 [C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/CadastroVoluntario.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -12,27 +12,35 @@
     </ContentPage.Resources>
 
     <Grid RowDefinitions="Auto, Auto">
-        <!--Botão de voltar-->
-        <ImageButton Grid.Row="0"
-                 Source="voltar.png"                                        
-                 Margin="8"
-                 Padding="12"
-                 VerticalOptions="Start"
-                 HorizontalOptions="Start"
-                 BackgroundColor="#1848a0"
-                 Clicked="ButtonVoltar"
-                 HeightRequest="50"
-                 WidthRequest="50"
-                 CornerRadius="15"/>
+        <!-- Barra azul superior -->
+        <Grid Grid.Row="0" 
+              ColumnDefinitions="Auto, *" 
+              BackgroundColor="#1848a0" 
+              Padding="10,15">
 
-        <Label Text="Configuração da Conta"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalOptions="Center"
-               TextColor="#1848a0"
-               FontSize="22"
-               FontAttributes="Bold"
-               Margin="0,20"/>
+            <!-- Botão Voltar -->
+            <ImageButton Grid.Column="0" 
+                         Grid.Row="0"
+                         Source="voltar.png" 
+                         Clicked="ButtonVoltar"
+                         Margin="0"
+                         BackgroundColor="Transparent"
+                         HeightRequest="30"
+                         WidthRequest="30"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+            <!-- Título da Página -->
+            <Label Grid.Column="1" 
+                   Grid.Row="0"
+                   Text="Configurações" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="White"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   Margin="0,0,30,0"/>
+        </Grid>
 
         <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
@@ -97,19 +105,17 @@
                        VerticalOptions="Center"/>
 
                     <Border Grid.Column="1"
-                        StrokeThickness="1"
-                        BackgroundColor="#e8ecee"
-                        Padding="0"
-                        HorizontalOptions="Fill">
+                            StrokeThickness="0"
+                            BackgroundColor="#e8ecee"
+                            Padding="0"
+                            HorizontalOptions="Fill">
+
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="18"/>
+                            <RoundRectangle CornerRadius="4"/>
                         </Border.StrokeShape>
 
                         <Border.Shadow>
-                            <Shadow Brush="Black"
-                                Offset="5,5"
-                                Radius="10"
-                                Opacity="0.3"/>
+                            <Shadow Opacity="0"/>
                         </Border.Shadow>
 
                         <Entry x:Name="txt_novoemail"
@@ -134,19 +140,17 @@
                            VerticalOptions="Center"/>
 
                     <Border Grid.Column="1"
-                            StrokeThickness="1"
+                            StrokeThickness="0"
                             BackgroundColor="#e8ecee"
                             Padding="0"
                             HorizontalOptions="Fill">
+
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="18"/>
+                            <RoundRectangle CornerRadius="4"/>
                         </Border.StrokeShape>
 
                         <Border.Shadow>
-                            <Shadow Brush="Black"
-                                    Offset="5,5"
-                                    Radius="10"
-                                    Opacity="0.3"/>
+                            <Shadow Opacity="0"/>
                         </Border.Shadow>
 
                         <Entry x:Name="txt_novotelefone"
@@ -171,19 +175,17 @@
                            VerticalOptions="Center"/>
 
                     <Border Grid.Column="1"
-                            StrokeThickness="1"
+                            StrokeThickness="0"
                             BackgroundColor="#e8ecee"
                             Padding="0"
                             HorizontalOptions="Fill">
+
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="18"/>
+                            <RoundRectangle CornerRadius="4"/>
                         </Border.StrokeShape>
 
                         <Border.Shadow>
-                            <Shadow Brush="Black"
-                                    Offset="5,5"
-                                    Radius="10"
-                                    Opacity="0.3"/>
+                            <Shadow Opacity="0"/>
                         </Border.Shadow>
 
                         <Grid ColumnDefinitions="*, Auto"
@@ -225,19 +227,17 @@
                            VerticalOptions="Center"/>
 
                     <Border Grid.Column="1"
-                            StrokeThickness="1"
+                            StrokeThickness="0"
                             BackgroundColor="#e8ecee"
                             Padding="0"
                             HorizontalOptions="Fill">
+
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="18"/>
+                            <RoundRectangle CornerRadius="4"/>
                         </Border.StrokeShape>
 
                         <Border.Shadow>
-                            <Shadow Brush="Black"
-                                    Offset="5,5"
-                                    Radius="10"
-                                    Opacity="0.3"/>
+                            <Shadow Opacity="0"/>
                         </Border.Shadow>
 
                         <Grid ColumnDefinitions="*, Auto"
@@ -270,22 +270,20 @@
                 <Border BackgroundColor="#ff751f"
                         Padding="4"
                         StrokeThickness="1"
-                        Margin="40,20">
+                        Margin="0,20">
 
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ButtonAlterar" />
                     </Border.GestureRecognizers>
 
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20"/>
+                        <RoundRectangle CornerRadius="4"/>
                     </Border.StrokeShape>
 
                     <Border.Shadow>
-                        <Shadow Brush="Black"
-                                Offset="2,0"
-                                Radius="10"
-                                Opacity="0.1"/>
+                        <Shadow Opacity="0"/>
                     </Border.Shadow>
+
                     <Button Text="Alterar"
                             TextColor="#e8ecee"
                             FontSize="18"

@@ -27,20 +27,17 @@
 
                 <Label Text="Email ou CPF"
                        TextColor="#2a2828"
-                       Margin="10,15,0,0"/>
+                       Margin="0,15,0,0"/>
                 <Border StrokeThickness="1"
                         BackgroundColor="#e8ecee"
                         Padding="8">
 
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20"/>
+                        <RoundRectangle CornerRadius="4"/>
                     </Border.StrokeShape>
 
                     <Border.Shadow>
-                        <Shadow Brush="Black"
-                                Offset="5,5"
-                                Radius="10"
-                                Opacity="0.3"/>
+                        <Shadow Opacity="0"/>
                     </Border.Shadow>
 
                     <Entry x:Name="txt_usuario"
@@ -54,20 +51,17 @@
 
                 <Label Text="Senha"
                        TextColor="#2a2828"
-                       Margin="10,15,0,0"/>
+                       Margin="0,15,0,0"/>
                 <Border BackgroundColor="#e8ecee"
                         Padding="8"
                         StrokeThickness="1">
 
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20"/>
+                        <RoundRectangle CornerRadius="4"/>
                     </Border.StrokeShape>
 
                     <Border.Shadow>
-                        <Shadow Brush="Black"
-                                Offset="5,5"
-                                Radius="10"
-                                Opacity="0.3"/>
+                        <Shadow Opacity="0"/>
                     </Border.Shadow>
 
                     <Grid ColumnDefinitions="*, Auto" 
@@ -100,7 +94,7 @@
                        FontSize="12"
                        TextColor="#6170ab"
                        FontAttributes="Bold"
-                       Margin="10,0,0,0">
+                       Margin="0">
 
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTapRecuperarSenha" />
@@ -118,14 +112,11 @@
                     </Border.GestureRecognizers>
 
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="20"/>
+                        <RoundRectangle CornerRadius="4"/>
                     </Border.StrokeShape>
 
                     <Border.Shadow>
-                        <Shadow Brush="Black"
-                                Offset="2,0"
-                                Radius="10"
-                                Opacity="0.1"/>
+                        <Shadow Opacity="0"/>
                     </Border.Shadow>
 
                     <HorizontalStackLayout Spacing="10"

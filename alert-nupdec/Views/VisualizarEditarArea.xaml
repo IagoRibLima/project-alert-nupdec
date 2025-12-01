@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:alert_nupdec.Models"
              x:Class="alert_nupdec.Views.VisualizarEditarArea"
              Title="Visualizar Áreas de Risco"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#f0f0f0">
+             BackgroundColor="#a6a6a6">
 
-    <!-- Estrutura principal: Header (Auto) e Conteúdo (Resto: *) -->
     <Grid RowDefinitions="Auto, *">
 
-        <!-- 
-        ========================================================
-        ROW 0: HEADER COMPLETO (Botão Voltar, Título e Descrição)
-        ========================================================
-        -->
-        <!-- Define 3 colunas para o conteúdo do cabeçalho: Botão, Título Centralizado, Espaço -->
         <Grid Grid.Row="0" 
               ColumnDefinitions="Auto, *, Auto" 
               RowDefinitions="Auto, Auto"
               BackgroundColor="#1848a0" 
               Padding="10, 15, 10, 5">
 
-            <!-- Botão Voltar (Grid.Row="0", Grid.Column="0") -->
+            <!-- Botão Voltar -->
             <ImageButton Grid.Column="0" Grid.Row="0"
                          Source="voltar.png" 
                          Clicked="ButtonVoltar"
@@ -33,7 +25,7 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Start"/>
 
-            <!-- Título da Página (Grid.Row="0", Grid.Column="1" - centralizado) -->
+            <!-- Título da Página -->
             <Label Grid.Column="1" Grid.Row="0"
                    Text="Áreas Cadastradas" 
                    HorizontalOptions="Center"
@@ -43,7 +35,7 @@
                    FontAttributes="Bold"
                    Margin="0,0,30,0"/>
 
-            <!-- Descrição (Grid.Row="1" - ocupa todas as colunas) -->
+            <!-- Descrição -->
             <Label Grid.ColumnSpan="3" Grid.Row="1"
                    Text="Toque em um card para editar ou ver detalhes." 
                    HorizontalOptions="Start"
@@ -52,92 +44,5 @@
                    Margin="10, 5, 0, 10"/>
         </Grid>
 
-        <!-- 
-        ========================================================
-        ROW 1: CONTEÚDO (COLLECTION VIEW QUE OCUPA TODO O RESTO)
-        ========================================================
-        -->
-        <CollectionView Grid.Row="1"
-                        x:Name="lista_areaRisco"  
-                        Margin="10, 0"
-                        SelectionMode="None">
-
-            <!-- CORREÇÃO: Usando ItemsLayout SÓ para definir a Orientação Vertical.
-                 O espaçamento interno (Padding) foi removido daqui para evitar o erro. -->
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="0"/>
-            </CollectionView.ItemsLayout>
-
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:AreaRisco">
-
-                    <!-- Card (Border) -->
-                    <!-- O espaçamento vertical entre os cards é dado por este Margin -->
-                    <Border Margin="0, 8" 
-                            Padding="15"
-                            BackgroundColor="White" 
-                            Stroke="#e8ecee"
-                            StrokeThickness="1">
-
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="12"/>
-                        </Border.StrokeShape>
-
-                        <Border.Shadow>
-                            <Shadow Brush="Black"
-                                    Offset="0,4"
-                                    Radius="8"
-                                    Opacity="0.15"/>
-                        </Border.Shadow>
-
-                        <!-- Conteúdo do Card -->
-                        <VerticalStackLayout Spacing="8">
-
-                            <!-- Nome da Área e Status (Cor Risco) -->
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="{Binding nomeArea}" 
-                                       FontAttributes="Bold" 
-                                       TextColor="#1848a0" 
-                                       FontSize="18"
-                                       VerticalOptions="Center"/>
-
-                                <!-- Indicador de Risco Imediato (Pill) -->
-                                <Border BackgroundColor="{Binding CorRisco}"
-                                        Padding="8, 3"
-                                        HorizontalOptions="EndAndExpand"
-                                        VerticalOptions="Center">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="15"/>
-                                    </Border.StrokeShape>
-                                    <Label Text="{Binding StatusRisco}"
-                                           TextColor="White"
-                                           FontSize="11"
-                                           FontAttributes="Bold"/>
-                                </Border>
-                            </StackLayout>
-
-                            <BoxView HeightRequest="1" Color="#e8ecee" Margin="0, 3"/>
-
-                            <!-- Detalhes do Problema e Endereço -->
-                            <Label Text="{Binding tipoProblema}" 
-                                   FontAttributes="Bold" 
-                                   TextColor="#ff751f" 
-                                   FontSize="15"/>
-
-                            <Label Text="{Binding enderecoCompleto}" 
-                                   TextColor="Gray" 
-                                   FontSize="13"/>
-
-                            <Label Text="{Binding descricao}" 
-                                   TextColor="DarkSlateGray" 
-                                   MaxLines="2" 
-                                   LineBreakMode="TailTruncation"
-                                   FontSize="13"/>
-                        </VerticalStackLayout>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
     </Grid>
 </ContentPage>

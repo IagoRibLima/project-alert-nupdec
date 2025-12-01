@@ -7,27 +7,35 @@
              BackgroundColor="#a6a6a6">
 
     <Grid RowDefinitions="Auto, Auto">
-        <!--Botão de voltar-->
-        <ImageButton Grid.Row="0"
-                     Source="voltar.png"                                        
-                     Margin="8"
-                     Padding="12"
-                     VerticalOptions="Start"
-                     HorizontalOptions="Start"
-                     BackgroundColor="#1848a0"
-                     Clicked="ButtonVoltar"
-                     HeightRequest="50"
-                     WidthRequest="50"
-                     CornerRadius="15"/>
+        <!-- Barra azul superior -->
+        <Grid Grid.Row="0" 
+              ColumnDefinitions="Auto, *" 
+              BackgroundColor="#1848a0" 
+              Padding="10,15">
 
-        <Label Text="Configuração da Conta"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalOptions="Center"
-               TextColor="#1848a0"
-               FontSize="22"
-               FontAttributes="Bold"
-               Margin="0,20"/>
+            <!-- Botão Voltar -->
+            <ImageButton Grid.Column="0" 
+                         Grid.Row="0"
+                         Source="voltar.png" 
+                         Clicked="ButtonVoltar"
+                         Margin="0"
+                         BackgroundColor="Transparent"
+                         HeightRequest="30"
+                         WidthRequest="30"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+            <!-- Título da Página -->
+            <Label Grid.Column="1" 
+                   Grid.Row="0"
+                   Text="Configurações" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="White"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   Margin="0,0,30,0"/>
+        </Grid>
 
         <!--ScrollView das Configurações-->
         <ScrollView Grid.Row="1"
@@ -40,7 +48,7 @@
                         Margin="10,0"
                         VerticalOptions="Center">
                     <Image x:Name="img_perfil"
-                           Aspect="AspectFill" />
+                           Aspect="AspectFill"/>
                 </Border>
 
                 <Label Text="Dados da Conta"

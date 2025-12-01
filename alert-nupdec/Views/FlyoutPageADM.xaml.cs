@@ -60,7 +60,7 @@ public partial class FlyoutPageADM : FlyoutPage
     //Bot?o de cadastro da area de risco
     private async void OnTapCadastrarAreaDeRisco(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AreaDeRisco());
+        await Navigation.PushAsync(new CadastroUnidade());
     }
 
     private async void OnTapEditarVisualizarAreaDeRisco(object sender, EventArgs e)
