@@ -8,5 +8,6 @@
         public string Descricao { get; set; }
         public string Imagem { get; set; }
         public Usuario Usuario { get; set; }
+        public bool Aceito { get; set; }
     }
 }

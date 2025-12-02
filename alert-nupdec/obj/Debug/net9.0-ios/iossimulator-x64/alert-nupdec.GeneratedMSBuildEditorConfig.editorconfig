@@ -155,3 +155,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.VisualizarEditarArea.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\VisualizarEditarArea.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\VisualizarEditarArea.xaml
+
+[C:/Users/iagol/OneDrive/Documentos/project-alert-nupdec/alert-nupdec/alert-nupdec/Views/VisualizarUnidade.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = alert_nupdec.Views.VisualizarUnidade.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\VisualizarUnidade.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\VisualizarUnidade.xaml

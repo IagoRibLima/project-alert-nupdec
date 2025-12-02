@@ -28,9 +28,9 @@ public partial class FlyoutPageADM : FlyoutPage
     }
 
     //Bot?o submenu area de risco
-    private async void OnTapSubMenuAreaDeRisco(object sender, EventArgs e)
+    private async void OnTapSubMenuUnidade(object sender, EventArgs e)
     {
-        subMenuAreaDeRisco.IsVisible = !subMenuAreaDeRisco.IsVisible;
+        subMenuUnidade.IsVisible = !subMenuUnidade.IsVisible;
     }
 
     //Bot?o de cadastro de volunt?rios
@@ -58,21 +58,30 @@ public partial class FlyoutPageADM : FlyoutPage
     }
 
     //Bot?o de cadastro da area de risco
-    private async void OnTapCadastrarAreaDeRisco(object sender, EventArgs e)
+    private async void OnTapCadastrarUnidade(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroUnidade());
     }
 
-    private async void OnTapEditarVisualizarAreaDeRisco(object sender, EventArgs e)
+    private async void OnTapVisualizarUnidade(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new VisualizarEditarArea());
+        await Navigation.PushAsync(new VisualizarUnidade());
+    }
+
+    private async void OnTapVisualizarDica(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Dicas());
+    }
+
+    private async void OnTapVisualizarTreinamentos(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Treinamentos());
     }
 
     //Bot?o de ver ocorr?ncias
     private async void OnTapOcorrencia(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Ocorrencias());
-
     }
 
     //Bot?o de sair

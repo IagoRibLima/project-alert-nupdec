@@ -6,6 +6,5 @@
         public string enderecoCompleto { get; set; }
         public string cep { get; set; }
         public string descricaoUnidade { get; set; }
-        public string imagem { get; set; }
     }
 }

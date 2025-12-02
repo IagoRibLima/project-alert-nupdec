@@ -6,7 +6,6 @@ namespace alert_nupdec.Repository
     {
         public static List<Unidade> list_unidade = new List<Unidade>();
 
-        public static string ImagemBase64Temp { get; set; }
 
         // Método para cadastrar uma nova unidade
         public static void cadastrarUnidade(String nome, String enderecoCompleto, String cep, String descricaoUnidade)
@@ -31,8 +30,7 @@ namespace alert_nupdec.Repository
                 nome = nome,
                 enderecoCompleto = enderecoCompleto,
                 cep = cep,
-                descricaoUnidade = descricaoUnidade,
-                imagem = ImagemBase64Temp
+                descricaoUnidade = descricaoUnidade
             };
 
             list_unidade.Add(unidade);
@@ -40,10 +38,7 @@ namespace alert_nupdec.Repository
             System.Diagnostics.Debug.WriteLine($"Nome da Unidade: {unidade.nome}" +
                                                $"\nEndereço completo: {unidade.enderecoCompleto}" +
                                                $"\nCEP: {unidade.cep}" +
-                                               $"\nDescrição: {unidade.descricaoUnidade}" +
-                                               $"\nImagem: {unidade.imagem}");
-
-            ImagemBase64Temp = null;
+                                               $"\nDescrição: {unidade.descricaoUnidade}");
         }
     }
 }

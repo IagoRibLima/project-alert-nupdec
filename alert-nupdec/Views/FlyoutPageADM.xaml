@@ -65,7 +65,7 @@
                                          Spacing="0"
                                          BackgroundColor="#0f3473">
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Cadastrar Novo Voluntário"
+                            <Label Text="Cadastrar Novo"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
@@ -76,7 +76,7 @@
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Visualizar e Editar Voluntário"
+                            <Label Text="Todos Voluntários"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
@@ -85,7 +85,7 @@
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
-                
+
                 <!--Botão Gerenciar Unidades-->
                 <VerticalStackLayout Spacing="10">
                     <HorizontalStackLayout Spacing="10"
@@ -98,7 +98,7 @@
                            VerticalOptions="Center"
                            Margin="0,10,0,10"/>
 
-                        <Label x:Name="lblArea" 
+                        <Label x:Name="lblUnidade" 
                            Text="Gerenciar Unidades"
                            FontAttributes="Bold"
                            FontSize="17"
@@ -106,34 +106,34 @@
                            VerticalOptions="Center"/>
 
                         <HorizontalStackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTapSubMenuAreaDeRisco"/>
+                            <TapGestureRecognizer Tapped="OnTapSubMenuUnidade"/>
                         </HorizontalStackLayout.GestureRecognizers>
                     </HorizontalStackLayout>
 
-                    <VerticalStackLayout x:Name="subMenuAreaDeRisco"
+                    <VerticalStackLayout x:Name="subMenuUnidade"
                                          IsVisible="False"
                                          Spacing="0"
                                          BackgroundColor="#0f3473">
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Cadastrar Nova Unidade"
+                            <Label Text="Cadastrar Nova"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
                             <HorizontalStackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnTapCadastrarAreaDeRisco"/>
+                                <TapGestureRecognizer Tapped="OnTapCadastrarUnidade"/>
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Visualizar e Editar Unidade"
+                            <Label Text="Todas Unidades"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
                             <HorizontalStackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnTapEditarVisualizarAreaDeRisco"/>
+                                <TapGestureRecognizer Tapped="OnTapVisualizarUnidade"/>
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
@@ -167,7 +167,7 @@
                                          Spacing="0"
                                          BackgroundColor="#0f3473">
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Criar Nova Dica"
+                            <Label Text="Criar Nova"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
@@ -178,12 +178,15 @@
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Visualizar e Editar Dica"
+                            <Label Text="Todas Dicas"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapVisualizarDica"/>
+                            </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
@@ -217,7 +220,7 @@
                                          Spacing="0"
                                          BackgroundColor="#0f3473">
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Cadastrar Novo Treinamento"
+                            <Label Text="Cadastrar Novo"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
@@ -228,12 +231,15 @@
                             </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10" Padding="30, 8, 10, 8">
-                            <Label Text="Visualizar e Editar Treinamento"
+                            <Label Text="Todos Treinamentos"
                                    FontSize="15"
                                    FontAttributes="Bold"
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapVisualizarTreinamentos"/>
+                            </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
@@ -296,5 +302,6 @@
             </x:Arguments>
         </NavigationPage>
     </FlyoutPage.Detail>
+
 
 </FlyoutPage>

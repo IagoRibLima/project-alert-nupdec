@@ -12,7 +12,22 @@ public partial class HomeADM : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
+        // Recarrega a lista toda vez que a p?gina se torna vis?vel (ex: ao voltar de EmitirAlerta)
+        lista_alertas.ItemsSource = null; // Limpa para for?ar o refresh
+        lista_alertas.ItemsSource = AlertaRepository.lista_alerta_aceito
+            .OrderByDescending(d => d.Id)
+            .ToList();
         CarregarDadosUsuario();
+        VerificarNotificacoes();
+    }
+
+    private void VerificarNotificacoes()
+    {
+        // Verifica na lista GERAL se existe algum alerta que NÃO foi aceito ainda
+        bool temPendencia = AlertaRepository.list_alerta.Any(a => a.Aceito == false);
+
+        // Se tiver pendência, torna o indicador visível
+        indicador_notificacao.IsVisible = temPendencia;
     }
 
     //Carrega os dados do usuário logado
@@ -73,5 +88,10 @@ public partial class HomeADM : ContentPage
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EmitirAlerta());
+    }
+
+    private async void ButtonOcorrencia(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Ocorrencias());
     }
 }

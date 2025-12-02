@@ -26,7 +26,6 @@ namespace alert_nupdec.Repository
                     enderecoCompleto = "Rua A",
                     cep = "00000000",
                     descricaoUnidade = "Unidade Central",
-                    imagem = null
                 },
                 Senha = "Abc1234@",
                 Adm = true,
@@ -45,7 +44,6 @@ namespace alert_nupdec.Repository
                     enderecoCompleto = "Rua A",
                     cep = "00000000",
                     descricaoUnidade = "Unidade Central",
-                    imagem = null
                 },
                 Senha = "Abc1234@",
                 Adm = false,

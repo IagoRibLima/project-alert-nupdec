@@ -1,4 +1,3 @@
-using alert_nupdec.Models;
 using alert_nupdec.Repository;
 using alert_nupdec.Service;
 
@@ -13,11 +12,17 @@ public partial class EmitirAlerta : ContentPage
         //Tipos de ocorrências
         picker_ocorrencia.ItemsSource = new List<string>
         {
-            "Unidade A",
-            "Unidade B",
-            "Unidade C",
-            "Unidade D"
+            "Selecione um Tipo",
+            "Incêndio",
+            "Alagamento",
+            "Inundação",
+            "Enchente",
+            "Deslizamento",
+            "Desabamento",
+            "Erosão"
         };
+
+        picker_ocorrencia.SelectedIndex = 0;
     }
 
     //Botão de voltar

@@ -14,7 +14,7 @@ public partial class HomeVoluntario : ContentPage
         base.OnAppearing();
         // Recarrega a lista toda vez que a p?gina se torna vis?vel (ex: ao voltar de EmitirAlerta)
         lista_alertas.ItemsSource = null; // Limpa para for?ar o refresh
-        lista_alertas.ItemsSource = AlertaRepository.list_alerta
+        lista_alertas.ItemsSource = AlertaRepository.lista_alerta_aceito
             .OrderByDescending(d => d.Id)
             .ToList();
         CarregarDadosUsuario();
@@ -24,7 +24,7 @@ public partial class HomeVoluntario : ContentPage
     {
         if (UsuarioRepository.usuario_logado != null)
         {
-            lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
+            lbl_boasvindas.Text = $"Voluntário: {UsuarioRepository.usuario_logado.NomeCompleto}";
             lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.enderecoCompleto} - {UsuarioRepository.usuario_logado.Unidade.cep}";
         }
 

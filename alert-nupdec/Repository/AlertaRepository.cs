@@ -5,6 +5,7 @@ namespace alert_nupdec.Repository
     class AlertaRepository
     {
         public static List<Alerta> list_alerta = new List<Alerta>();
+        public static List<Alerta> lista_alerta_aceito = new List<Alerta>();
 
         public static string ImagemBase64Temp { get; set; }
 
@@ -16,6 +17,8 @@ namespace alert_nupdec.Repository
             var erros = new List<string>();
 
             if (string.IsNullOrWhiteSpace(tipo))
+                erros.Add("É necessário selecionar o tipo de ocorrência");
+            if (tipo.Equals("Selecione um Tipo"))
                 erros.Add("É necessário selecionar o tipo de ocorrência");
             if (string.IsNullOrWhiteSpace(endereco))
                 erros.Add("É necessário informa o endereço da ocorrência");
@@ -30,26 +33,61 @@ namespace alert_nupdec.Repository
                 throw new Exception(mensagemErro);
             }
 
-            Alerta alerta = new Alerta()
+            if (UsuarioRepository.usuario_logado.Adm == true)
             {
-                Id = list_alerta.Count +1,
-                Tipo = tipo,
-                Endereco = endereco,
-                Descricao = descricao,
-                Imagem = ImagemBase64Temp,
-                Usuario = UsuarioRepository.usuario_logado
-            };
+                Alerta alerta = new Alerta()
+                {
+                    Id = list_alerta.Count + 1,
+                    Tipo = tipo,
+                    Endereco = endereco,
+                    Descricao = descricao,
+                    Imagem = ImagemBase64Temp,
+                    Usuario = UsuarioRepository.usuario_logado,
+                    Aceito = true
+                };
 
-            list_alerta.Add(alerta);
+                lista_alerta_aceito.Add(alerta);
 
-            System.Diagnostics.Debug.WriteLine($"Id: {alerta.Id}" +
+                System.Diagnostics.Debug.WriteLine($"Id: {alerta.Id}" +
                                                $"Tipo: {alerta.Tipo}" +
                                                $"\nEndereço: {alerta.Endereco}" +
                                                $"\nDescricao: {alerta.Descricao}" +
                                                $"\nImagem: {alerta.Imagem}" +
-                                               $"\nUsuario: {alerta.Usuario.NomeCompleto}");
+                                               $"\nUsuario: {alerta.Usuario.NomeCompleto}" +
+                                               $"\nAceito: {alerta.Aceito}");
 
-            ImagemBase64Temp = null;
-        }        
+                ImagemBase64Temp = null;
+            }
+            
+            else
+            {
+                Alerta alerta = new Alerta()
+                {
+                    Id = list_alerta.Count + 1,
+                    Tipo = tipo,
+                    Endereco = endereco,
+                    Descricao = descricao,
+                    Imagem = ImagemBase64Temp,
+                    Usuario = UsuarioRepository.usuario_logado,
+                    Aceito = false
+                };
+                list_alerta.Add(alerta);
+                System.Diagnostics.Debug.WriteLine($"Id: {alerta.Id}" +
+                                               $"Tipo: {alerta.Tipo}" +
+                                               $"\nEndereço: {alerta.Endereco}" +
+                                               $"\nDescricao: {alerta.Descricao}" +
+                                               $"\nImagem: {alerta.Imagem}" +
+                                               $"\nUsuario: {alerta.Usuario.NomeCompleto}" +
+                                               $"\nAceito: {alerta.Aceito}");
+                ImagemBase64Temp = null;
+            }
+        }
+
+        //Metodo para aceitar alerta
+        public static void aceitarAlerta(Alerta alerta)
+        {
+            alerta.Aceito = true;
+            lista_alerta_aceito.Add(alerta);
+        }
     }
 }
