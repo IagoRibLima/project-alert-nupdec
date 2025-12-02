@@ -11,7 +11,8 @@ public partial class CadastroVoluntario : ContentPage
 
         //Opções do picker das unidades
         picker_unidades.ItemsSource = UnidadeRepository.list_unidade;
-        picker_unidades.ItemDisplayBinding = new Binding("nome");      
+        picker_unidades.ItemDisplayBinding = new Binding("nome");   
+        picker_unidades.SelectedIndex = 0;
     }
 
     //Botão de voltar

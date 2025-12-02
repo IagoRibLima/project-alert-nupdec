@@ -14,7 +14,9 @@ public partial class VisualizarUnidade : ContentPage
         base.OnAppearing();
 
         lista_unidade.ItemsSource = null;
-        lista_unidade.ItemsSource = UnidadeRepository.list_unidade;
+        lista_unidade.ItemsSource = UnidadeRepository.list_unidade
+            .Where(u => u.nome != "Selecione uma unidade")
+            .ToList();
     }
 
     private async void ButtonVoltar(object sender, EventArgs e)

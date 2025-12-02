@@ -11,7 +11,7 @@
         <converters:Base64ToImageConverter x:Key="Base64ToImage"/>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="Auto, Auto">
+    <Grid RowDefinitions="Auto, *">
 
         <!-- Barra azul superior -->
         <Grid Grid.Row="0" 
@@ -42,65 +42,68 @@
                    Margin="0,0,30,0"/>
         </Grid>
 
-        <CollectionView Grid.Row="1" 
-                        x:Name="lista_ocorrencias_pendentes"
-                        SelectionMode="None"
-                        Margin="10">
+        <ScrollView Grid.Row="1"
+                    Padding="30,20">
+            <CollectionView x:Name="lista_ocorrencias_pendentes"
+                            SelectionMode="None"                       
+                            Margin="10">
 
-            <CollectionView.EmptyView>
-                <Label Text="Nenhuma ocorrência pendente no momento."
-                       TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-            </CollectionView.EmptyView>
+                <CollectionView.EmptyView>
+                    <Label Text="Nenhuma ocorrência."
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Gray"
+               FontAttributes="Italic"/>
+                </CollectionView.EmptyView>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border StrokeThickness="0"
-                            BackgroundColor="White"
-                            Margin="0,0,0,10"
-                            Padding="10"
-                            StrokeShape="RoundRectangle 10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeThickness="0"
+                    BackgroundColor="White"
+                    Margin="0,0,0,10"
+                    Padding="10"
+                    StrokeShape="RoundRectangle 10">
 
-                        <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, Auto">
+                            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, Auto">
 
-                            <Image Grid.Row="0" Grid.ColumnSpan="2"
-                                   Source="{Binding Imagem, Converter={StaticResource Base64ToImage}}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="150"
-                                   Margin="0,0,0,10"/>
+                                <Image Grid.Row="0" Grid.ColumnSpan="2"
+                           Source="{Binding Imagem, Converter={StaticResource Base64ToImage}}"
+                           Aspect="AspectFill"
+                           HeightRequest="150"
+                           Margin="0,0,0,10"/>
 
-                            <Label Grid.Row="1" Grid.Column="0"
-                                   Text="{Binding Tipo}"
-                                   FontAttributes="Bold"
-                                   FontSize="18"
-                                   TextColor="#1848a0"/>
+                                <Label Grid.Row="1" Grid.Column="0"
+                           Text="{Binding Tipo}"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#1848a0"/>
 
-                            <Label Grid.Row="2" Grid.Column="0"
-                                   Text="{Binding Endereco}"
-                                   FontSize="14"
-                                   TextColor="Gray"/>
+                                <Label Grid.Row="2" Grid.Column="0"
+                           Text="{Binding Endereco}"
+                           FontSize="14"
+                           TextColor="Gray"/>
 
-                            <Label Grid.Row="3" Grid.Column="0"
-                                   Text="{Binding Descricao}"
-                                   FontSize="14"
-                                   TextColor="Black"
-                                   Margin="0,5"/>
+                                <Label Grid.Row="3" Grid.Column="0"
+                           Text="{Binding Descricao}"
+                           FontSize="14"
+                           TextColor="Black"
+                           Margin="0,5"/>
 
-                            <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="1"
-                                    Text="ACEITAR"
-                                    Clicked="ButtonAceitar_Clicked"
-                                    CommandParameter="{Binding .}"
-                                    BackgroundColor="#28a745"
-                                    TextColor="White"
-                                    FontAttributes="Bold"
-                                    VerticalOptions="Center"
-                                    HeightRequest="40"/>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                                <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="1"
+                            Text="ACEITAR"
+                            Clicked="ButtonAceitar_Clicked"
+                            CommandParameter="{Binding .}"
+                            BackgroundColor="#28a745"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            VerticalOptions="Center"
+                            HeightRequest="40"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
 
     </Grid>
 </ContentPage>

@@ -18,7 +18,7 @@ namespace alert_nupdec.Repository
                 Id = "0",
                 NomeCompleto = "Iago Lima",
                 Email = "iago@email.com",
-                CPF = "00000000000",
+                CPF = "17158520013",
                 Telefone = "11999999999",
                 Unidade = new Unidade()
                 {
@@ -36,7 +36,7 @@ namespace alert_nupdec.Repository
                 Id = "1",
                 NomeCompleto = "Pri Couto",
                 Email = "pri@email.com",
-                CPF = "11111111111",
+                CPF = "43693106010",
                 Telefone = "11988888888",
                 Unidade = new Unidade()
                 {
@@ -46,7 +46,25 @@ namespace alert_nupdec.Repository
                     descricaoUnidade = "Unidade Central",
                 },
                 Senha = "Abc1234@",
-                Adm = false,
+                Adm = true,
+                Foto = null
+            },
+            new Usuario()
+            {
+                Id = "2",
+                NomeCompleto = "Guilherme Jeremias",
+                Email = "gui@email.com",
+                CPF = "96773089042",
+                Telefone = "11988888888",
+                Unidade = new Unidade()
+                {
+                    nome = "Centro",
+                    enderecoCompleto = "Rua A",
+                    cep = "00000000",
+                    descricaoUnidade = "Unidade Central",
+                },
+                Senha = "Abc1234@",
+                Adm = true,
                 Foto = null
             }
         };
@@ -82,10 +100,10 @@ namespace alert_nupdec.Repository
                 erros.Add("O campo Telefone é obrigatório.");
             if (string.IsNullOrWhiteSpace(cpf))
                 erros.Add("O campo CPF é obrigatório.");
-            if (unidade == null)
+            if (unidade.nome.Equals("Selecione uma unidade"))
                 erros.Add("O campo Unidade é obrigatório.");
             if (string.IsNullOrWhiteSpace(senha))
-                erros.Add("O campo Senha é obrigatório.");
+                erros.Add("O campo Senha é obrigatório.");            
 
             if (!string.IsNullOrWhiteSpace(cpf))
             {

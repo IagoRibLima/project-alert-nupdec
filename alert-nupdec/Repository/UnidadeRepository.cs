@@ -4,14 +4,23 @@ namespace alert_nupdec.Repository
 {
     public class UnidadeRepository
     {
-        public static List<Unidade> list_unidade = new List<Unidade>();
+        public static List<Unidade> list_unidade = new List<Unidade>()
+        {
+            new Unidade(){
+                nome = "Selecione uma unidade",
+                enderecoCompleto = null,
+                cep = null,
+                descricaoUnidade = null
+            },
+        };
+
 
 
         // Método para cadastrar uma nova unidade
         public static void cadastrarUnidade(String nome, String enderecoCompleto, String cep, String descricaoUnidade)
         {
             var erros = new List<string>();
-
+            
             if (string.IsNullOrWhiteSpace(nome))
                 erros.Add("É necessário informar o nome da unidade");
             if (string.IsNullOrWhiteSpace(enderecoCompleto))

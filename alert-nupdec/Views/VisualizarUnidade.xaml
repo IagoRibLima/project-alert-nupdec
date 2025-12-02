@@ -29,7 +29,7 @@
 
             <!-- Título da Página -->
             <Label Grid.Column="1" Grid.Row="0"
-                   Text="Unidades Cadastradas" 
+                   Text="Gerenciar Unidades" 
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    TextColor="White"
@@ -38,67 +38,78 @@
                    Margin="0,0,30,0"/>
         </Grid>
 
-        <CollectionView Grid.Row="1"
-                        x:Name="lista_unidade"  
-                        Margin="10, 20"
-                        SelectionMode="None">
+        <ScrollView Grid.Row="1"
+                    Padding="30,20">
+            <CollectionView 
+                x:Name="lista_unidade" 
+                SelectionMode="None">
 
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="10"/>
-            </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <Label Text="Nenhuma unidade."
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="Gray"
+                FontAttributes="Italic"/>
+                </CollectionView.EmptyView>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Unidade">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
 
-                    <Border Margin="15, 8" 
-                            Padding="15"
-                            BackgroundColor="White" 
-                            Stroke="#e8ecee"
-                            StrokeThickness="1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Unidade">
 
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="12"/>
-                        </Border.StrokeShape>
+                        <Border Margin="15, 8" 
+                    Padding="15"
+                    BackgroundColor="White" 
+                    Stroke="#e8ecee"
+                    StrokeThickness="1">
 
-                        <Border.Shadow>
-                            <Shadow Opacity="0"/>
-                        </Border.Shadow>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="12"/>
+                            </Border.StrokeShape>
 
-                        <!-- Conteúdo do Card -->
-                        <VerticalStackLayout Spacing="8">
+                            <Border.Shadow>
+                                <Shadow Opacity="0"/>
+                            </Border.Shadow>
 
-                            <!-- Nome da Área e Status (Cor Risco) -->
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="{Binding nome}" 
+                            <!-- Conteúdo do Card -->
+                            <VerticalStackLayout Spacing="8">
+
+                                <!-- Nome da Área e Status (Cor Risco) -->
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="{Binding nome, StringFormat='Nome: {0}'}"
                                        FontAttributes="Bold" 
                                        TextColor="#1848a0" 
                                        FontSize="18"
                                        VerticalOptions="Center"/>
-                            </StackLayout>
+                                </StackLayout>
 
-                            <BoxView HeightRequest="1" Color="#e8ecee" Margin="0, 3"/>
+                                <BoxView HeightRequest="1" Color="#e8ecee" Margin="0, 3"/>
 
-                            <!-- Detalhes do Problema e Endereço -->
-                            <Label Text="{Binding enderecoCompleto}" 
-                                   FontAttributes="Bold" 
-                                   TextColor="#ff751f" 
-                                   FontSize="15"/>
-
-                            <Label Text="{Binding cep}" 
-                                   TextColor="Gray" 
+                                <!-- Detalhes do Problema e Endereço -->
+                                <Label Text="{Binding enderecoCompleto, StringFormat='Endereço: {0}'}"
+                                    MaxLines="2"
+                                   TextColor="DarkSlateGray" 
                                    FontSize="13"/>
 
-                            <Label Text="{Binding descricaoUnidade}" 
+                                <Label Text="{Binding cep, StringFormat='CEP: {0}'}" 
+                                   TextColor="DarkSlateGray" 
+                                   MaxLines="2"
+                                   FontSize="13"/>
+
+                                <Label Text="{Binding descricaoUnidade, StringFormat='Descrição: {0}'}" 
                                    TextColor="DarkSlateGray" 
                                    MaxLines="2" 
                                    LineBreakMode="TailTruncation"
                                    FontSize="13"/>
-                        </VerticalStackLayout>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </Grid>
 
 </ContentPage>
