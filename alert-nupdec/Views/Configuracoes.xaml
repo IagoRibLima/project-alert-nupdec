@@ -162,8 +162,8 @@
                            FontAttributes="Bold"
                            HorizontalOptions="Start"
                            VerticalOptions="Start"/>
-        
-                    <Label x:Name="lbl_senha" 
+
+                    <Label Text="••••••••"
                            TextColor="DarkSlateGray"
                            FontSize="15"
                            HorizontalOptions="Start"

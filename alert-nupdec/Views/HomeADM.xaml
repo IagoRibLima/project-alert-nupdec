@@ -21,15 +21,28 @@
             </Grid.ColumnDefinitions>
 
             <!--Primeiro Grid Horizontal (Foto do usuário)-->
-            <Border Grid.Column="0"
-                    HeightRequest="40"
-                    WidthRequest="40"
-                    StrokeShape="RoundRectangle 20"
-                    Margin="10,0"
-                    VerticalOptions="Center">
-                <Image x:Name="img_perfil"
-                       Aspect="AspectFill" />
-            </Border>
+            <HorizontalStackLayout Grid.Column="0" 
+                                   Spacing="5"
+                                   Margin="2,0"
+                                   VerticalOptions="Center">
+
+                <ImageButton Source="menu.png"
+                             Clicked="ButtonOpenMenu_Clicked"
+                             HeightRequest="20"
+                             WidthRequest="20"
+                             Padding="6"
+                             BackgroundColor="Transparent"
+                             VerticalOptions="Center"/>
+
+                <Border HeightRequest="40"
+                        WidthRequest="40"
+                        StrokeShape="RoundRectangle 20"
+                        VerticalOptions="Center">
+                    <Image x:Name="img_perfil"
+                           Aspect="AspectFill" />
+                </Border>
+
+            </HorizontalStackLayout>
 
             <!--Segundo Grid Horizontal (Nome do usuário com unidade)-->
             <VerticalStackLayout Grid.Column="1" 
@@ -39,7 +52,7 @@
                 <Label x:Name="lbl_boasvindas"
                        TextColor="White"
                        FontAttributes="Bold"
-                       FontSize="16"/>
+                       FontSize="14"/>
                 <Label x:Name="lbl_unidade" 
                        TextColor="#B0C4DE"
                        FontSize="12"/>

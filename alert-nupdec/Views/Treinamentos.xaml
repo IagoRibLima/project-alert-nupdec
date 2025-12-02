@@ -41,7 +41,7 @@
         <VerticalStackLayout Grid.Row="1"
                              Padding="20,10"
                              Spacing="10"
-                             Margin="60,20">
+                             Margin="20,20">
 
             <CollectionView x:Name="lista_treinamentos"
                             SelectionMode="None"

@@ -22,7 +22,8 @@ public partial class EmitirAlerta : ContentPage
 
     //Botão de voltar
     private async void ButtonVoltar(object sender, EventArgs e)
-    {        
+    {
+        AlertaRepository.ImagemBase64Temp = null;
         await Navigation.PopAsync();
     }
 
@@ -42,7 +43,9 @@ public partial class EmitirAlerta : ContentPage
 
             picker_ocorrencia.SelectedItem = null;
             txt_descricao.Text = string.Empty;
-            txt_endereco.Text = string.Empty;            
+            txt_endereco.Text = string.Empty;      
+            img_unidade.IsVisible = false;
+            AlertaRepository.ImagemBase64Temp = null;
 
             OnAppearing();
         }
@@ -65,6 +68,9 @@ public partial class EmitirAlerta : ContentPage
                 return;
 
             AlertaRepository.ImagemBase64Temp = base64Result;
+            img_unidade.IsVisible = true;
+            byte[] imageBytes = Convert.FromBase64String(AlertaRepository.ImagemBase64Temp);
+            img_unidade.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
 
             await DisplayAlert("Imagem Selecionada", "Imagem selecionada com sucesso!", "OK");
         }

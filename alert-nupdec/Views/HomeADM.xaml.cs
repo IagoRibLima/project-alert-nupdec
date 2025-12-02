@@ -35,6 +35,40 @@ public partial class HomeADM : ContentPage
         }
     }
 
+    private void ButtonOpenMenu_Clicked(object sender, EventArgs e)
+    {
+        // 1. Tenta pegar a referência da FlyoutPage "pai" desta tela
+        var flyoutPai = FindParentFlyoutPage(this);
+
+        // 2. Se achou, inverte o estado (Abre ou Fecha)
+        if (flyoutPai != null)
+        {
+            flyoutPai.IsPresented = !flyoutPai.IsPresented;
+        }
+        else
+        {
+            // Debug: Apenas para você saber se não encontrou
+            Console.WriteLine("ERRO: Não encontrei nenhuma FlyoutPage pai.");
+            DisplayAlert("Erro", "Não foi possível localizar o menu.", "OK");
+        }
+    }
+
+    // Método auxiliar que sobe a hierarquia visual procurando uma FlyoutPage
+    private FlyoutPage FindParentFlyoutPage(Element element)
+    {
+        var parent = element.Parent;
+
+        while (parent != null)
+        {
+            if (parent is FlyoutPage flyout)
+            {
+                return flyout;
+            }
+            parent = parent.Parent;
+        }
+        return null;
+    }
+
     //Botão de emitir alerta
     private async void ButtonEmitirAlerta(object sender, EventArgs e)
     {

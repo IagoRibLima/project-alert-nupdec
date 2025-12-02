@@ -78,7 +78,7 @@ public partial class FlyoutPageADM : FlyoutPage
     //Bot?o de sair
     private async void OnTapSair(object sender, EventArgs e)
     {
-        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "N?o");
+        bool confirmacao = await DisplayAlert("Tem Certeza?", "Deseja realmente sair do aplicativo?", "Sim", "Não");
 
         if (confirmacao)
         {

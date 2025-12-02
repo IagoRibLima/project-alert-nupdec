@@ -41,7 +41,7 @@
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="20,10"
                                  Spacing="10"
-                                 Margin="60,20">
+                                 Margin="20,20">
 
                 <CollectionView x:Name="lista_dicas"
                             SelectionMode="None"
