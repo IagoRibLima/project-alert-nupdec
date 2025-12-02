@@ -46,27 +46,9 @@ namespace alert_nupdec.Repository
                     descricaoUnidade = "Unidade Central",
                 },
                 Senha = "Abc1234@",
-                Adm = true,
+                Adm = false,
                 Foto = null
-            },
-            new Usuario()
-            {
-                Id = "2",
-                NomeCompleto = "Guilherme Jeremias",
-                Email = "gui@email.com",
-                CPF = "96773089042",
-                Telefone = "11988888888",
-                Unidade = new Unidade()
-                {
-                    nome = "Centro",
-                    enderecoCompleto = "Rua A",
-                    cep = "00000000",
-                    descricaoUnidade = "Unidade Central",
-                },
-                Senha = "Abc1234@",
-                Adm = true,
-                Foto = null
-            }
+            }          
         };
 
         /*------------------------------------------------------------------------------------------------------*/
