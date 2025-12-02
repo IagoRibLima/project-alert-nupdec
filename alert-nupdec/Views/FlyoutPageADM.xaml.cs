@@ -78,6 +78,11 @@ public partial class FlyoutPageADM : FlyoutPage
         await Navigation.PushAsync(new Treinamentos());
     }
 
+    private async void OnTapVizualisarVoluntario(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new VizualizarVoluntario());
+    }
+
     //Bot?o de ver ocorr?ncias
     private async void OnTapOcorrencia(object sender, EventArgs e)
     {

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="alert_nupdec.Views.VizualizarVoluntario"
+             Title="VizualizarVoluntario"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#a6a6a6">
+
+    <Grid RowDefinitions="Auto, Auto">
+        <!-- Barra azul superior -->
+        <Grid Grid.Row="0" 
+          ColumnDefinitions="Auto, *" 
+          BackgroundColor="#1848a0" 
+          Padding="10,15">
+
+            <!-- Botão Voltar -->
+            <ImageButton Grid.Column="0" 
+                     Grid.Row="0"
+                     Source="voltar.png" 
+                     Clicked="ButtonVoltar"
+                     Margin="0"
+                     BackgroundColor="Transparent"
+                     HeightRequest="30"
+                     WidthRequest="30"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Start"/>
+
+            <!-- Título da Página -->
+            <Label Grid.Column="1" 
+               Grid.Row="0"
+               Text="Gerenciar Voluntarios" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="White"
+               FontSize="22"
+               FontAttributes="Bold"
+               Margin="0,0,30,0"/>
+        </Grid>
+
+        <!--ScrollView do Feed-->
+        <ScrollView Grid.Row="1">
+            
+            
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

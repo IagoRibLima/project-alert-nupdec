@@ -82,6 +82,9 @@
                                    TextColor="#e8ecee"
                                    VerticalOptions="Center"
                                    Margin="20,0,20,0"/>
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapVizualisarVoluntario"/>
+                            </HorizontalStackLayout.GestureRecognizers>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
