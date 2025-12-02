@@ -32,6 +32,7 @@ namespace alert_nupdec.Repository
 
             Alerta alerta = new Alerta()
             {
+                Id = list_alerta.Count +1,
                 Tipo = tipo,
                 Endereco = endereco,
                 Descricao = descricao,
@@ -41,7 +42,8 @@ namespace alert_nupdec.Repository
 
             list_alerta.Add(alerta);
 
-            System.Diagnostics.Debug.WriteLine($"Tipo: {alerta.Tipo}" +
+            System.Diagnostics.Debug.WriteLine($"Id: {alerta.Id}" +
+                                               $"Tipo: {alerta.Tipo}" +
                                                $"\nEndereço: {alerta.Endereco}" +
                                                $"\nDescricao: {alerta.Descricao}" +
                                                $"\nImagem: {alerta.Imagem}" +

@@ -21,6 +21,8 @@ public partial class Treinamentos : ContentPage
     private void CarregarTreinamentos()
     {
 
-        lista_treinamentos.ItemsSource = TreinamentoRepository.ListarTreinamentos();
+        lista_treinamentos.ItemsSource = TreinamentoRepository.list_treinamento
+            .OrderByDescending(d => d.Id)
+            .ToList();
     }
 }

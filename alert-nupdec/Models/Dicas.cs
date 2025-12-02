@@ -8,6 +8,7 @@ namespace alert_nupdec.Models
 {
     public class Dicas
     {
+        public int Id { get; set; }
         public string NomeDica { get; set; }
         public string Descricao { get; set; }
     }

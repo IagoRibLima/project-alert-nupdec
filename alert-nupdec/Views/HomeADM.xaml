@@ -64,8 +64,8 @@
                   Margin="10,0">
 
                 <ImageButton Source="sino.png"
-                             HeightRequest="26"
-                             WidthRequest="26"
+                             HeightRequest="30"
+                             WidthRequest="30"
                              Background="Transparent"/>
             </Grid>
         </Grid>

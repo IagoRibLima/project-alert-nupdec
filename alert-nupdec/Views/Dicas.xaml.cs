@@ -20,6 +20,8 @@ public partial class Dicas : ContentPage
     //Método para carregar as dicas na ListView
     private void CarregarDicas()
     {
-        lista_dicas.ItemsSource = DicasRepository.list_dicas;
+        lista_dicas.ItemsSource = DicasRepository.list_dicas
+            .OrderByDescending(d => d.Id)
+            .ToList();
     }
 }

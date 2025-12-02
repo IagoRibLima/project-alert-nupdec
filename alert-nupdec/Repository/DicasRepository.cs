@@ -13,13 +13,15 @@ namespace alert_nupdec.Repository
         {
             Dicas dicas = new Dicas
             {
+                Id = list_dicas.Count + 1,
                 NomeDica = dica,
                 Descricao = descricao
             };
 
             list_dicas.Add(dicas);
 
-            System.Diagnostics.Debug.WriteLine($"NomeDica: {dicas.NomeDica}" +
+            System.Diagnostics.Debug.WriteLine($"Id: {dicas.Id}" +
+                                               $"NomeDica: {dicas.NomeDica}" +
                                                $"\nDescricao: {dicas.Descricao}");
         }
     }

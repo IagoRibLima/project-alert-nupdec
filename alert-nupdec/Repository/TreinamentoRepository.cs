@@ -4,7 +4,7 @@ namespace alert_nupdec.Repository
 {
     public class TreinamentoRepository
     {        
-        private static List<Treinamento> list_treinamento = new List<Treinamento>();
+        public static List<Treinamento> list_treinamento = new List<Treinamento>();
         
         /*------------------------------------------------------------------------------*/
 
@@ -13,6 +13,7 @@ namespace alert_nupdec.Repository
         {
             Treinamento treinamento = new Treinamento
             {
+                Id = list_treinamento.Count + 1,
                 Nome = nome,
                 Vaga = vaga,
                 Descricao = descricao
@@ -20,15 +21,11 @@ namespace alert_nupdec.Repository
 
             list_treinamento.Add(treinamento);
             
-            System.Diagnostics.Debug.WriteLine($"Nome: {treinamento.Nome}" +
+            System.Diagnostics.Debug.WriteLine($"Id: {treinamento.Id}" +
+                                               $"Nome: {treinamento.Nome}" +
                                                $"\nVaga: {treinamento.Vaga}" +
                                                $"\nDescricao: {treinamento.Descricao}");
         }
 
-        // Método adicionado para listagem — compatível com sua View
-        public static List<Treinamento> ListarTreinamentos()
-        {
-            return list_treinamento;
-        }
     }
 }
