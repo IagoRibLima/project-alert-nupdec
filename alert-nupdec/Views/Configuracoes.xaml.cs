@@ -24,7 +24,7 @@ public partial class Configuracoes : ContentPage
             lbl_email.Text = $"{UsuarioRepository.usuario_logado.Email}";
             lbl_cpf.Text = $"{UsuarioRepository.usuario_logado.CPF}";
             lbl_telefone.Text = $"{UsuarioRepository.usuario_logado.Telefone}";
-            lbl_unidade.Text = $"{UsuarioRepository.usuario_logado.Unidade.enderecoCompleto}";
+            lbl_unidade.Text = $"{UsuarioRepository.usuario_logado.Unidade.nome}";
         }
 
         if (UsuarioRepository.usuario_logado != null && !string.IsNullOrEmpty(UsuarioRepository.usuario_logado.Foto))

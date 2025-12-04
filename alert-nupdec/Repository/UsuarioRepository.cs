@@ -22,9 +22,9 @@ namespace alert_nupdec.Repository
                 Telefone = "11999999999",
                 Unidade = new Unidade()
                 {
-                    nome = "Centro",
+                    nome = "Central",
                     enderecoCompleto = "Rua A",
-                    cep = "00000000",
+                    cep = "23456789",
                     descricaoUnidade = "Unidade Central",
                 },
                 Senha = "Abc1234@",
@@ -40,10 +40,10 @@ namespace alert_nupdec.Repository
                 Telefone = "11988888888",
                 Unidade = new Unidade()
                 {
-                    nome = "Centro",
+                    nome = "Itagaçaba",
                     enderecoCompleto = "Rua A",
-                    cep = "00000000",
-                    descricaoUnidade = "Unidade Central",
+                    cep = "12345678",
+                    descricaoUnidade = "As margens do Paraiba",
                 },
                 Senha = "Abc1234@",
                 Adm = false,

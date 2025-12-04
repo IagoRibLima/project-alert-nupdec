@@ -4,7 +4,15 @@ namespace alert_nupdec.Repository
 {
     public class DicasRepository
     {
-        public static List<Dicas> list_dicas = new List<Dicas>();
+        public static List<Dicas> list_dicas = new List<Dicas>()
+        {
+            new Dicas()
+            {
+                Id = 0,
+                NomeDica = "Desligue a energia",
+                Descricao = "Em casos de fortes chuvas com risco de enchentes, desligue a energia"
+            }
+        };
 
         /*-----------------------------------------------------------------------------*/
 

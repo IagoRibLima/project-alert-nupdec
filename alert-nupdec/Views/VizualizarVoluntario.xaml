@@ -91,12 +91,11 @@
 
                                 <!-- Detalhes dos dados dos voluntarios -->
                                 <Label Text="{Binding Email, StringFormat='Email: {0}'}" 
-                               FontAttributes="Bold" 
-                               TextColor="#ff751f" 
+                               TextColor="DarkSlateGray" 
                                FontSize="15"/>
 
                                 <Label Text="{Binding CPF, StringFormat='CPF: {0}'}" 
-                               TextColor="Gray" 
+                               TextColor="DarkSlateGray" 
                                FontSize="13"/>
 
                                 <Label Text="{Binding Telefone, StringFormat='Telefone: {0}'}"

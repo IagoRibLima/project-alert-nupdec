@@ -12,6 +12,13 @@ namespace alert_nupdec.Repository
                 cep = null,
                 descricaoUnidade = null
             },
+            new Unidade()
+            {
+                nome = "Itagaçaba",
+                enderecoCompleto = "Rua A",
+                cep = "12345678",
+                descricaoUnidade = "As margens do Paraiba"
+            }
         };
 
 

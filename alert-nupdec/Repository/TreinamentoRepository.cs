@@ -4,7 +4,16 @@ namespace alert_nupdec.Repository
 {
     public class TreinamentoRepository
     {        
-        public static List<Treinamento> list_treinamento = new List<Treinamento>();
+        public static List<Treinamento> list_treinamento = new List<Treinamento>()
+        {
+            new Treinamento
+            {
+                Id = 0,
+                Nome = "Primeiros Socorros",
+                Vaga = "100",
+                Descricao = "Como agir em casos de ferimentos, desmaios, quedas e parada cardiorespiratoria"
+            }
+        };
         
         /*------------------------------------------------------------------------------*/
 

@@ -36,7 +36,7 @@ public partial class HomeADM : ContentPage
         if (UsuarioRepository.usuario_logado != null)
         {
             lbl_boasvindas.Text = $"Administrador: {UsuarioRepository.usuario_logado.NomeCompleto}";
-            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.enderecoCompleto} - {UsuarioRepository.usuario_logado.Unidade.cep}";
+            lbl_unidade.Text = $"Nupdec - {UsuarioRepository.usuario_logado.Unidade.nome} - {UsuarioRepository.usuario_logado.Unidade.cep}";
         }
 
         if (UsuarioRepository.usuario_logado != null && !string.IsNullOrEmpty(UsuarioRepository.usuario_logado.Foto))
